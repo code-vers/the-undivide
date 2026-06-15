@@ -31,7 +31,7 @@ const programs = [
     id: "03",
     title: "Community Hub",
     description: "Creating physical and digital spaces where communities can access tools, education, and support for a resilient future.",
-    image: "https://www.figma.com/api/mcp/asset/47e90de4-6ba5-4a1f-b3ba-a5e8ca75e1b3",
+    image: "https://www.figma.com/api/mcp/asset/b51f3581-5e9b-4787-b135-ae10bd97fc8a",
     points: [
       "Localized climate resilience centers",
       "Digital literacy and skills training",
@@ -62,73 +62,98 @@ export default function Programs() {
         </div>
 
         {/* Content */}
-        <div className="space-y-6">
-          {programs.map((program) => (
-            <div 
-              key={program.id}
-              onMouseEnter={() => setActiveId(program.id)}
-              onClick={() => setActiveId(program.id)}
-              className={cn(
-                "transition-all duration-500 ease-in-out rounded-[16px] overflow-hidden cursor-pointer",
-                activeId === program.id 
-                  ? "bg-[#2d584a] text-white" 
-                  : "bg-[#f1f2f3] border border-[#d6cfc0] text-[#1c3530]"
-              )}
-            >
-              <div className="p-[32px] flex flex-col lg:flex-row gap-8 relative">
-                <div className="flex-1 flex gap-[32px] items-start">
-                  <span className={cn(
-                    "text-[12px] font-medium tracking-[1.2px] mt-1",
-                    activeId === program.id ? "text-white/40" : "text-[#8fa39d]"
-                  )}>
-                    {program.id}
-                  </span>
-                  
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-[24px] font-semibold">{program.title}</h3>
-                      <p className={cn(
-                        "text-[16px] mt-2 max-w-[879px] transition-all duration-300",
-                        activeId === program.id ? "text-white/70" : "text-[#5c7a72]"
-                      )}>
-                        {program.description}
-                      </p>
+        <div className="space-y-6 pt-6 md:pt-16">
+          {programs.map((program) => {
+            const isActive = activeId === program.id
+            
+            if (isActive) {
+              return (
+                <div 
+                  key={program.id}
+                  className="group bg-[#2d584a] text-white rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer relative shadow-lg"
+                  onMouseEnter={() => setActiveId(program.id)}
+                >
+                  <div className="p-4 md:p-[32px] flex flex-col lg:flex-row gap-6 md:gap-8 relative items-start">
+                    <div className="w-full lg:max-w-[55%] xl:max-w-[60%] flex gap-4 md:gap-[32px] items-start">
+                      <span className="text-[12px] font-medium tracking-[1.2px] text-white/40 mt-1 shrink-0">
+                        {program.id}
+                      </span>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-[24px] font-semibold text-[#f8f8f2]">{program.title}</h3>
+                          <p className="text-[16px] text-white/70 mt-2 leading-relaxed">
+                            {program.description}
+                          </p>
+                        </div>
+                        
+                        <ul className="space-y-3 animate-in fade-in slide-in-from-top-2 duration-500">
+                          {program.points.map((point, idx) => (
+                            <li key={idx} className="flex items-center gap-3 text-white/80">
+                              <div className="size-[15px] bg-[#d6cfc0] rounded-full flex items-center justify-center text-[#2d584a]">
+                                <CheckIcon />
+                              </div>
+                              <span className="text-[14px]">{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                     
-                    {activeId === program.id && (
-                      <ul className="space-y-3 animate-in fade-in slide-in-from-top-2 duration-500">
-                        {program.points.map((point, idx) => (
-                          <li key={idx} className="flex items-center gap-3 text-white/80">
-                            <div className="size-[15px] bg-[#d6cfc0] rounded-full flex items-center justify-center text-[#2d584a]">
-                              <CheckIcon />
-                            </div>
-                            <span className="text-[14px]">{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                </div>
-                
-                {activeId === program.id && (
-                  <div className="lg:w-[442px] aspect-[532/388] rounded-[12px] overflow-hidden animate-in fade-in zoom-in-95 duration-500">
-                    <img 
-                      src={program.image} 
-                      alt={program.title} 
-                      className="size-full object-cover"
-                    />
-                  </div>
-                )}
+                    {/* Inline Image Container for Mobile/Tablet */}
+                    <div className="w-full aspect-[532/388] rounded-[12px] overflow-hidden lg:hidden mt-4 shrink-0">
+                      <img 
+                        src={program.image} 
+                        alt={program.title} 
+                        className="size-full object-cover"
+                      />
+                    </div>
 
-                <div className={cn(
-                  "absolute top-8 right-8 size-10 rounded-full flex items-center justify-center transition-all duration-300",
-                  activeId === program.id ? "bg-white/10 text-white" : "bg-[#d6cfc0]/20 text-[#1c3530]"
-                )}>
-                   <Plus size={24} className={cn("transition-transform duration-300", activeId === program.id && "rotate-45")} />
+                    {/* Floating Image Container for Desktop */}
+                    <div className="hidden lg:block absolute right-4 xl:right-[32px] -top-[40px] xl:-top-[60px] w-[320px] xl:w-[442px] aspect-[532/388] rounded-[12px] overflow-hidden shadow-[0px_20px_40px_rgba(28,53,48,0.25)] z-20 transition-all duration-500 group-hover:-translate-y-2 border border-[#dcfcc0]/20 pointer-events-none">
+                      <img 
+                        src={program.image} 
+                        alt={program.title} 
+                        className="size-full object-cover"
+                      />
+                    </div>
+
+                    <div className="absolute top-4 md:top-8 right-4 md:right-8 size-8 md:size-10 bg-white/10 rounded-full flex items-center justify-center text-white transition-all duration-300">
+                       <Plus size={24} className="rotate-45" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              )
+            } else {
+              return (
+                <div 
+                  key={program.id}
+                  onMouseEnter={() => setActiveId(program.id)}
+                  onClick={() => setActiveId(program.id)}
+                  className="bg-[#f1f2f3] border border-[#d6cfc0] text-[#1c3530] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer hover:bg-[#e8eaeb]"
+                >
+                  <div className="p-4 md:p-[32px] flex items-center justify-between gap-4 relative">
+                    <div className="flex gap-4 md:gap-[32px] items-start flex-1 min-w-0">
+                      <span className="text-[12px] font-medium tracking-[1.2px] text-[#8fa39d] mt-1 shrink-0">
+                        {program.id}
+                      </span>
+                      
+                      <div className="space-y-2 min-w-0">
+                        <h3 className="text-[24px] font-semibold">{program.title}</h3>
+                        <p className="text-[16px] text-[#5c7a72] line-clamp-2 md:line-clamp-none">
+                          {program.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="size-8 md:size-10 bg-[#d6cfc0]/20 rounded-full flex items-center justify-center text-[#1c3530] shrink-0 hover:bg-[#d6cfc0]/40 transition-colors">
+                       <Plus size={24} />
+                    </div>
+                  </div>
+                </div>
+              )
+            }
+          })}
         </div>
       </div>
     </section>

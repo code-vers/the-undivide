@@ -1,12 +1,25 @@
+import DonateHero from "@/components/donate/DonateHero"
+import ImpactPanel from "@/components/donate/ImpactPanel"
+import WhyDonate from "@/components/donate/WhyDonate"
+import DonationImpact from "@/components/donate/DonationImpact"
+import ImpactStats from "@/components/donate/ImpactStats"
+import DonateIntro from "@/components/donate/DonateIntro"
+import PromotionSection from "@/components/programs/PromotionSection"
+
 export default function DonatePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-12 px-4">
-      <div className="max-w-3xl w-full text-center space-y-6">
-        <h1 className="text-h1 font-bold text-foreground">Support Our Work</h1>
-        <p className="text-body-large text-muted-foreground">
-          Your donation helps us rebuild, reclaim, and connect underserved communities to critical digital and environmental resources.
-        </p>
+    <div className="flex flex-col bg-white">
+      <DonateHero />
+      <div className="relative">
+        <ImpactPanel />
+        <WhyDonate />
+        <DonationImpact />
       </div>
+      <div className="space-y-0">
+        <ImpactStats />
+        <DonateIntro />
+      </div>
+      <PromotionSection />
     </div>
   )
 }

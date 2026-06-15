@@ -92,13 +92,13 @@ export default function Team() {
   }
 
   const ViewProfileButton = () => (
-    <div className="bg-[#f8f8f2] flex items-center px-[24px] py-[8px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm border border-[#dcfcc0]/50">
-      <span className="font-semibold text-[#1c3530] text-[14px]">View Profile</span>
+    <div className="bg-[#f8f8f2] flex items-center px-[18px] md:px-[24px] py-[6px] md:py-[8px] rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 shadow-sm border border-[#dcfcc0]/50">
+      <span className="font-semibold text-[#1c3530] text-[12px] md:text-[14px]">View Profile</span>
     </div>
   )
 
   return (
-    <section className="bg-[#fffdf6] py-[120px] px-8 md:px-[80px] overflow-hidden">
+    <section className="bg-[#fffdf6] py-12 md:py-[80px] lg:py-[120px] px-4 sm:px-8 md:px-[80px] overflow-hidden">
       <div className="mx-auto max-w-[1750px]">
         {/* Header */}
         <div className="flex flex-col items-center space-y-4 mb-16">
@@ -107,7 +107,7 @@ export default function Team() {
               Our Team
             </span>
           </div>
-          <h2 className="text-[48px] font-bold text-[#1c3530] text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-[48px] font-bold text-[#1c3530] text-center">
             Meet Our Team
           </h2>
           <p className="text-[16px] text-[#5c7a72] text-center max-w-[964px]">
@@ -120,12 +120,12 @@ export default function Team() {
           {/* Card 1: Monica Sanders */}
           <div 
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "monica") || null)}
-            className="lg:col-span-1 lg:row-span-2 relative group overflow-hidden rounded-[48px] border border-[#dcfcc0] h-[400px] md:h-[589px] cursor-pointer"
+            className="lg:col-span-1 lg:row-span-2 relative group overflow-hidden rounded-[24px] md:rounded-[48px] border border-[#dcfcc0] h-[320px] md:h-[400px] lg:h-[589px] cursor-pointer"
           >
             <img src={teamMembers[0].image} alt="Monica Sanders" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-[#1c3530]/40 to-transparent p-[32px] flex flex-col justify-end">
-               <h3 className="text-[32px] font-bold text-white leading-tight">Monica Sanders</h3>
-               <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Founder / Advocate in Chief</p>
+               <h3 className="text-xl md:text-2xl lg:text-[32px] font-bold text-white leading-tight">Monica Sanders</h3>
+               <p className="text-sm md:text-base lg:text-[20px] font-medium text-[#e5fff8]/80 mt-1">Founder / Advocate in Chief</p>
                <div className="mt-8 self-start">
                   <ViewProfileButton />
                </div>
@@ -135,12 +135,12 @@ export default function Team() {
           {/* Card 2: Anne Gibbon */}
           <div 
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "anne") || null)}
-            className="lg:col-span-1 lg:row-span-1 relative group overflow-hidden rounded-[42px] border border-[#dcfcc0] h-[280px] cursor-pointer"
+            className="lg:col-span-1 lg:row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[42px] border border-[#dcfcc0] h-[220px] md:h-[280px] cursor-pointer"
           >
             <img src={teamMembers[1].image} alt="Anne Gibbon" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-[#1c3530]/40 to-transparent p-[24px] flex flex-col justify-end">
-               <h3 className="text-[32px] font-bold text-white leading-tight">Anne Gibbon</h3>
-               <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Advisor</p>
+               <h3 className="text-xl md:text-[32px] font-bold text-white leading-tight">Anne Gibbon</h3>
+               <p className="text-sm md:text-[20px] font-medium text-[#e5fff8]/80 mt-1">Advisor</p>
                <div className="mt-6 self-start">
                   <ViewProfileButton />
                </div>
@@ -150,13 +150,13 @@ export default function Team() {
           {/* Card 3: Dr. Sarah Chen */}
           <div 
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "sarah") || null)}
-            className="lg:col-span-1 lg:row-span-2 relative group overflow-hidden rounded-[57px] border-[#2d584a] border-[1px] shadow-2xl h-[400px] md:h-[581px] cursor-pointer"
+            className="lg:col-span-1 lg:row-span-2 relative group overflow-hidden rounded-[24px] md:rounded-[57px] border-[#2d584a] border-[1px] shadow-2xl h-[320px] md:h-[400px] lg:h-[581px] cursor-pointer"
           >
             <img src={teamMembers[2].image} alt="Dr. Sarah Chen" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/85 via-transparent to-transparent p-[24px] flex flex-col justify-end">
-               <h3 className="text-[32px] font-bold text-[#f8f8f2] leading-tight">Dr. Sarah Chen</h3>
-               <p className="text-[20px] font-medium text-[#c5d0cc] mt-1">Director of Technology</p>
-               <p className="text-[14px] font-medium text-[#e8ebe9] mt-3">Digital infrastructure and climate data systems</p>
+               <h3 className="text-xl md:text-[32px] font-bold text-[#f8f8f2] leading-tight">Dr. Sarah Chen</h3>
+               <p className="text-sm md:text-[20px] font-medium text-[#c5d0cc] mt-1">Director of Technology</p>
+               <p className="text-xs md:text-[14px] font-medium text-[#e8ebe9] mt-2">Digital infrastructure and climate data systems</p>
                <div className="mt-6">
                   <ViewProfileButton />
                </div>
