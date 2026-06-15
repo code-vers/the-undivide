@@ -7,7 +7,7 @@ export default function DonateHero() {
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/b28a3638-c6b5-4b24-998f-6a7fc365b525"
+          // src="https://www.figma.com/api/mcp/asset/b28a3638-c6b5-4b24-998f-6a7fc365b525"
           alt="Mission Background"
           className="size-full object-cover"
         />

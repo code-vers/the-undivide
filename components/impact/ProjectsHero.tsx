@@ -4,7 +4,7 @@ export default function ProjectsHero() {
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/60b7bc9e-2422-4c4c-b438-d0cc93642932"
+          // src="https://www.figma.com/api/mcp/asset/60b7bc9e-2422-4c4c-b438-d0cc93642932"
           alt="Projects Background"
           className="size-full object-cover"
         />

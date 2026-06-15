@@ -4,7 +4,7 @@ export default function ProgramsHero() {
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/21f4e273-b5c5-46d3-b900-c5e43fc8aa60"
+          // src="https://www.figma.com/api/mcp/asset/21f4e273-b5c5-46d3-b900-c5e43fc8aa60"
           alt="Programs Background"
           className="size-full object-cover"
         />
