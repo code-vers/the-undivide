@@ -10,7 +10,7 @@ export default function ContactForm() {
           <div className="space-y-6 md:space-y-[32px]">
             <div className="space-y-3 md:space-y-[16px]">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[56px] font-semibold text-[#1c3530] leading-tight tracking-[-0.32px]">
-                Feel Free to Contact &amp; Get Touch!
+                Feel Free to <br/> Contact &amp; Get Touch!
               </h2>
               <p className="text-base md:text-lg lg:text-[20px] font-medium text-[#3d5e57] leading-relaxed">
                 Have a question, partnership idea, or want to learn more about our work at the intersection of climate resilience and digital equity? We&apos;d love to hear from you.
