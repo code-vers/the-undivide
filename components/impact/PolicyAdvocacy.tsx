@@ -81,9 +81,9 @@ export default function PolicyAdvocacy() {
                   </div>
                 </div>
 
-                <button className="hidden md:flex items-center gap-1 self-center text-[#144134] font-bold text-[14px] md:text-[16px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all hover:text-[#2d584a] shrink-0 cursor-pointer">
+                <button className="group/btn hidden md:flex items-center gap-1 self-center text-[#144134] font-bold text-[14px] md:text-[16px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all hover:text-[#2d584a] shrink-0 cursor-pointer">
                   Read More
-                  <img src="https://www.figma.com/api/mcp/asset/189cb1ab-7f4f-47be-b78a-757c152f3037" alt="arr" className="size-[10px]" />
+                  <ArrowUpRight size={14} className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </button>
               </div>
             ))}

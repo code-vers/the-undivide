@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils"
+import { ArrowUpRight } from "lucide-react"
 
 const researchItems = [
   {
@@ -85,14 +86,10 @@ export default function ResearchAdvocacy() {
                   
                   <div className="mt-auto pt-4 pb-2">
                     <button className={cn(
-                      "flex items-center gap-2 text-[14px] font-semibold uppercase tracking-[0.35px] hover:opacity-80 transition-opacity text-[#1c3530]"
+                      "group flex items-center gap-2 text-[14px] font-semibold uppercase tracking-[0.35px] hover:opacity-80 transition-opacity text-[#1c3530]"
                     )}>
                       READ MORE
-                      <img 
-                        src={"https://www.figma.com/api/mcp/asset/aebc6b5d-eb45-45e6-947d-39a87f64d6d6"} 
-                        alt="arrow" 
-                        className="size-[10px]" 
-                      />
+                      <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </button>
                   </div>
                 </div>

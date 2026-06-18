@@ -208,7 +208,7 @@ export default function Team() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-[#1c3530]/30 to-transparent p-[32px] flex flex-col justify-end">
                <h3 className="text-[32px] font-bold text-white leading-tight">Join Us</h3>
                <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Open Position</p>
-               <Button variant="outline" className="mt-8 self-start rounded-full bg-[#f8f8f2] text-[#1c3530] border-none font-semibold text-[14px] hover:bg-white hover:text-[#1c3530] transition-colors cursor-pointer">
+               <Button variant="outline" className="mt-8 self-start rounded-full bg-[#f8f8f2] text-[#1c3530] border-none font-semibold text-[14px] hover:bg-[#2d584a] hover:text-white transition-colors cursor-pointer">
                   Learn More
                </Button>
             </div>
@@ -223,7 +223,7 @@ export default function Team() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-transparent to-transparent p-[24px] flex flex-col justify-end">
                <h3 className="text-[32px] font-bold text-white leading-tight">Community</h3>
                <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Partner Network</p>
-               <Button variant="outline" className="mt-6 self-start rounded-full bg-[#f8f8f2] text-[#1c3530] border-none font-semibold text-[14px] hover:bg-white hover:text-[#1c3530] transition-colors cursor-pointer">
+               <Button variant="outline" className="mt-6 self-start rounded-full bg-[#f8f8f2] text-[#1c3530] border-none font-semibold text-[14px] hover:bg-[#2d584a] hover:text-white transition-colors cursor-pointer">
                   View Partners
                </Button>
             </div>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Paperclip, Share2 } from "lucide-react"
+import { Paperclip, Share2, ArrowUpRight } from "lucide-react"
 
 export default function ContactForm() {
   return (
@@ -83,9 +83,9 @@ export default function ContactForm() {
                 <textarea placeholder="Write your message here..." className="w-full bg-white border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] min-h-[140px] md:min-h-[160px] outline-none focus:border-[#2d584a] transition-colors resize-none" />
               </div>
 
-              <button className="bg-[#2d584a] text-white px-[24px] md:px-[32px] py-[14px] md:py-[16px] rounded-full font-bold text-[15px] md:text-[16px] flex items-center gap-2 hover:bg-[#1c3530] transition-colors shadow-sm active:scale-95">
+              <button className="group bg-[#2d584a] text-white px-[24px] md:px-[32px] py-[14px] md:py-[16px] rounded-full font-bold text-[15px] md:text-[16px] flex items-center gap-2 hover:bg-[#1c3530] transition-colors shadow-sm active:scale-95">
                 Send Message
-                <img src="https://www.figma.com/api/mcp/asset/a30f0b48-afbc-4b23-bdcd-7a0b36e685ca" alt="Arrow" className="size-[13px]" />
+                <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </button>
 
               <div className="border-t border-[#dcfcc0] pt-5 md:pt-[25px] mt-4 md:mt-[16px] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">

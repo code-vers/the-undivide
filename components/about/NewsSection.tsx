@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const newsItems = [
@@ -8,7 +8,8 @@ const newsItems = [
     description: "Digital literacy program graduates first cohort of 150 students in web development and data analysis.",
     date: "May 10, 2026",
     source: "TechCrunch",
-    image: "https://www.figma.com/api/mcp/asset/54e3d323-928f-4007-bbab-7389940107dd"
+    image: "https://www.figma.com/api/mcp/asset/54e3d323-928f-4007-bbab-7389940107dd",
+    url: 'https://www.technologyreview.com/2023/06/20/1074244/climate-vulnerability-digital-divide/'
   },
   {
     category: "Grinnel College",
@@ -16,7 +17,8 @@ const newsItems = [
     description: "Renewable energy access program reduces utility costs while cutting carbon emissions.",
     date: "May 6, 2026",
     source: "Grist",
-    image: "https://www.figma.com/api/mcp/asset/c6a96dae-a665-4346-ae56-010b5fdfbb7d"
+    image: "https://www.figma.com/api/mcp/asset/c6a96dae-a665-4346-ae56-010b5fdfbb7d",
+    url: 'https://www.grinnell.edu/news/grinnell-college-announces-monica-sanders-inaugural-social-innovator-residence'
   },
   {
     category: "Forbes",
@@ -24,7 +26,8 @@ const newsItems = [
     description: "Open-source platform helps municipalities develop evidence-based resilience strategies.",
     date: "May 1, 2026",
     source: "CityLab",
-    image: "https://www.figma.com/api/mcp/asset/9f92ba8f-907d-46c3-8429-11216f19940d"
+    image: "https://www.figma.com/api/mcp/asset/9f92ba8f-907d-46c3-8429-11216f19940d",
+    url: 'https://www.forbes.com/sites/yolandabaruch/2022/10/25/expert-monica-sanders-analyzes-disproportionate-impact-of-natural-disasters-on-bipoc-communities/'
   }
 ]
 
@@ -70,10 +73,12 @@ export default function NewsSection() {
                   <span className="text-[12px] md:text-[13px] text-[#8fa39d]">• {item.source}</span>
                 </div>
 
-                <button className="flex items-center gap-2 pt-3 text-[13px] md:text-[14px] font-semibold text-[#2d584a] hover:opacity-80 transition-opacity">
-                  Read More
-                  <img src="https://www.figma.com/api/mcp/asset/baa27dd1-8f54-42cd-8bbe-c7a3bcdaf273" alt="arrow" className="size-4" />
-                </button>
+                <Link href={item?.url}>
+                  <button className="group flex items-center gap-2 pt-3 text-[13px] md:text-[14px] font-semibold text-[#2d584a] hover:opacity-80 transition-opacity">
+                    Read More
+                    <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -82,9 +87,9 @@ export default function NewsSection() {
         {/* View All Button */}
         <div className="mt-10 md:mt-16 flex justify-center">
           <Link href="/news">
-            <button className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[52px] md:h-[64px] px-[24px] md:px-[32px] rounded-[12px] text-[15px] md:text-[16px] font-normal shadow-lg flex items-center gap-[12px] transition-colors">
+            <button className="group bg-[#2d584a] hover:bg-[#1c3530] text-white h-[52px] md:h-[64px] px-[24px] md:px-[32px] rounded-[12px] text-[15px] md:text-[16px] font-normal shadow-lg flex items-center gap-[12px] transition-colors">
               View All News
-              <img src="https://www.figma.com/api/mcp/asset/23b3661c-9dae-4dc3-bdf5-d889773aa273" alt="arrow" className="size-[13.33px]" />
+              <ArrowRight className="size-[16px] transition-transform group-hover:translate-x-1" />
             </button>
           </Link>
         </div>

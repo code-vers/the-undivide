@@ -1,3 +1,5 @@
+import { ArrowUpRight } from "lucide-react"
+
 const impactCards = [
   {
     title: "Public Education",
@@ -48,9 +50,9 @@ export default function ImpactPanel() {
                 <p className="text-[14px] text-[#3d5e57] leading-[21px] max-w-[260px]">
                   {card.description}
                 </p>
-                <button className="flex items-center gap-1 pt-2 text-[14px] font-semibold text-[#2d584a] hover:underline">
+                <button className="group flex items-center gap-1 pt-2 text-[14px] font-semibold text-[#2d584a] hover:underline">
                   Learn more
-                  <img src="https://www.figma.com/api/mcp/asset/0b1db02b-87e9-473f-8c2b-cd1eae439170" alt="arrow" className="h-2 w-[10px]" />
+                  <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
               </div>
             </div>

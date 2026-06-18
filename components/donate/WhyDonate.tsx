@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function WhyDonate() {
   return (
@@ -29,10 +30,12 @@ export default function WhyDonate() {
             </ul>
 
             <div className="pt-2">
-              <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-[#f8f8f2] h-[50px] md:h-[56px] px-[24px] md:px-[32px] rounded-full text-[15px] md:text-[16px] font-bold gap-2">
-                Donate Now
-                <img src="https://www.figma.com/api/mcp/asset/3279e6b7-a417-4e74-a2ae-c278b483fc5a" alt="Icon" className="size-[13px]" />
-              </Button>
+              <Link href={'https://donorbox.org/support-our-work-86'} target="_blank">
+                <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-[#f8f8f2] h-[50px] md:h-[56px] px-[24px] md:px-[32px] rounded-full text-[15px] md:text-[16px] font-bold gap-2">
+                  Donate Now
+                  <img src="https://www.figma.com/api/mcp/asset/3279e6b7-a417-4e74-a2ae-c278b483fc5a" alt="Icon" className="size-[13px]" />
+                </Button>
+              </Link>
             </div>
           </div>
 

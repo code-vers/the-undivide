@@ -56,7 +56,7 @@ export default function Navbar() {
             <Link href="/donate" className="hidden sm:block">
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#1a352f] rounded-[22px] px-[20px] lg:px-[33px] h-[38px] lg:h-[44px] text-[11px] lg:text-[12px] font-semibold tracking-[0.6px] uppercase transition-all duration-300"
+                className="bg-transparent border-white text-white hover:bg-white hover:text-[#1a352f] rounded-[22px] px-[20px] lg:px-[33px] h-[38px] lg:h-[44px] text-[11px] lg:text-[12px] font-semibold tracking-[0.6px] uppercase transition-all duration-300"
               >
                 DONATE
               </Button>

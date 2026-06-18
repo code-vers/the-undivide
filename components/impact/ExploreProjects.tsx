@@ -10,21 +10,24 @@ const projects = [
     title: "GEV Climate Risk Dashboard",
     description: "The GEV Climate Risk Dashboard provides critical insights into climate-related risks, helping communities and policymakers make informed decisions to build a more resilient future.",
     image: "https://www.figma.com/api/mcp/asset/006e6b7b-f206-4315-8e13-968c1e852422",
-    href: "#"
+    href: "/projects/gev-climate-risk-dashboard",
+    target: ''
   },
   {
     id: "02",
     title: "Ten States Project",
     description: "The Ten States Project targets states hardest hit by climate injustice and digital inequality, using storytelling and a research hub to help communities build sustainable, equitable solutions.",
     image: "https://www.figma.com/api/mcp/asset/d0c6a58a-a68f-46ec-9d3d-49aecfc51d13",
-    href: "#"
+    href: "https://the-ten-states-project-for-equitable-climate-risk-undivide.hub.arcgis.com/",
+    target: '_blank'
   },
    {
     id: "03",
     title: "AI Resilience",
     description: "The AI Resilience project (AI Law Compass) explores the intersection of artificial intelligence, policy, and legal frameworks to guide legal practitioners and researchers through AI regulation.",
     image: "https://www.figma.com/api/mcp/asset/d0c6a58a-a68f-46ec-9d3d-49aecfc51d13",
-    href: "/projects/ai-resilience"
+    href: "/projects/ai-resilience",
+    target: ''
   },
 ]
 
@@ -120,7 +123,7 @@ export default function ExploreProjects() {
                   onMouseEnter={() => setHoveredIndex(idx)}
                 >
                   {project.href !== "#" ? (
-                    <Link href={project.href} className="block size-full text-left">
+                    <Link href={project.href} className="block size-full text-left" target={project.target}>
                       {cardContent}
                     </Link>
                   ) : (

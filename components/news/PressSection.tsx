@@ -7,7 +7,8 @@ const pressItems = [
     description: "How community-led tech hubs are transforming access to critical resources and education.",
     date: "April 25, 2026",
     source: "Wired",
-    image: "https://www.figma.com/api/mcp/asset/54e3d323-928f-4007-bbab-7389940107dd"
+    image: "https://www.figma.com/api/mcp/asset/54e3d323-928f-4007-bbab-7389940107dd",
+    url: 'https://www.benton.org/headlines/how-climate-vulnerability-and-digital-divide-are-linked'
   },
   {
     category: "INNOVATION",
@@ -15,7 +16,8 @@ const pressItems = [
     description: "Young innovators develop solutions for environmental challenges in their own backyards.",
     date: "April 20, 2026",
     source: "MIT Tech Review",
-    image: "https://www.figma.com/api/mcp/asset/c6a96dae-a665-4346-ae56-010b5fdfbb7d"
+    image: "https://www.figma.com/api/mcp/asset/c6a96dae-a665-4346-ae56-010b5fdfbb7d",
+    url: ''
   },
   {
     category: "SUSTAINABILITY",

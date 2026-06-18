@@ -43,13 +43,13 @@ export default function DonateHero() {
           </div>
 
           <div className="flex flex-wrap gap-4 md:gap-[24px] items-center">
-            <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[52px] md:h-[64px] px-[24px] md:px-[32px] rounded-[12px] text-[15px] md:text-[16px] shadow-lg gap-2">
+            <Button className="group bg-[#2d584a] hover:bg-[#1c3530] text-white h-[52px] md:h-[64px] px-[24px] md:px-[32px] rounded-[12px] text-[15px] md:text-[16px] shadow-lg gap-2">
               Donate Now
-              <img src="https://www.figma.com/api/mcp/asset/08c14db6-5cef-49df-b506-55fd15066093" alt="Icon" className="size-[13px]" />
+              <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#1c3530] h-[52px] md:h-[64px] px-[24px] md:px-[33px] rounded-[12px] text-[15px] md:text-[16px] gap-2">
+            <Button variant="outline" className="group bg-transparent border-white text-white hover:bg-white hover:text-[#1c3530] h-[52px] md:h-[64px] px-[24px] md:px-[33px] rounded-[12px] text-[15px] md:text-[16px] gap-2">
               Get Involved
-              <img src="https://www.figma.com/api/mcp/asset/08c14db6-5cef-49df-b506-55fd15066093" alt="Icon" className="size-[13px]" />
+              <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
           </div>
         </div>

@@ -61,9 +61,9 @@ export default function EventsSection() {
                   <p>Location: {event.location}</p>
                   <p>Time: {event.time}</p>
                 </div>
-                <button className="border-2 border-[#2d584a] text-[#2d584a] rounded-full px-[22px] md:px-[26px] py-[12px] md:py-[14px] text-[13px] md:text-[14px] font-medium tracking-[0.14px] flex items-center gap-2 hover:bg-[#2d584a] hover:text-white transition-all w-fit">
+                <button className="group border-2 border-[#2d584a] text-[#2d584a] rounded-full px-[22px] md:px-[26px] py-[12px] md:py-[14px] text-[13px] md:text-[14px] font-medium tracking-[0.14px] flex items-center gap-2 hover:bg-[#2d584a] hover:text-white transition-all w-fit">
                   Explore
-                  <img src="https://www.figma.com/api/mcp/asset/48ec98cc-177d-46dc-a3e1-a85a059d77b3" alt="arrow" className="size-4" />
+                  <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </button>
               </div>
 

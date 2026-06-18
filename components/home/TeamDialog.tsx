@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { cn } from "@/lib/utils"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 
 export interface TeamMember {
   id: string
@@ -83,19 +84,19 @@ export default function TeamDialog({ member, isOpen, onClose, onNext, onPrevious
           {/* Design navigation: Previous (Left arrow overlay) */}
           <button 
               onClick={(e) => { e.stopPropagation(); onPrevious?.(); }}
-              className="absolute left-6 top-[130px] md:top-[252px] z-20 size-[44px] rounded-full bg-[#f8f8f2] border border-[#dcfcc0] flex items-center justify-center text-[#1c3530] hover:bg-white transition-all shadow-sm active:scale-95 cursor-pointer"
+              className="group absolute left-6 top-[130px] md:top-[252px] z-20 size-[44px] rounded-full bg-[#f8f8f2] border border-[#dcfcc0] flex items-center justify-center text-[#1c3530] hover:bg-white transition-all shadow-sm active:scale-95 cursor-pointer"
               aria-label="Previous team member"
           >
-              <img src="https://www.figma.com/api/mcp/asset/ad3e9d86-9766-4355-8c1e-315c7050e798" alt="Previous" className="size-5" />
+              <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-0.5" />
           </button>
 
           {/* Design navigation: Next (Right arrow overlay) */}
           <button 
               onClick={(e) => { e.stopPropagation(); onNext?.(); }}
-              className="absolute right-6 top-[130px] md:top-[252px] z-20 size-[44px] rounded-full bg-[#f8f8f2] border border-[#dcfcc0] flex items-center justify-center text-[#1c3530] hover:bg-white transition-all shadow-sm active:scale-95 cursor-pointer"
+              className="group absolute right-6 top-[130px] md:top-[252px] z-20 size-[44px] rounded-full bg-[#f8f8f2] border border-[#dcfcc0] flex items-center justify-center text-[#1c3530] hover:bg-white transition-all shadow-sm active:scale-95 cursor-pointer"
               aria-label="Next team member"
           >
-              <img src="https://www.figma.com/api/mcp/asset/e5ff2faf-bad0-40ae-b898-4a11816a9c5f" alt="Next" className="size-5" />
+              <ArrowRight size={20} className="transition-transform group-hover:translate-x-0.5" />
           </button>
         </div>
       </DialogContent>

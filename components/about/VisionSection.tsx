@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 export default function VisionSection() {
   return (
@@ -71,10 +72,12 @@ export default function VisionSection() {
               ))}
             </ul>
 
-            <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[48px] md:h-[54px] px-[24px] md:px-[28px] rounded-full text-[15px] md:text-[16px] font-semibold gap-2">
-              Explore Our Work
-              <ArrowUpRight size={16} />
-            </Button>
+            <Link href='/impact'>
+              <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[48px] md:h-[54px] px-[24px] md:px-[28px] rounded-full text-[15px] md:text-[16px] font-semibold gap-2">
+                Explore Our Work
+                <ArrowUpRight size={16} />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

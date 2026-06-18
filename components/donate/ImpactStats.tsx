@@ -1,19 +1,100 @@
 "use client"
 
 import { ArrowLeft, ArrowRight } from "lucide-react"
-import { useRef } from "react"
+import { useState, useEffect, useRef } from "react"
+
+const impactImages = [
+  { src: "https://www.figma.com/api/mcp/asset/88994552-c2a5-4b57-bdd3-0ac27e70df06", alt: "Impact 1", widthClass: "w-[280px] sm:w-[380px] md:w-[521px]" },
+  { src: "https://www.figma.com/api/mcp/asset/c913f3d1-868f-4bbe-b928-a0de8a62dfec", alt: "Impact 2", widthClass: "w-[180px] sm:w-[220px] md:w-[293px]" },
+  { src: "https://www.figma.com/api/mcp/asset/1bafcb6b-2ea8-4045-ad66-633583044001", alt: "Impact 3", widthClass: "w-[320px] sm:w-[440px] md:w-[587px]" },
+  { src: "https://www.figma.com/api/mcp/asset/021afc96-a66e-448a-81d0-785fce7fc217", alt: "Impact 4", widthClass: "w-[180px] sm:w-[220px] md:w-[293px]" },
+]
 
 export default function ImpactStats() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null)
+  const timerRef = useRef<NodeJS.Timeout | null>(null)
+  const isProgrammaticScroll = useRef(false)
 
-  const scroll = (direction: "left" | "right") => {
+  const scrollToImage = (index: number) => {
     if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current
-      const scrollAmount = clientWidth * 0.6
-      const scrollTo = direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount
-      scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" })
+      isProgrammaticScroll.current = true
+      const container = scrollRef.current
+      const children = container.children
+      if (children && children[index]) {
+        const targetElement = children[index] as HTMLElement
+        const containerOffsetLeft = container.offsetLeft
+        const targetOffsetLeft = targetElement.offsetLeft
+        
+        const scrollPos = targetOffsetLeft - containerOffsetLeft
+        const offset = window.innerWidth >= 768 ? 80 : (window.innerWidth >= 640 ? 32 : 16)
+        
+        container.scrollTo({
+          left: scrollPos - offset,
+          behavior: "smooth"
+        })
+        
+        setTimeout(() => {
+          isProgrammaticScroll.current = false
+        }, 600)
+      }
     }
   }
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => {
+      const nextIdx = (prev - 1 + impactImages.length) % impactImages.length
+      scrollToImage(nextIdx)
+      return nextIdx
+    })
+  }
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => {
+      const nextIdx = (prev + 1) % impactImages.length
+      scrollToImage(nextIdx)
+      return nextIdx
+    })
+  }
+
+  const handleScroll = () => {
+    if (isProgrammaticScroll.current || !scrollRef.current) return
+    const container = scrollRef.current
+    const scrollLeft = container.scrollLeft
+    const children = container.children
+    const containerOffsetLeft = container.offsetLeft
+    
+    let activeIdx = 0
+    let closestDiff = Infinity
+    
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i] as HTMLElement
+      const targetPos = child.offsetLeft - containerOffsetLeft
+      const offset = window.innerWidth >= 768 ? 80 : (window.innerWidth >= 640 ? 32 : 16)
+      const diff = Math.abs(targetPos - offset - scrollLeft)
+      
+      if (diff < closestDiff) {
+        closestDiff = diff
+        activeIdx = i
+      }
+    }
+    
+    if (activeIdx !== currentIndex) {
+      setCurrentIndex(activeIdx)
+    }
+  }
+
+  useEffect(() => {
+    if (!isHovered) {
+      timerRef.current = setInterval(() => {
+        handleNext()
+      }, 4000)
+    }
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current)
+    }
+  }, [isHovered])
 
   return (
     <section className="bg-[#2d584a] py-10 md:py-[60px] relative overflow-hidden">
@@ -35,15 +116,15 @@ export default function ImpactStats() {
             {/* Nav Arrows */}
             <div className="flex gap-[8px] shrink-0 mt-2 md:mt-8">
               <button
-                onClick={() => scroll("left")}
-                className="size-[36px] md:size-[40px] border border-[#fdf9ed] rounded-[4px] flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer"
+                onClick={handlePrev}
+                className="size-[36px] md:size-[40px] border border-[#fdf9ed] rounded-[4px] flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer text-[#fdf9ed]"
                 aria-label="Previous image"
               >
                 <ArrowLeft />
               </button>
               <button
-                onClick={() => scroll("right")}
-                className="size-[36px] md:size-[40px] border border-[#fdf9ed] rounded-[4px] flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer"
+                onClick={handleNext}
+                className="size-[36px] md:size-[40px] border border-[#fdf9ed] rounded-[4px] flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer text-[#fdf9ed]"
                 aria-label="Next image"
               >
                 <ArrowRight />
@@ -59,21 +140,41 @@ export default function ImpactStats() {
         {/* Horizontal Scrolling images */}
         <div
           ref={scrollRef}
+          onScroll={handleScroll}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           className="mt-10 md:mt-20 flex gap-4 md:gap-[32px] overflow-x-auto pb-4 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <div className="h-[200px] sm:h-[280px] md:h-[391px] w-[280px] sm:w-[380px] md:w-[521px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/88994552-c2a5-4b57-bdd3-0ac27e70df06" alt="Impact 1" className="size-full object-cover" />
-          </div>
-          <div className="h-[200px] sm:h-[280px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/c913f3d1-868f-4bbe-b928-a0de8a62dfec" alt="Impact 2" className="size-full object-cover" />
-          </div>
-          <div className="h-[200px] sm:h-[280px] md:h-[391px] w-[320px] sm:w-[440px] md:w-[587px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/1bafcb6b-2ea8-4045-ad66-633583044001" alt="Impact 3" className="size-full object-cover" />
-          </div>
-          <div className="h-[200px] sm:h-[280px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/021afc96-a66e-448a-81d0-785fce7fc217" alt="Impact 4" className="size-full object-cover" />
-          </div>
+          {impactImages.map((img, idx) => (
+            <div 
+              key={idx} 
+              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-opacity duration-300 ${
+                idx === currentIndex ? "opacity-100" : "opacity-70"
+              }`}
+            >
+              <img src={img.src} alt={img.alt} className="size-full object-cover" />
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Dots Indicator */}
+        <div className="flex justify-center gap-2 mt-8">
+          {impactImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setCurrentIndex(index)
+                scrollToImage(index)
+              }}
+              className={`size-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                index === currentIndex 
+                  ? "bg-[#f8f8f2] w-6" 
+                  : "bg-[#f8f8f2]/40 hover:bg-[#f8f8f2]/80"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

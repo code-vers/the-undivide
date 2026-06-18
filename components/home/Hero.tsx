@@ -7,9 +7,9 @@ export default function Hero() {
     <section className="relative min-h-[600px] md:min-h-[1081px] w-full overflow-hidden flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://www.figma.com/api/mcp/asset/db746d67-4f29-4ed4-b7e7-68192da19966" 
-          alt="Hero Background" 
+        <img
+          src="https://www.figma.com/api/mcp/asset/db746d67-4f29-4ed4-b7e7-68192da19966"
+          alt="Hero Background"
           className="size-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30" />
@@ -24,32 +24,36 @@ export default function Hero() {
                 THE UNDIVIDE PROJECT
               </p>
             </div>
-            
+
             <div className="space-y-[32px]">
-               <div className="max-w-4xl">
-                  <h1 className="text-3xl sm:text-5xl md:text-[64px] font-bold leading-[1.1] text-white">
-                    Closing the Divide<br />
-                    Between Climate Risk<br />
-                    and Digital Access.
-                  </h1>
-               </div>
-               
-               <div className="max-w-[786px] opacity-80 pt-[8.19px]">
-                  <p className="text-lg sm:text-2xl md:text-[32px] leading-snug text-white font-normal">
-                    We connect communities with tools, data, education, and support to prepare for climate challenges and build a more equitable future.
-                  </p>
-               </div>
+              <div className="max-w-4xl">
+                <h1 className="text-3xl sm:text-5xl md:text-[64px] font-bold leading-[1.1] text-white">
+                  Closing the Divide<br />
+                  Between Climate Risk<br />
+                  and Digital Access.
+                </h1>
+              </div>
+
+              <div className="max-w-[786px] opacity-80 pt-[8.19px]">
+                <p className="text-lg sm:text-2xl md:text-[32px] leading-snug text-white font-normal">
+                  We connect communities with tools, data, education, and support to prepare for climate challenges and build a more equitable future.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-wrap gap-[24px] items-center">
-              <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[64px] px-[32px] rounded-[12px] text-[16px] shadow-lg gap-2">
-                Explore Our Work
-                <ArrowUpRight size={16} />
-              </Button>
-              <Button variant="outline" className="bg-transparent dark:bg-transparent text-white dark:text-white border-white dark:border-white hover:bg-white dark:hover:bg-white hover:text-[#1c3530] dark:hover:text-[#1c3530] h-[64px] px-[33px] rounded-[12px] text-[16px] gap-2">
-                Get Involved
-                <ArrowUpRight size={16} />
-              </Button>
+              <Link href={'/impact'}>
+                <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[64px] px-[32px] rounded-[12px] text-[16px] shadow-lg gap-2">
+                  Explore Our Work
+                  <ArrowUpRight size={16} />
+                </Button>
+              </Link>
+              <Link href={'/contact'}>
+                <Button variant="outline" className="bg-transparent dark:bg-transparent text-white dark:text-white border-white dark:border-white hover:bg-white dark:hover:bg-white hover:text-[#1c3530] dark:hover:text-[#1c3530] h-[64px] px-[33px] rounded-[12px] text-[16px] gap-2">
+                  Get Involved
+                  <ArrowUpRight size={16} />
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -59,7 +63,7 @@ export default function Hero() {
               {/* Pillar 1 */}
               <div className="flex items-center gap-[16px] w-[210px]">
                 <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                   <img src="https://www.figma.com/api/mcp/asset/b7e73fd7-16f0-43ed-97cf-3ba4a1b96ba0" alt="Icon" className="h-[21px] w-[28px]" />
+                  <img src="https://www.figma.com/api/mcp/asset/b7e73fd7-16f0-43ed-97cf-3ba4a1b96ba0" alt="Icon" className="h-[21px] w-[28px]" />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Public Education</p>
@@ -71,7 +75,7 @@ export default function Hero() {
               {/* Pillar 2 */}
               <div className="flex items-center gap-[16px] w-[281px]">
                 <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                   <img src="https://www.figma.com/api/mcp/asset/e325640d-81ad-49ff-a736-436fabd84c39" alt="Icon" className="h-[19px] w-[27px]" />
+                  <img src="https://www.figma.com/api/mcp/asset/e325640d-81ad-49ff-a736-436fabd84c39" alt="Icon" className="h-[19px] w-[27px]" />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Community Co-Creation</p>
@@ -83,7 +87,7 @@ export default function Hero() {
               {/* Pillar 3 */}
               <div className="flex items-center gap-[16px] w-[271px]">
                 <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                   <img src="https://www.figma.com/api/mcp/asset/cb175779-83da-4c65-bef1-0691f0a911d2" alt="Icon" className="size-6" />
+                  <img src="https://www.figma.com/api/mcp/asset/cb175779-83da-4c65-bef1-0691f0a911d2" alt="Icon" className="size-6" />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Research & Advocacy</p>
