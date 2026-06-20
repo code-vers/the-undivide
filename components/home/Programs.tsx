@@ -19,7 +19,7 @@ const programs = [
   {
     id: "02",
     title: "Our Solution",
-    description: "We bring together innovation, tech, and real partnerships to create solutions that work for everyone—not just a select few.",
+    description: "We bring together innovation, tech, and real partnerships to create solutions that work for everyone, not just a select few.",
     image: "https://www.figma.com/api/mcp/asset/b51f3581-5e9b-4787-b135-ae10bd97fc8a",
     points: [
       "Community-driven technology solutions",

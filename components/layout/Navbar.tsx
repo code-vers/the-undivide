@@ -54,11 +54,8 @@ export default function Navbar() {
           {/* Right Side: Donate button + Hamburger */}
           <div className="flex items-center gap-3 shrink-0">
             <Link href="/donate" className="hidden sm:block">
-              <Button
-                variant="outline"
-                className="bg-transparent border-white text-white hover:bg-white hover:text-[#1a352f] rounded-[22px] px-[20px] lg:px-[33px] h-[38px] lg:h-[44px] text-[11px] lg:text-[12px] font-semibold tracking-[0.6px] uppercase transition-all duration-300"
-              >
-                DONATE
+              <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[52px] px-[32px] rounded-full text-[16px] shadow-lg gap-2 hover:border-white">
+                Donate
               </Button>
             </Link>
 
@@ -128,9 +125,9 @@ export default function Navbar() {
 
           {/* Donate Button */}
           <div className="px-6 pb-8 pt-4 border-t border-white/10">
-            <Link href="/donate" onClick={() => setIsOpen(false)} className="block">
-              <Button className="w-full bg-white text-[#1a352f] hover:bg-white/90 rounded-[22px] h-[46px] text-[13px] font-semibold tracking-[0.6px] uppercase">
-                DONATE
+            <Link href="/donate" onClick={() => setIsOpen(false)} >
+              <Button className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[64px] px-[32px] rounded-full text-[16px] shadow-lg gap-2">
+                Explore Our Work
               </Button>
             </Link>
           </div>

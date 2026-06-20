@@ -59,28 +59,28 @@ export default function ContactForm() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-[24px]">
                 <div className="space-y-2">
                   <label className="text-[13px] md:text-[14px] font-medium text-[#1c3530] tracking-[0.14px]">Your Name</label>
-                  <input type="text" placeholder="Jane Doe" className="w-full bg-white border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] outline-none focus:border-[#2d584a] transition-colors" />
+                  <input type="text" placeholder="Jane Doe" className="w-full bg-white text-[#1c3530] placeholder:text-[#8fa39d] border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] transition-all focus:outline-none focus:ring-2 focus:ring-[#2d584a] focus:border-[#2d584a]" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[13px] md:text-[14px] font-medium text-[#1c3530] tracking-[0.14px]">Email Address</label>
-                  <input type="email" placeholder="jane@example.com" className="w-full bg-white border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] outline-none focus:border-[#2d584a] transition-colors" />
+                  <input type="email" placeholder="jane@example.com" className="w-full bg-white text-[#1c3530] placeholder:text-[#8fa39d] border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] transition-all focus:outline-none focus:ring-2 focus:ring-[#2d584a] focus:border-[#2d584a]" />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-[24px]">
                 <div className="space-y-2">
                   <label className="text-[13px] md:text-[14px] font-medium text-[#1c3530] tracking-[0.14px]">Subject</label>
-                  <input type="text" placeholder="How can we help?" className="w-full bg-white border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] outline-none focus:border-[#2d584a] transition-colors" />
+                  <input type="text" placeholder="How can we help?" className="w-full bg-white text-[#1c3530] placeholder:text-[#8fa39d] border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] transition-all focus:outline-none focus:ring-2 focus:ring-[#2d584a] focus:border-[#2d584a]" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[13px] md:text-[14px] font-medium text-[#1c3530] tracking-[0.14px]">Phone / Organization</label>
-                  <input type="text" placeholder="Optional" className="w-full bg-white border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] outline-none focus:border-[#2d584a] transition-colors" />
+                  <input type="text" placeholder="Optional" className="w-full bg-white text-[#1c3530] placeholder:text-[#8fa39d] border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] transition-all focus:outline-none focus:ring-2 focus:ring-[#2d584a] focus:border-[#2d584a]" />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-[13px] md:text-[14px] font-medium text-[#1c3530] tracking-[0.14px]">Your Message</label>
-                <textarea placeholder="Write your message here..." className="w-full bg-white border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] min-h-[140px] md:min-h-[160px] outline-none focus:border-[#2d584a] transition-colors resize-none" />
+                <textarea placeholder="Write your message here..." className="w-full bg-white text-[#1c3530] placeholder:text-[#8fa39d] border border-[#a8b5b0] rounded-[18px] px-[15px] md:px-[17px] py-[13px] md:py-[15px] text-[15px] md:text-[16px] min-h-[140px] md:min-h-[160px] transition-all focus:outline-none focus:ring-2 focus:ring-[#2d584a] focus:border-[#2d584a] resize-none" />
               </div>
 
               <button className="group bg-[#2d584a] text-white px-[24px] md:px-[32px] py-[14px] md:py-[16px] rounded-full font-bold text-[15px] md:text-[16px] flex items-center gap-2 hover:bg-[#1c3530] transition-colors shadow-sm active:scale-95">

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowRight, ArrowUpRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import TeamDialog, { TeamMember } from "./TeamDialog"
 
@@ -11,7 +11,11 @@ const teamMembers: TeamMember[] = [
     id: "monica",
     name: "Monica Sanders",
     role: "Founder / Advocate in Chief",
-    description: "Monica Sanders is the visionary behind The Undivide Project. As a globally recognized expert in environmental justice and disaster resilience, she has dedicated her career to ensuring that technology serves as a bridge, not a barrier, for the most vulnerable communities.",
+    description: `Founder, Advocate in Chief
+
+Prof. Monica Sanders JD, LL.M. is an attorney, educator, and advocate. She focuses on disasters, climate justice, and how law and policy can be both inhibitors and creators of systemic change. She holds undergraduate degrees from the University of Miami and the University of Costa Rica. She received her science and legal qualifications from the Catholic University of America, Jagiellonian University, Harvard Law School, and University College London. Professor Sanders is a two-time social impact founder, who started both The Undivide Project and Bonne Terre LLC - Consulting for the Planet. She and her teams partner with communities in Washington, DC, Southeast Louisiana, and Puerto Rico. Professor Sanders teaches at the Georgetown University Law Center and is an affiliated scholar with the Earth Commons at Georgetown University.
+
+`,
     image: "https://www.figma.com/api/mcp/asset/2aa410c4-eaeb-494f-a2b8-0a674e6c24f6",
     tags: ["Leadership", "Advocacy", "Policy", "Justice"]
   },
@@ -19,32 +23,36 @@ const teamMembers: TeamMember[] = [
     id: "anne",
     name: "Anne Gibbon",
     role: "Advisor",
-    description: "Anne Gibbon provides strategic guidance on community-led innovation and sustainable design. Her extensive background in social impact helps the project build robust frameworks for long-term climate adaptation and digital equity.",
-    image: "https://www.figma.com/api/mcp/asset/bdd6d645-0289-4eb5-9c88-1493c9bb9c89",
+    description: `Advisor
+
+Anne Gibbon is passionate about designing experiences that support leaders in making better decisions. She graduated from the Naval Academy in 2003, setting the 2000m erg record and becoming the first woman at the school to box competitively. She later won the 2007 National Amateur Boxing Championship. Through 10 years of military service Anne moved between roles including navigator of a warship, admiral’s aide, and leadership instructor. Her last tour was at Naval Special Warfare Development Group, where she helped to found an internal think tank. Since leaving the Navy she completed a fellowship at Stanford’s Design School and went on to consulting. Before launching Matri, a decision management and AI tech startup, Anne lived in New Zealand working with Maori tribes, co-designing innovation strategies.`,
+    image: "https://www.theundivideproject.org/assets/Anne-Gibbon-DOZrB59X.jpeg",
     tags: ["Strategy", "Design", "Innovation", "Impact"]
   },
   {
-    id: "sarah",
-    name: "Dr. Sarah Chen",
-    role: "Director of Technology",
-    description: "Dr. Chen leads our technology initiatives, developing innovative solutions to bridge the digital divide and enhance climate resilience through accessible technology. She oversees digital infrastructure and climate data systems.",
-    image: "https://www.figma.com/api/mcp/asset/0a86def7-1994-4d7e-877f-8c5e7328455a",
+    id: "yian",
+    name: "Yian Hu",
+    role: "Alumni",
+    description: `Yian Hu is a second-year student at Georgetown University, pursuing a Master’s in Data Science and Analytics. He joined The Undivide Project team in September 2024 through his capstone course, focusing on evaluating climate risks and health impacts in low socioeconomic status counties across Ten States. Drawing on his passion for data-driven problem-solving, Yian aims to identify counties most vulnerable to climate change and support interventions that foster health equity and resilience.`,
+    image: "https://www.theundivideproject.org/assets/Yian-D39OE-5B.jpg",
     tags: ["Technology", "Innovation", "Data Science", "Infrastructure"]
   },
   {
     id: "meghan",
-    name: "Meghan",
-    role: "Team Member",
-    description: "Meghan is a key driver of our grassroots engagement programs. She works directly with local communities to co-create digital tools that address their specific environmental challenges, ensuring our solutions are truly community-driven.",
-    image: "https://www.figma.com/api/mcp/asset/47eca578-7d4c-4603-89a2-f786208dcad4",
+    name: "Meghan McPherson",
+    role: "Advisor",
+    description: `Meghan McPherson is the Director of Emergency Management Education, Training, and Exercises for the Mount Sinai Health System in New York City. In this role, Meghan leads the development, planning, and execution of a robust training and exercise program across the health system. McPherson is a seasoned emergency manager with over two decades of experience in the field. Most recently, she served as the Director of Emergency Management for Mount Sinai Queens Hospital on the front lines of the response to the COVID-19 pandemic. Prior to joining the Mount Sinai Health System, Meghan was Assistant Director of the Center for Health Innovation (CHI) at Adelphi University, served as the program coordinator for emergency management graduate programs, and concentrated her work on community-based social resilience initiatives. Preceding her work at Adelphi, Meghan spent four years as both the Grants Manager and the Energy Assurance Program Manager in the Governor’s Office of Energy and Planning in New Hampshire. While in this position, she supported the State Emergency Operations Center during disasters by ensuring the continuity of the state’s energy supply. She also worked for James Lee Witt Associates in Washington, D.C. and deployed multiple times to Louisiana to support recovery efforts following Hurricane Katrina. Meghan serves on the University of Southern California Emergency Management program faculty, where she also participated in curriculum and course development. She previously wrote the curriculum for the MPS in Emergency Management and served as adjunct faculty at Tulane University’s Emergency and Security Studies graduate programs. Meghan is a Certified Emergency Manager (CEM), Certified National Healthcare Disaster Professional (NHDP-BC), and Certified Healthcare Provider Continuity Professional (CHPCP). She is the Co-Founder and Co-Director of the Pracademic Affairs journal. She is also a member of the Naval Postgraduate School Center for Homeland Defense and Security Executive Leaders Program Cohort 2102. Meghan earned her BA in political science at the University of New Hampshire and her Master of Public Policy (MPP) with a concentration in national security policy from The George Washington University.`,
+    image: "https://www.theundivideproject.org/assets/Meghan-CpWtG55g.jpg",
     tags: ["Outreach", "Community", "Engagement", "Fieldwork"]
   },
   {
     id: "dustin",
-    name: "Dustin",
-    role: "Team Member",
-    description: "Dustin specializes in the technical implementation of our climate resilience tools. With a focus on systems engineering and IoT solutions, he ensures our data-driven platforms are reliable and effective in real-world environments.",
-    image: "https://www.figma.com/api/mcp/asset/b1bc9687-773f-408d-aed7-e55fef8d9e11",
+    name: "Dustin Loup",
+    role: "Founding Board Member/Community Connector",
+    description: `Founding Board Member/Community Connector
+
+Dustin Loup, a Founding Board Member and Community Connector for The Undivide Project, focuses on building strong community relationships and guiding the project's outreach strategies.`,
+    image: "https://www.theundivideproject.org/assets/Dustin-ZNVgCs_z.jpg",
     tags: ["Systems", "IoT", "Technical", "Climate Data"]
   },
   {
@@ -118,71 +126,70 @@ export default function Team() {
         {/* Team Grid */}
         <div className="relative w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Card 1: Monica Sanders */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "monica") || null)}
             className="lg:col-span-1 lg:row-span-2 relative group overflow-hidden rounded-[24px] md:rounded-[48px] border border-[#dcfcc0] h-[320px] md:h-[400px] lg:h-[589px] cursor-pointer"
           >
             <img src={teamMembers[0].image} alt="Monica Sanders" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-[#1c3530]/40 to-transparent p-[32px] flex flex-col justify-end">
-               <h3 className="text-xl md:text-2xl lg:text-[32px] font-bold text-white leading-tight">Monica Sanders</h3>
-               <p className="text-sm md:text-base lg:text-[20px] font-medium text-[#e5fff8]/80 mt-1">Founder / Advocate in Chief</p>
-               <div className="mt-8 self-start">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-xl md:text-2xl lg:text-[32px] font-bold text-white leading-tight">{teamMembers[0].name}</h3>
+              <p className="text-sm md:text-base lg:text-[20px] font-medium text-[#e5fff8]/80 mt-1">{teamMembers[0].role}</p>
+              <div className="mt-8 self-start">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
           {/* Card 2: Anne Gibbon */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "anne") || null)}
             className="lg:col-span-1 lg:row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[42px] border border-[#dcfcc0] h-[220px] md:h-[280px] cursor-pointer"
           >
             <img src={teamMembers[1].image} alt="Anne Gibbon" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-[#1c3530]/40 to-transparent p-[24px] flex flex-col justify-end">
-               <h3 className="text-xl md:text-[32px] font-bold text-white leading-tight">Anne Gibbon</h3>
-               <p className="text-sm md:text-[20px] font-medium text-[#e5fff8]/80 mt-1">Advisor</p>
-               <div className="mt-6 self-start">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-xl md:text-[32px] font-bold text-white leading-tight">{teamMembers[1].name}</h3>
+              <p className="text-sm md:text-[20px] font-medium text-[#e5fff8]/80 mt-1">{teamMembers[1].role}</p>
+              <div className="mt-6 self-start">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
           {/* Card 3: Dr. Sarah Chen */}
-          <div 
-            onClick={() => setSelectedMember(teamMembers.find(m => m.id === "sarah") || null)}
+          <div
+            onClick={() => setSelectedMember(teamMembers.find(m => m.id === "yian") || null)}
             className="lg:col-span-1 lg:row-span-2 relative group overflow-hidden rounded-[24px] md:rounded-[57px] border-[#2d584a] border-[1px] shadow-2xl h-[320px] md:h-[400px] lg:h-[581px] cursor-pointer"
           >
             <img src={teamMembers[2].image} alt="Dr. Sarah Chen" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/85 via-transparent to-transparent p-[24px] flex flex-col justify-end">
-               <h3 className="text-xl md:text-[32px] font-bold text-[#f8f8f2] leading-tight">Dr. Sarah Chen</h3>
-               <p className="text-sm md:text-[20px] font-medium text-[#c5d0cc] mt-1">Director of Technology</p>
-               <p className="text-xs md:text-[14px] font-medium text-[#e8ebe9] mt-2">Digital infrastructure and climate data systems</p>
-               <div className="mt-6">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-xl md:text-[32px] font-bold text-[#f8f8f2] leading-tight">{teamMembers[2].name}</h3>
+              <p className="text-sm md:text-[20px] font-medium text-[#c5d0cc] mt-1">{teamMembers[2].role}</p>
+              <div className="mt-6">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
           {/* Card 4: Meghan */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "meghan") || null)}
             className={cn(
               "lg:col-span-1 lg:row-span-1 relative group overflow-hidden rounded-[466px] border border-[#dcfcc0] h-[280px] cursor-pointer",
               !isExpanded && "hidden md:block"
             )}
           >
-             <img src={teamMembers[3].image} alt="Meghan" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src={teamMembers[3].image} alt="Meghan" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#1c3530]/90 via-[#1c3530]/40 to-transparent p-[40px] flex flex-col justify-center items-end text-right">
-               <h3 className="text-[32px] font-bold text-white leading-tight">Meghan</h3>
-               <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Team Member</p>
-               <div className="mt-4">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-[32px] font-bold text-white leading-tight">{teamMembers[3].name}</h3>
+              <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">{teamMembers[3].role}</p>
+              <div className="mt-4">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
           {/* Card 5: Dustin */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "dustin") || null)}
             className={cn(
               "lg:col-start-2 lg:col-span-1 lg:row-start-2 lg:row-span-1 relative group overflow-hidden rounded-[42px] border border-[#dcfcc0] h-[284px] cursor-pointer",
@@ -191,11 +198,11 @@ export default function Team() {
           >
             <img src={teamMembers[4].image} alt="Dustin" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-transparent to-transparent p-[24px] flex flex-col justify-end">
-               <h3 className="text-[32px] font-bold text-white leading-tight">Dustin</h3>
-               <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Team Member</p>
-               <div className="mt-6 self-start">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-[32px] font-bold text-white leading-tight">{teamMembers[4].name}</h3>
+              <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">{teamMembers[4].role}</p>
+              <div className="mt-6 self-start">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
@@ -206,11 +213,11 @@ export default function Team() {
           )}>
             <img src="https://www.figma.com/api/mcp/asset/fb95f6e0-5041-4436-8411-c869a78f6ace" alt="Join Us" className="absolute inset-0 size-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-[#1c3530]/30 to-transparent p-[32px] flex flex-col justify-end">
-               <h3 className="text-[32px] font-bold text-white leading-tight">Join Us</h3>
-               <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Open Position</p>
-               <Button variant="outline" className="mt-8 self-start rounded-full bg-[#f8f8f2] text-[#1c3530] border-none font-semibold text-[14px] hover:bg-[#2d584a] hover:text-white transition-colors cursor-pointer">
-                  Learn More
-               </Button>
+              <h3 className="text-[32px] font-bold text-white leading-tight">Join Us</h3>
+              <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Open Position</p>
+              <Button variant="outline" className="mt-8 self-start rounded-full bg-[#f8f8f2] text-[#1c3530] border-none font-semibold text-[14px] hover:bg-[#2d584a] hover:text-white transition-colors cursor-pointer">
+                Learn More
+              </Button>
             </div>
           </div>
 
@@ -219,67 +226,67 @@ export default function Team() {
             "lg:col-start-1 lg:col-span-1 lg:row-start-3 lg:row-span-1 relative group overflow-hidden rounded-[42px] border border-[#dcfcc0] h-[280px]",
             !isExpanded && "hidden"
           )}>
-             <img src="https://www.figma.com/api/mcp/asset/e39d717c-3ded-44aa-a4c2-6eb2a1073206" alt="Community" className="absolute inset-0 size-full object-cover" />
+            <img src="https://www.figma.com/api/mcp/asset/e39d717c-3ded-44aa-a4c2-6eb2a1073206" alt="Community" className="absolute inset-0 size-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-transparent to-transparent p-[24px] flex flex-col justify-end">
-               <h3 className="text-[32px] font-bold text-white leading-tight">Community</h3>
-               <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Partner Network</p>
-               <Button variant="outline" className="mt-6 self-start rounded-full bg-[#f8f8f2] text-[#1c3530] border-none font-semibold text-[14px] hover:bg-[#2d584a] hover:text-white transition-colors cursor-pointer">
-                  View Partners
-               </Button>
+              <h3 className="text-[32px] font-bold text-white leading-tight">Community</h3>
+              <p className="text-[20px] font-medium text-[#e5fff8]/80 mt-1">Partner Network</p>
+              <Button variant="outline" className="mt-6 self-start rounded-full bg-[#f8f8f2] text-[#1c3530] border-none font-semibold text-[14px] hover:bg-[#2d584a] hover:text-white transition-colors cursor-pointer">
+                View Partners
+              </Button>
             </div>
           </div>
 
           {/* Card 8: Lihem Amlak */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "lihem") || null)}
             className={cn(
               "lg:col-start-2 lg:col-span-1 lg:row-start-3 lg:row-span-2 relative group overflow-hidden rounded-[56px] border border-[#dcfcc0] h-[400px] md:h-[520px] cursor-pointer",
               !isExpanded && "hidden md:block"
             )}
           >
-             <img src={teamMembers[5].image} alt="Lihem Amlak" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src={teamMembers[5].image} alt="Lihem Amlak" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/75 via-transparent to-transparent p-[24px] flex flex-col justify-end">
-               <h3 className="text-[32px] font-bold text-[#f8f8f2] leading-tight">Lihem Amlak</h3>
-               <p className="text-[20px] font-medium text-[#c5d0cc] mt-1">Volunteer Copywriter</p>
-               <div className="mt-6 self-start">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-[32px] font-bold text-[#f8f8f2] leading-tight">{teamMembers[5].name}</h3>
+              <p className="text-[20px] font-medium text-[#c5d0cc] mt-1">{teamMembers[5].role}</p>
+              <div className="mt-6 self-start">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
           {/* Card 9: Dave Jacobs */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "dave") || null)}
             className={cn(
               "lg:col-start-3 lg:col-span-1 lg:row-start-3 lg:row-span-2 relative group overflow-hidden rounded-[56px] border border-[#dcfcc0] h-[400px] md:h-[520px] cursor-pointer",
               !isExpanded && "hidden md:block"
             )}
           >
-             <img src={teamMembers[6].image} alt="Dave Jacobs" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src={teamMembers[6].image} alt="Dave Jacobs" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/75 via-transparent to-transparent p-[24px] flex flex-col justify-end">
-               <h3 className="text-[32px] font-bold text-[#f8f8f2] leading-tight">Dave Jacobs</h3>
-               <p className="text-[20px] font-medium text-[#c5d0cc] mt-1">Advisor</p>
-               <div className="mt-6 self-start">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-[32px] font-bold text-[#f8f8f2] leading-tight">{teamMembers[6].name}</h3>
+              <p className="text-[20px] font-medium text-[#c5d0cc] mt-1">{teamMembers[6].role}</p>
+              <div className="mt-6 self-start">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
           {/* Card 10: Anne Gibbon (Tall Rounded) */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "anne") || null)}
             className={cn(
               "lg:col-start-4 lg:col-span-1 lg:row-start-4 lg:row-span-1 relative group overflow-hidden rounded-[100px] border border-[#dcfcc0] h-[486px] cursor-pointer",
               !isExpanded && "hidden"
             )}
           >
-             <img src="https://www.figma.com/api/mcp/asset/2f705207-1e1d-4af1-aa2e-5393f0a3c941" alt="Anne Gibbon" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://www.figma.com/api/mcp/asset/2f705207-1e1d-4af1-aa2e-5393f0a3c941" alt="Anne Gibbon" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530] via-transparent to-transparent p-[24px] flex flex-col justify-end items-center text-center">
-               <h3 className="text-[20px] font-bold text-[#f8f8f2] leading-tight">Anne Gibbon</h3>
-               <p className="text-[14px] font-normal text-[#c5d0cc] mt-1">Advisor</p>
-               <div className="mt-4">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-[20px] font-bold text-[#f8f8f2] leading-tight">{teamMembers[1].name}</h3>
+              <p className="text-[14px] font-normal text-[#c5d0cc] mt-1">{teamMembers[1].role}</p>
+              <div className="mt-4">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
@@ -296,25 +303,25 @@ export default function Team() {
           </div>
 
           {/* Card 12: Anne Gibbon (Small Pill) */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "anne") || null)}
             className={cn(
               "lg:col-start-3 lg:col-span-1 lg:row-start-5 lg:row-span-1 relative group overflow-hidden rounded-full border border-[#dcfcc0] h-[240px] cursor-pointer",
               !isExpanded && "hidden"
             )}
           >
-             <img src="https://www.figma.com/api/mcp/asset/b0918f28-5250-4f45-b561-ce95a1eb04a1" alt="Anne Gibbon" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://www.figma.com/api/mcp/asset/b0918f28-5250-4f45-b561-ce95a1eb04a1" alt="Anne Gibbon" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/75 via-transparent to-transparent p-[24px] flex flex-col justify-end items-center text-center">
-               <h3 className="text-[20px] font-bold text-[#f8f8f2] leading-tight">Anne Gibbon</h3>
-               <p className="text-[14px] font-normal text-[#c5d0cc] mt-1">Advisor</p>
-               <div className="mt-4">
-                  <ViewProfileButton />
-               </div>
+              <h3 className="text-[20px] font-bold text-[#f8f8f2] leading-tight">{teamMembers[1].name}</h3>
+              <p className="text-[14px] font-normal text-[#c5d0cc] mt-1">{teamMembers[1].role}</p>
+              <div className="mt-4">
+                <ViewProfileButton />
+              </div>
             </div>
           </div>
 
           {/* Card 13: Lisa Park */}
-          <div 
+          <div
             onClick={() => setSelectedMember(teamMembers.find(m => m.id === "lisa") || null)}
             className={cn(
               "lg:col-start-2 lg:col-span-1 lg:row-start-5 lg:row-span-1 relative group overflow-hidden rounded-[42px] border border-[#dcfcc0] h-[300px] md:h-[377px] cursor-pointer",
@@ -323,10 +330,10 @@ export default function Team() {
           >
             <img src={teamMembers[7].image} alt="Lisa Park" className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/92 via-transparent to-transparent p-[24px] flex flex-col justify-end">
-              <h3 className="text-[32px] font-bold text-white leading-tight">Lisa Park</h3>
-              <p className="text-[20px] font-medium text-[#c5d0cc] mt-1">Communications Manager</p>
+              <h3 className="text-[32px] font-bold text-white leading-tight">{teamMembers[7].name}</h3>
+              <p className="text-[20px] font-medium text-[#c5d0cc] mt-1">{teamMembers[7].role}</p>
               <div className="mt-6 self-start">
-                  <ViewProfileButton />
+                <ViewProfileButton />
               </div>
             </div>
           </div>
@@ -334,20 +341,20 @@ export default function Team() {
 
         {/* View Full Team Toggle Button */}
         <div className="flex justify-center w-full mt-12 z-20">
-           <Button 
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[64px] px-[32px] rounded-[12px] text-[16px] shadow-lg gap-[12px]"
-           >
-              <span>{isExpanded ? "Show Less" : "View Full Team"}</span>
-              <div className="size-[13.33px] relative">
-                <img src="https://www.figma.com/api/mcp/asset/f82e8824-cd95-433f-abf8-9b6725ff2002" alt="Icon" className={cn("size-full transition-transform duration-500", isExpanded && "rotate-45")} />
-              </div>
-           </Button>
+          <Button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="bg-[#2d584a] hover:bg-[#1c3530] text-white h-[64px] px-[32px] rounded-[12px] text-[16px] shadow-lg gap-[12px]"
+          >
+            <span>{isExpanded ? "Show Less" : "View Full Team"}</span>
+            <div className="size-[13.33px] relative">
+              <ArrowRight className={cn("size-full transition-transform duration-500", isExpanded && "rotate-[270deg]")} />
+            </div>
+          </Button>
         </div>
       </div>
 
       {/* Team Member Dialog */}
-      <TeamDialog 
+      <TeamDialog
         member={selectedMember}
         isOpen={!!selectedMember}
         onClose={() => setSelectedMember(null)}
