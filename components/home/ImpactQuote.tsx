@@ -7,11 +7,11 @@ export default function ImpactQuote() {
       {/* Background with Overlays */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/78918359-201b-4736-bb68-0d69588b4ab2"
+          src="/assets/sections/home/community.png"
           alt="Impact Background"
           className="size-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#1c3530]/85" />
+        <div className="absolute inset-0 bg-[#1c3530]/10" />
         <div className="absolute inset-0 bg-black/37" />
       </div>
 

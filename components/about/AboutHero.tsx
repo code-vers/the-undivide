@@ -2,19 +2,19 @@ import { Button } from "@/components/ui/button"
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[753px] w-full overflow-hidden flex items-end">
+    <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[950px] w-full overflow-hidden flex items-end">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/c6ce2693-3499-44e3-a698-3414fd466210"
+          src="/assets/bg/about-hero.JPG"
           alt="Mission Background"
-          className="size-full object-cover"
+          className="size-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/53" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1760px] px-4 sm:px-8 md:px-[80px] pt-[100px] md:pt-[180px] lg:pt-[264px] pb-10 md:pb-16">
+      <div className="relative z-10 mx-auto w-full max-w-[1760px] px-4 sm:px-8 md:px-[80px] pt-16 md:pt-24 lg:pt-[160px] pb-10 md:pb-16">
         <div className="max-w-[1011px] space-y-6 md:space-y-[42px]">
           <div className="opacity-90">
             <p className="text-[14px] md:text-[20px] font-semibold tracking-wide text-white uppercase">

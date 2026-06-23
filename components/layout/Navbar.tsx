@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="absolute top-0 z-50 w-full backdrop-blur-[6px] bg-[#1a352f]/90">
+      <header className="sticky top-0 z-50 w-full backdrop-blur-[6px] bg-[#1a352f]/90">
         <div className="mx-auto flex h-[80px] md:h-[100px] lg:h-[123px] max-w-[1920px] items-center justify-between px-4 sm:px-6 md:px-[80px]">
           {/* Logo Section */}
           <Link href="/" className="flex items-start shrink-0" onClick={() => setIsOpen(false)}>

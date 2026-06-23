@@ -6,11 +6,11 @@ export default function ChatSection() {
       {/* Background with Overlays */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://www.figma.com/api/mcp/asset/d5a16ef2-ccaf-4517-bdae-457ad8888f70" 
+          src="/assets/sections/about/chat.png" 
           alt="Chat Background" 
           className="size-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#1c3530]/85" />
+        <div className="absolute inset-0 bg-[#1c3530]/15" />
         <div className="absolute inset-0 bg-black/37" />
       </div>
 

@@ -4,29 +4,29 @@ import Link from "next/link"
 const newsItems = [
   {
     category: "MIT Technology Review",
-    title: "Free Coding Workshops Empower Underserved Communities",
-    description: "Digital literacy program graduates first cohort of 150 students in web development and data analysis.",
+    title: "How climate vulnerability and the digital divide are linked",
+    description: "Monica Sanders draws connections between internet availability, environmental risk, and historical racial inequity for the Undivide Project.",
     date: "May 10, 2026",
     source: "TechCrunch",
-    image: "https://www.figma.com/api/mcp/asset/54e3d323-928f-4007-bbab-7389940107dd",
+    image: "/assets/sections/about/news/news-1.png",
     url: 'https://www.technologyreview.com/2023/06/20/1074244/climate-vulnerability-digital-divide/'
   },
   {
     category: "Grinnel College",
-    title: "Community Solar Initiative Powers 1,200 Low-Income Homes",
-    description: "Renewable energy access program reduces utility costs while cutting carbon emissions.",
+    title: "Grinnell College Announces Monica Sanders as the Inaugural Social Innovator in Residence",
+    description: "Grinnell College is thrilled to announce Monica Sanders as the distinguished inaugural recipient of the Social Innovator in Residence Program.",
     date: "May 6, 2026",
     source: "Grist",
-    image: "https://www.figma.com/api/mcp/asset/c6a96dae-a665-4346-ae56-010b5fdfbb7d",
+    image: "/assets/sections/about/news/news-2.png",
     url: 'https://www.grinnell.edu/news/grinnell-college-announces-monica-sanders-inaugural-social-innovator-residence'
   },
   {
     category: "Forbes",
-    title: "Climate Adaptation Planning Tools Now Available to Cities",
-    description: "Open-source platform helps municipalities develop evidence-based resilience strategies.",
+    title: "Expert Monica Sanders Analyzes Disproportionate Impact Of Natural Disasters On BIPOC Communities",
+    description: "Low-socioeconomic communities face hindrances like prolonged wait times for utility services, personal loss, and lack of essential...",
     date: "May 1, 2026",
     source: "CityLab",
-    image: "https://www.figma.com/api/mcp/asset/9f92ba8f-907d-46c3-8429-11216f19940d",
+    image: "/assets/sections/about/news/news-3.jpg",
     url: 'https://www.forbes.com/sites/yolandabaruch/2022/10/25/expert-monica-sanders-analyzes-disproportionate-impact-of-natural-disasters-on-bipoc-communities/'
   }
 ]
@@ -53,28 +53,28 @@ export default function NewsSection() {
         {/* News Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {newsItems.map((item, idx) => (
-            <div key={idx} className="bg-white border border-[#dcfcc0] rounded-[18px] overflow-hidden group">
-              <div className="h-[220px] sm:h-[300px] md:h-[380px] lg:h-[497px] overflow-hidden">
-                <img src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div key={idx} className="group bg-white border border-[#dcfcc0] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[18px] overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div className="h-[220px] sm:h-[300px] md:h-[380px] lg:h-[497px] overflow-hidden bg-[#f8f8f2] flex items-center justify-center">
+                <img src={item.image} alt={item.title} className="size-full object-contain transition-transform duration-500 group-hover:scale-105" />
               </div>
               <div className="p-4 md:p-[20px] space-y-2 md:space-y-3">
-                <span className="text-[11px] font-semibold text-[#2d584a] tracking-[0.88px] uppercase">
+                <span className="text-[11px] font-semibold text-[#2d584a] group-hover:text-white/80 tracking-[0.88px] uppercase transition-colors duration-300">
                   {item.category}
                 </span>
-                <h3 className="text-[17px] md:text-[20px] font-bold text-[#1c3530] leading-snug line-clamp-2">
+                <h3 className="text-[17px] md:text-[20px] font-bold text-[#1c3530] group-hover:text-white leading-snug line-clamp-2 transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-[14px] md:text-[16px] text-[#3d5e57] line-clamp-2">
+                <p className="text-[14px] md:text-[16px] text-[#3d5e57] group-hover:text-white/90 line-clamp-2 transition-colors duration-300">
                   {item.description}
                 </p>
 
                 <div className="flex items-center gap-3 pt-3">
-                  <span className="text-[12px] md:text-[13px] text-[#8fa39d]">{item.date}</span>
-                  <span className="text-[12px] md:text-[13px] text-[#8fa39d]">• {item.source}</span>
+                  <span className="text-[12px] md:text-[13px] text-[#8fa39d] group-hover:text-white/70 transition-colors duration-300">{item.date}</span>
+                  <span className="text-[12px] md:text-[13px] text-[#8fa39d] group-hover:text-white/70 transition-colors duration-300">• {item.source}</span>
                 </div>
 
-                <Link href={item?.url}>
-                  <button className="group flex items-center gap-2 pt-3 text-[13px] md:text-[14px] font-semibold text-[#2d584a] hover:opacity-80 transition-opacity">
+                <Link href={item?.url} target="_blank">
+                  <button className="flex items-center gap-2 pt-3 text-[13px] md:text-[14px] font-semibold text-[#2d584a] group-hover:text-white transition-colors duration-300 cursor-pointer">
                     Read More
                     <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </button>

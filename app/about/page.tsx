@@ -11,8 +11,8 @@ export default function AboutPage() {
     <div className="flex flex-col bg-white">
       <AboutHero />
       <IntroSection />
-      <VisionSection />
       <NewsSection />
+      <VisionSection />
       <ChatSection />
       <Stats />
       <Newsletter />
