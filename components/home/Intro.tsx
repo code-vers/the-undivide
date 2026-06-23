@@ -4,9 +4,9 @@ import { useState, useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
 
 const carouselImages = [
-  "https://www.figma.com/api/mcp/asset/3b3cf235-7463-45a4-a4cd-179cc2569fbc",
-  "https://www.figma.com/api/mcp/asset/b51f3581-5e9b-4787-b135-ae10bd97fc8a",
-  "https://www.figma.com/api/mcp/asset/8bcd98d4-e1a5-4bad-9569-8b1b2446613d"
+  "/assets/sections/home/intro-carousel/1.jpg",
+  "/assets/sections/home/intro-carousel/2.jpg",
+  "/assets/sections/home/intro-carousel/3.jpeg"
 ]
 
 const words = [

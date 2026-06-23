@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { cn } from "@/lib/utils"
-import { ArrowLeft, ArrowRight, Mail } from "lucide-react"
+import { ArrowLeft, ArrowRight, Mail, X } from "lucide-react"
 
 export interface TeamMember {
   id: string
@@ -78,7 +78,7 @@ export default function TeamDialog({ member, isOpen, onClose, onNext, onPrevious
             className="absolute top-6 right-6 size-[44px] rounded-full bg-[#f8f8f2] border border-[#dcfcc0] flex items-center justify-center text-[#1c3530] hover:bg-white transition-all shadow-sm z-30 active:scale-95 cursor-pointer"
             aria-label="Close modal"
           >
-            <img src="https://www.figma.com/api/mcp/asset/ec896985-9f4b-476c-9b3f-8bca1b627006" alt="Close" className="size-5" />
+            <X />
           </button>
 
           {/* Design navigation: Previous (Left arrow overlay) */}

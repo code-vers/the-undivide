@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, BookOpenText, Search, Users } from "lucide-react"
 
 export default function Hero() {
   return (
@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/db746d67-4f29-4ed4-b7e7-68192da19966"
+          src="/assets/bg/home-hero.png"
           alt="Hero Background"
           className="size-full object-cover"
         />
@@ -63,7 +63,7 @@ export default function Hero() {
               {/* Pillar 1 */}
               <div className="flex items-center gap-[16px] w-[210px]">
                 <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                  <img src="https://www.figma.com/api/mcp/asset/b7e73fd7-16f0-43ed-97cf-3ba4a1b96ba0" alt="Icon" className="h-[21px] w-[28px]" />
+                  <BookOpenText />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Public Education</p>
@@ -75,7 +75,7 @@ export default function Hero() {
               {/* Pillar 2 */}
               <div className="flex items-center gap-[16px] w-[281px]">
                 <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                  <img src="https://www.figma.com/api/mcp/asset/e325640d-81ad-49ff-a736-436fabd84c39" alt="Icon" className="h-[19px] w-[27px]" />
+                  <Users />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Community Co-Creation</p>
@@ -87,7 +87,7 @@ export default function Hero() {
               {/* Pillar 3 */}
               <div className="flex items-center gap-[16px] w-[271px]">
                 <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                  <img src="https://www.figma.com/api/mcp/asset/cb175779-83da-4c65-bef1-0691f0a911d2" alt="Icon" className="size-6" />
+                  <Search />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Research & Advocacy</p>

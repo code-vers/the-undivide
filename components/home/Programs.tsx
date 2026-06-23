@@ -9,7 +9,7 @@ const programs = [
     id: "01",
     title: "The Problem",
     description: "Climate change and the digital divide hit hardest where communities are struggling. That’s not fair, and it needs to change.",
-    image: "https://www.figma.com/api/mcp/asset/3b3cf235-7463-45a4-a4cd-179cc2569fbc",
+    image: "https://www.theundivideproject.org/assets/digital-divide-map-BfyaqonR.png",
     points: [
       "Limited access to essential digital tools and resources",
       "Disproportionate climate impacts on vulnerable communities",
@@ -20,7 +20,7 @@ const programs = [
     id: "02",
     title: "Our Solution",
     description: "We bring together innovation, tech, and real partnerships to create solutions that work for everyone, not just a select few.",
-    image: "https://www.figma.com/api/mcp/asset/b51f3581-5e9b-4787-b135-ae10bd97fc8a",
+    image: "https://www.theundivideproject.org/assets/monica-dmv-stand-BSsXTxyv.png",
     points: [
       "Community-driven technology solutions",
       "Public-private partnerships for digital equity",
@@ -31,7 +31,7 @@ const programs = [
     id: "03",
     title: "Community Hub",
     description: "Creating physical and digital spaces where communities can access tools, education, and support for a resilient future.",
-    image: "https://www.figma.com/api/mcp/asset/b51f3581-5e9b-4787-b135-ae10bd97fc8a",
+    image: "https://www.theundivideproject.org/assets/teamimage-CRSL7gX6.png",
     points: [
       "Localized climate resilience centers",
       "Digital literacy and skills training",
