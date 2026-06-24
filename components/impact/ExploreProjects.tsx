@@ -3,13 +3,14 @@
 import { useState } from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
+import { Plus } from "lucide-react"
 
 const projects = [
   {
     id: "01",
-    title: "GEV Climate Risk Dashboard",
+    title: "Grinnell Social Innovator in Residence: Hazard vs. Connectivity Collaboration",
     description: "The GEV Climate Risk Dashboard provides critical insights into climate-related risks, helping communities and policymakers make informed decisions to build a more resilient future.",
-    image: "https://www.figma.com/api/mcp/asset/006e6b7b-f206-4315-8e13-968c1e852422",
+    image: "/assets/sections/impact/projects/Grinnell.JPG",
     href: "/projects/gev-climate-risk-dashboard",
     target: ''
   },
@@ -17,15 +18,23 @@ const projects = [
     id: "02",
     title: "Ten States Project",
     description: "The Ten States Project targets states hardest hit by climate injustice and digital inequality, using storytelling and a research hub to help communities build sustainable, equitable solutions.",
-    image: "https://www.figma.com/api/mcp/asset/d0c6a58a-a68f-46ec-9d3d-49aecfc51d13",
+    image: "/assets/sections/impact/projects/Tenstate.png",
     href: "https://the-ten-states-project-for-equitable-climate-risk-undivide.hub.arcgis.com/",
     target: '_blank'
   },
-   {
+  {
     id: "03",
+    title: "GEV Climate Risk Dashboard",
+    description: "The GEV Climate Risk Dashboard provides critical insights into climate-related risks, helping communities and policymakers make informed decisions to build a more resilient future.",
+    image: "/assets/sections/impact/projects/Gev.png",
+    href: "https://gevtenstates-37sxyyuhn8ahyqvbc2yfi2.streamlit.app/",
+    target: '_blank'
+  },
+   {
+    id: "04",
     title: "AI Resilience",
     description: "The AI Resilience project (AI Law Compass) explores the intersection of artificial intelligence, policy, and legal frameworks to guide legal practitioners and researchers through AI regulation.",
-    image: "https://www.figma.com/api/mcp/asset/d0c6a58a-a68f-46ec-9d3d-49aecfc51d13",
+    image: "/assets/sections/impact/projects/AI-resilience.png",
     href: "/projects/ai-resilience",
     target: ''
   },
@@ -107,11 +116,11 @@ export default function ExploreProjects() {
                     }}
                     className="absolute top-4 md:top-8 right-4 md:right-8 size-8 md:size-10 bg-white/10 rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-white/20 transition-colors z-30"
                   >
-                    <img
+                    {/* <img
                       src="https://www.figma.com/api/mcp/asset/84b8371e-4119-4866-9e88-de50189ba59b"
                       alt="Close"
                       className="size-8 md:size-10"
-                    />
+                    /> */}
                   </div>
                 </div>
               )
@@ -153,11 +162,7 @@ export default function ExploreProjects() {
                       </div>
                     </div>
                     <div className="size-8 md:size-10 bg-[#d6cfc0]/20 rounded-full flex items-center justify-center text-[#1c3530] shrink-0 hover:bg-[#d6cfc0]/40 transition-colors">
-                      <img
-                        src="https://www.figma.com/api/mcp/asset/3ac354b3-ade6-4171-8c18-fbb8a8381345"
-                        alt="Plus"
-                        className="size-8 md:size-10"
-                      />
+                      <Plus/>
                     </div>
                   </div>
                 </div>

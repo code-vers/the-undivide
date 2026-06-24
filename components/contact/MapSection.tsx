@@ -18,7 +18,7 @@ const LeafletMap = dynamic(
 
 export default function MapSection() {
   return (
-    <section className="bg-[#e8edeb] h-[593px] relative w-full overflow-hidden">
+    <section className="bg-[#e8edeb] h-[593px] relative w-full overflow-hidden z-0">
       <LeafletMap 
         position={[38.8050, -77.0460]} 
         address="601 King St STE 200 #671, Alexandria, Virginia" 

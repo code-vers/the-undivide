@@ -67,9 +67,8 @@ export default function ResearchAdvocacy() {
         {/* Research Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[60px]">
           {researchItems.map((item, idx) => (
-            <Link href={item.link} target="_blank">
+            <Link href={item.link} key={idx} target="_blank" className="block no-underline">
               <div
-                key={idx}
                 className={cn(
                   "group rounded-[8px] overflow-hidden flex flex-col min-h-[450px] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg bg-[#f8f8f2] hover:bg-[#2d584a] text-[#1c3530]"
                 )}
@@ -91,12 +90,12 @@ export default function ResearchAdvocacy() {
                     </p>
 
                     <div className="mt-auto pt-4 pb-2">
-                      <button className={cn(
+                      <div className={cn(
                         "flex items-center gap-2 text-[14px] font-semibold uppercase tracking-[0.35px] text-[#1c3530] group-hover:text-white transition-colors duration-300 cursor-pointer"
                       )}>
                         READ MORE
                         <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>

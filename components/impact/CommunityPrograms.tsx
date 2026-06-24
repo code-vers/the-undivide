@@ -1,18 +1,117 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
+
+const caseStudies = [
+  {
+    src: "https://www.figma.com/api/mcp/asset/006e6b7b-f206-4315-8e13-968c1e852422",
+    alt: "Case Study 1",
+    className: "h-[220px] sm:h-[300px] md:h-[391px] w-[280px] sm:w-[380px] md:w-[521px] rounded-[8px] overflow-hidden shrink-0 snap-start"
+  },
+  {
+    src: "https://www.figma.com/api/mcp/asset/174c8585-78bb-4b3c-86ac-cd2214ee65f6",
+    alt: "Case Study 2",
+    className: "h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start"
+  },
+  {
+    src: "https://www.figma.com/api/mcp/asset/fd209c56-c83b-4ffe-8289-13406e59c6b9",
+    alt: "Case Study 3",
+    className: "h-[220px] sm:h-[300px] md:h-[391px] w-[320px] sm:w-[440px] md:w-[587px] rounded-[8px] overflow-hidden shrink-0 snap-start"
+  },
+  {
+    src: "https://www.figma.com/api/mcp/asset/336d5bce-46b8-4001-a96c-de16382aec5f",
+    alt: "Case Study 4",
+    className: "h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start"
+  },
+  {
+    src: "https://www.figma.com/api/mcp/asset/174c8585-78bb-4b3c-86ac-cd2214ee65f6",
+    alt: "Case Study 5",
+    className: "h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start"
+  }
+]
 
 export default function CommunityPrograms() {
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current
-      const scrollAmount = clientWidth * 0.6
-      const scrollTo = direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount
-      scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" })
+  useEffect(() => {
+    const scrollContainer = scrollRef.current
+    if (!scrollContainer) return
+
+    // 1. Initialize scroll to the middle set (Set 2)
+    const initScroll = () => {
+      const children = scrollContainer.children
+      if (children.length >= 10) {
+        const elem0 = children[0] as HTMLElement
+        const elem5 = children[5] as HTMLElement
+        scrollContainer.scrollLeft = elem5.offsetLeft - elem0.offsetLeft
+      } else if (scrollContainer.scrollWidth > 0) {
+        scrollContainer.scrollLeft = scrollContainer.scrollWidth / 3
+      }
     }
+
+    // Run on mount with a small timeout to ensure DOM layout is completed
+    const timer = setTimeout(initScroll, 50)
+
+    // 2. Debounced scroll normalization to wrap position seamlessly when scrolling stops
+    let scrollTimeout: NodeJS.Timeout
+    const handleScroll = () => {
+      if (scrollTimeout) clearTimeout(scrollTimeout)
+      scrollTimeout = setTimeout(() => {
+        const { scrollLeft } = scrollContainer
+        const children = scrollContainer.children
+        if (children.length < 10) return
+
+        const elem0 = children[0] as HTMLElement
+        const elem5 = children[5] as HTMLElement
+        const oneSetWidth = elem5.offsetLeft - elem0.offsetLeft
+
+        // If scrolled past Set 2 into Set 3 (right side), jump back to Set 2
+        if (scrollLeft >= oneSetWidth * 2) {
+          scrollContainer.scrollLeft = scrollLeft - oneSetWidth
+        }
+        // If scrolled before Set 2 into Set 1 (left side), jump forward to Set 2
+        else if (scrollLeft < oneSetWidth) {
+          scrollContainer.scrollLeft = scrollLeft + oneSetWidth
+        }
+      }, 150)
+    }
+
+    scrollContainer.addEventListener("scroll", handleScroll)
+
+    return () => {
+      clearTimeout(timer)
+      if (scrollTimeout) clearTimeout(scrollTimeout)
+      scrollContainer.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const scroll = (direction: "left" | "right") => {
+    const scrollContainer = scrollRef.current
+    if (!scrollContainer) return
+
+    const { scrollLeft, clientWidth } = scrollContainer
+    const children = scrollContainer.children
+    if (children.length < 10) return
+
+    const elem0 = children[0] as HTMLElement
+    const elem5 = children[5] as HTMLElement
+    const oneSetWidth = elem5.offsetLeft - elem0.offsetLeft
+
+    let currentScrollLeft = scrollLeft
+
+    // If we are out of Set 2 range, warp instantly before starting the smooth scroll
+    if (currentScrollLeft >= oneSetWidth * 2) {
+      scrollContainer.scrollLeft = currentScrollLeft - oneSetWidth
+      currentScrollLeft = scrollContainer.scrollLeft
+    } else if (currentScrollLeft < oneSetWidth) {
+      scrollContainer.scrollLeft = currentScrollLeft + oneSetWidth
+      currentScrollLeft = scrollContainer.scrollLeft
+    }
+
+    const scrollAmount = clientWidth * 0.6
+    const scrollTo = direction === "left" ? currentScrollLeft - scrollAmount : currentScrollLeft + scrollAmount
+    scrollContainer.scrollTo({ left: scrollTo, behavior: "smooth" })
   }
 
   return (
@@ -60,24 +159,27 @@ export default function CommunityPrograms() {
         {/* Horizontal Scrolling images */}
         <div
           ref={scrollRef}
-          className="flex gap-4 md:gap-[32px] overflow-x-auto pb-4 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden"
+          className="flex gap-4 md:gap-[32px] overflow-x-auto pb-4 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <div className="h-[220px] sm:h-[300px] md:h-[391px] w-[280px] sm:w-[380px] md:w-[521px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/006e6b7b-f206-4315-8e13-968c1e852422" alt="Case Study 1" className="size-full object-cover" />
-          </div>
-          <div className="h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/174c8585-78bb-4b3c-86ac-cd2214ee65f6" alt="Case Study 2" className="size-full object-cover" />
-          </div>
-          <div className="h-[220px] sm:h-[300px] md:h-[391px] w-[320px] sm:w-[440px] md:w-[587px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/fd209c56-c83b-4ffe-8289-13406e59c6b9" alt="Case Study 3" className="size-full object-cover" />
-          </div>
-          <div className="h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/336d5bce-46b8-4001-a96c-de16382aec5f" alt="Case Study 4" className="size-full object-cover" />
-          </div>
-          <div className="h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start">
-            <img src="https://www.figma.com/api/mcp/asset/174c8585-78bb-4b3c-86ac-cd2214ee65f6" alt="Case Study 5" className="size-full object-cover" />
-          </div>
+          {/* Render first set (clone) */}
+          {caseStudies.map((study, idx) => (
+            <div key={`set-1-${idx}`} className={study.className}>
+              <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+            </div>
+          ))}
+          {/* Render second set (original) */}
+          {caseStudies.map((study, idx) => (
+            <div key={`set-2-${idx}`} className={study.className}>
+              <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+            </div>
+          ))}
+          {/* Render third set (clone) */}
+          {caseStudies.map((study, idx) => (
+            <div key={`set-3-${idx}`} className={study.className}>
+              <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+            </div>
+          ))}
         </div>
       </div>
     </section>

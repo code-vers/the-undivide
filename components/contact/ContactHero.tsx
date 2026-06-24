@@ -2,11 +2,11 @@ import Link from "next/link"
 
 export default function ContactHero() {
   return (
-    <section className="relative min-h-[400px] md:min-h-[547px] lg:min-h-[647px] w-full overflow-hidden flex items-center">
+    <section className="relative min-h-[400px] md:min-h-[547px] lg:min-h-[770px] w-full overflow-hidden flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/30ead96a-b370-4f22-a864-d713dad700a4"
+          src="/assets/bg/contact-hero.JPG"
           alt="Contact Hero Background"
           className="size-full object-cover"
         />
@@ -22,17 +22,6 @@ export default function ContactHero() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-bold text-[#f8f8f2] leading-tight">
             Contact Us
           </h1>
-
-          {/* Breadcrumb */}
-          <nav className="flex items-center justify-center gap-[8px] pt-2">
-            <Link href="/" className="text-[13px] md:text-[14px] font-medium tracking-[0.14px] text-[#e8edeb] hover:text-white transition-colors">
-              Home
-            </Link>
-            <img src="https://www.figma.com/api/mcp/asset/c37edb8e-4a2f-4619-8147-1b79950c15db" alt="separator" className="size-2 opacity-60" />
-            <span className="text-[13px] md:text-[14px] font-medium tracking-[0.14px] text-[#e8edeb]">
-              Contact
-            </span>
-          </nav>
         </div>
       </div>
     </section>

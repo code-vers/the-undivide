@@ -2,11 +2,11 @@ import { MapPin, Building2, Calendar } from "lucide-react"
 
 export default function GevHero() {
   return (
-    <section className="relative h-[753px] w-full overflow-hidden">
+    <section className="relative h-[770px] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/2269f874-9ae4-4945-94d5-191c2063d921"
+          src="/assets/bg/GEV-hero.JPG"
           alt="Grinnell Iowa"
           className="size-full object-cover"
         />

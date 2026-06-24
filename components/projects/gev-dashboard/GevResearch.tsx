@@ -1,28 +1,43 @@
 import { ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export default function GevResearch() {
   const cards = [
     {
       title: "Hazard vs. Connectivity Tool",
       description: "An interactive web map that combines state and federal data with community-collected connectivity measurements to identify broadband gaps and environmental threats.",
-      image: "https://www.figma.com/api/mcp/asset/2bb65cff-6977-4512-8dc8-7cd68ba97849",
+      image: "/assets/sections/gev-climate/hazard.png",
       theme: "dark",
-      link: "#"
+      link: "https://arcg.is/bG5X40"
     },
     {
-      title: "Hazard vs. Connectivity Tool",
-      description: "An interactive web map that combines state and federal data with community-collected connectivity measurements to identify broadband gaps and environmental threats.",
-      image: "https://www.figma.com/api/mcp/asset/38e5cd6d-f729-4b47-9156-84470a168a98",
+      title: "Iowa Community Asset Map",
+      description: "Highlights local strengths—schools, libraries, nonprofits, and mutual aid organizations—that act as social and digital anchors during emergencies.",
+      image: "/assets/sections/gev-climate/iows-asset-map.png",
       theme: "light",
-      link: "#"
+      link: "https://www.canva.com/design/DAGu2tf09PI/ROiZXLZKxLTB2TJovW9zqw/view?utm_content=DAGu2tf09PI&utm_campaign=designshare&utm_medium=link&utm_source=viewer"
     },
     {
       title: "5 Questions with Monica Sanders",
       description: "Read the interview with Monica Sanders about her work and the Social Innovator in Residence program.",
-      image: "https://www.figma.com/api/mcp/asset/82b45ab9-15e6-4e0c-973c-30a11bd463af",
+      image: "/assets/sections/gev-climate/monica-5-questions.jpg",
       theme: "light",
-      link: "#"
-    }
+      link: "https://www.grinnell.edu/news/5-questions-monica-sanders"
+    },
+    {
+      title: "Grinnell College Announcement",
+      description: "Grinnell College announces Monica Sanders as Inaugural Social Innovator in Residence.",
+      image: "/assets/sections/gev-climate/gallery/1.JPG",
+      theme: "light",
+      link: "https://www.grinnell.edu/news/grinnell-college-announces-monica-sanders-inaugural-social-innovator-residence"
+    },
+    {
+      title: "Empowering Community Connections",
+      description: "Tanner's interview on empowering community connections.",
+      image: "/assets/sections/gev-climate/empowering-community.jpg",
+      theme: "light",
+      link: "https://www.grinnell.edu/news/empowering-community-connections"
+    },
   ]
 
   return (
@@ -46,37 +61,38 @@ export default function GevResearch() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {cards.map((card, idx) => (
-            <div 
+            <Link
+              href={card.link}
               key={idx}
-              className={`rounded-lg overflow-hidden flex flex-col h-full transition-transform duration-300 hover:-translate-y-2 ${
-                card.theme === "dark" ? "bg-[#2d5448] text-white" : "bg-[#f8f8f2] text-[#1c3530]"
-              }`}
+              target="_blank"
+              className="group block no-underline h-full"
             >
-              <div className="p-4 flex flex-col h-full">
-                <div className="aspect-[531/344] rounded-sm overflow-hidden mb-6">
-                  <img src={card.image} alt={card.title} className="size-full object-cover" />
-                </div>
-                <div className="px-2 pb-6 space-y-4 flex-grow flex flex-col justify-between">
-                  <div className="space-y-3">
-                    <h3 className={`text-xl font-bold font-serif ${card.theme === "dark" ? "text-white" : "text-[#2d584a]"}`}>
-                      {card.title}
-                    </h3>
-                    <p className={`text-[16px] leading-relaxed ${card.theme === "dark" ? "text-[#d1d5db]" : "text-[#717171]"}`}>
-                      {card.description}
-                    </p>
+              <div
+                className="rounded-lg overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-lg bg-[#f8f8f2] hover:bg-[#2d584a] text-[#1c3530]"
+              >
+                <div className="p-4 flex flex-col h-full">
+                  <div className="aspect-[531/344] rounded-sm overflow-hidden bg-white mb-6 flex items-center justify-center shrink-0">
+                    <img src={card.image} alt={card.title} className="size-full object-fit transition-transform duration-500 group-hover:scale-102" />
                   </div>
-                  <a 
-                    href={card.link}
-                    className={`inline-flex items-center gap-2 text-sm font-bold tracking-[0.35px] uppercase transition-colors ${
-                      card.theme === "dark" ? "text-[#e6c875] hover:text-white" : "text-[#1c3530] hover:text-[#2d584a]"
-                    }`}
-                  >
-                    READ MORE
-                    <ArrowRight className="size-4" />
-                  </a>
+                  <div className="px-2 pb-6 space-y-4 flex-grow flex flex-col justify-between">
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-bold font-serif text-[#2d584a] group-hover:text-white transition-colors duration-300">
+                        {card.title}
+                      </h3>
+                      <p className="text-[16px] leading-relaxed text-[#717171] group-hover:text-white/90 transition-colors duration-300">
+                        {card.description}
+                      </p>
+                    </div>
+                    <div
+                      className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.35px] uppercase text-[#1c3530] group-hover:text-white transition-colors duration-300"
+                    >
+                      READ MORE
+                      <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
