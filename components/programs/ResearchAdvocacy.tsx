@@ -1,43 +1,48 @@
 import { cn } from "@/lib/utils"
 import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 const researchItems = [
   {
     title: "Why affordable housing is more vulnerable to disasters",
     description: "Despite contributing the least to greenhouse gas emissions, low-income households often bear the brunt of climate change impacts. It usually becomes evident after significant flood events, such as Hurricane Helene, which pummeled the Southern US in September 2024, or the devastating floods that inundated Nepal in July 2024. The effects of climate change reinforce the disparities already evident in the housing sector.",
-    image: "https://www.figma.com/api/mcp/asset/900e9bbd-ad40-41c2-a305-20ccd444d736",
-    dark: true
+    image: "/assets/sections/what-we-do/research/research-1.png",
+    dark: true,
+    link: "https://www.preventionweb.net/drr-community-voices/why-affordable-housing-more-vulnerable-disasters"
   },
   {
     title: "Digital Justice Framework To Improve Disaster Preparation",
     description: "Social justice, environmental justice, and climate justice are all digital justice. Digital injustice arises from the fact that 21 million Americans are not connected to the internet, and seven percent of Americans do not use it, even if they have access to it. This lack of connectivity can lead to the loss of life, disrupted communities, and frayed social cohesion during natural disasters, as people are In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-",
-    image: "https://www.figma.com/api/mcp/asset/202e5f01-d835-4207-bfba-0a86ffb1dd58",
-    dark: false
+    image: "/assets/sections/what-we-do/research/research-2.png",
+    dark: false,
+    link: "https://fas.org/publication/using-a-digital-justice-framework-to-improve-disaster-preparation-and-response/"
   },
   {
     title: "Avoiding Data and Algorithmic Bias In Disaster Research",
     description: "In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-Americans in the ten most states where, except for New York and California, 60% of that population lives. Our goal is to create a In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-Americans in the ten most states where, except for New York and California, 60% of that population lives. Our goal is to create a",
-    image: "https://www.figma.com/api/mcp/asset/8fab6cc2-c342-4977-a662-75f6d947ca13",
-    dark: false
+    image: "/assets/sections/what-we-do/research/research-3.png",
+    dark: false,
+    link: "https://fas.org/publication/increasing-national-resilience-through-an-open-disaster-data-initiative/"
   },
   {
-    title: "Digital Justice Framework To Improve Disaster Preparation",
-    description: "Social justice, environmental justice, and climate justice are all digital justice. Digital injustice arises from the fact that 21 million Americans are not connected to the internet, and seven percent of Americans do not use it, even if they have access to it. This lack of connectivity can lead to the loss of life, disrupted communities, and frayed social cohesion during natural disasters, as people are In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-",
-    image: "https://www.figma.com/api/mcp/asset/202e5f01-d835-4207-bfba-0a86ffb1dd58",
-    dark: false
+    title: "Policy Paper – How the nation's emergency management agency can confront climate change",
+    description: "Federal, state, local, tribal, and territorial agencies collect and maintain a range of disaster resilience, vulnerability, and loss data. However, this valuable data lives on different platforms and in various formats across agency silos. Inconsistent data collection and lack of validation can result in gaps and inefficiencies and make it difficult to implement appropriate mitigation, preparedness, response, recovery, and adaptation measures for natural hazards, including wildfires, smoke, drought, extreme heat, flooding, and debris flow.",
+    image: "/assets/sections/what-we-do/research/research-4.png",
+    dark: false,
+    link: "https://www.preventionweb.net/news/increasing-national-resilience-through-open-disaster-data-initiative"
   },
-  {
-    title: "Digital Justice Framework To Improve Disaster Preparation",
-    description: "Social justice, environmental justice, and climate justice are all digital justice. Digital injustice arises from the fact that 21 million Americans are not connected to the internet, and seven percent of Americans do not use it, even if they have access to it. This lack of connectivity can lead to the loss of life, disrupted communities, and frayed social cohesion during natural disasters, as people are In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-",
-    image: "https://www.figma.com/api/mcp/asset/202e5f01-d835-4207-bfba-0a86ffb1dd58",
-    dark: false
-  },
-  {
-    title: "Avoiding Data and Algorithmic Bias In Disaster Research",
-    description: "In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-Americans in the ten most states where, except for New York and California, 60% of that population lives. Our goal is to create a In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-Americans in the ten most states where, except for New York and California, 60% of that population lives. Our goal is to create a",
-    image: "https://www.figma.com/api/mcp/asset/8fab6cc2-c342-4977-a662-75f6d947ca13",
-    dark: false
-  }
+  // {
+  //   title: "Digital Justice Framework To Improve Disaster Preparation",
+  //   description: "Social justice, environmental justice, and climate justice are all digital justice. Digital injustice arises from the fact that 21 million Americans are not connected to the internet, and seven percent of Americans do not use it, even if they have access to it. This lack of connectivity can lead to the loss of life, disrupted communities, and frayed social cohesion during natural disasters, as people are In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-",
+  //   image: "https://www.figma.com/api/mcp/asset/202e5f01-d835-4207-bfba-0a86ffb1dd58",
+  //   dark: false
+  // },
+  // {
+  //   title: "Avoiding Data and Algorithmic Bias In Disaster Research",
+  //   description: "In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-Americans in the ten most states where, except for New York and California, 60% of that population lives. Our goal is to create a In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-Americans in the ten most states where, except for New York and California, 60% of that population lives. Our goal is to create a",
+  //   image: "https://www.figma.com/api/mcp/asset/8fab6cc2-c342-4977-a662-75f6d947ca13",
+  //   dark: false
+  // }
 ]
 
 export default function ResearchAdvocacy() {
@@ -60,41 +65,43 @@ export default function ResearchAdvocacy() {
         </div>
 
         {/* Research Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[60px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[60px]">
           {researchItems.map((item, idx) => (
-            <div 
-              key={idx} 
-              className={cn(
-                "rounded-[8px] overflow-hidden flex flex-col min-h-[633px] transition-all hover:shadow-md bg-[#f8f8f2] text-[#1c3530]"
-              )}
-            >
-              <div className="p-4 flex flex-col h-full">
-                <div className="h-[264px] rounded-[4px] overflow-hidden shrink-0">
-                  <img src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-500 hover:scale-105" />
-                </div>
-                <div className="flex flex-col flex-1 p-2 pt-6 gap-3">
-                  <h3 className={cn(
-                    "text-[20px] font-bold leading-[28px] line-clamp-2 text-[#1c3530] "
-                  )}>
-                    {item.title}
-                  </h3>
-                  <p className={cn(
-                    "text-[14px] md:text-[16px] leading-[20px] line-clamp-[6] text-[#717171]"
-                  )}>
-                    {item.description}
-                  </p>
-                  
-                  <div className="mt-auto pt-4 pb-2">
-                    <button className={cn(
-                      "group flex items-center gap-2 text-[14px] font-semibold uppercase tracking-[0.35px] hover:opacity-80 transition-opacity text-[#1c3530]"
+            <Link href={item.link} target="_blank">
+              <div
+                key={idx}
+                className={cn(
+                  "group rounded-[8px] overflow-hidden flex flex-col min-h-[450px] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg bg-[#f8f8f2] hover:bg-[#2d584a] text-[#1c3530]"
+                )}
+              >
+                <div className="p-4 flex flex-col h-full">
+                  <div className="h-[264px] rounded-[4px] overflow-hidden shrink-0">
+                    <img src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                  <div className="flex flex-col flex-1 p-2 pt-6 gap-3">
+                    <h3 className={cn(
+                      "text-[20px] font-bold leading-[28px] line-clamp-2 text-[#1c3530] group-hover:text-white transition-colors duration-300"
                     )}>
-                      READ MORE
-                      <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </button>
+                      {item.title}
+                    </h3>
+                    <p className={cn(
+                      "text-[14px] md:text-[16px] leading-[20px] line-clamp-[6] text-[#717171] group-hover:text-white/90 transition-colors duration-300"
+                    )}>
+                      {item.description}
+                    </p>
+
+                    <div className="mt-auto pt-4 pb-2">
+                      <button className={cn(
+                        "flex items-center gap-2 text-[14px] font-semibold uppercase tracking-[0.35px] text-[#1c3530] group-hover:text-white transition-colors duration-300 cursor-pointer"
+                      )}>
+                        READ MORE
+                        <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

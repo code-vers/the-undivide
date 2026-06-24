@@ -7,7 +7,7 @@ export default function PromotionSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://www.figma.com/api/mcp/asset/5d5f8694-5169-4da3-82b6-1e1371893daa"
+          src="/assets/sections/what-we-do/promotion/research-promo-section.png"
           alt="Promotion Background"
           className="size-full object-cover"
         />

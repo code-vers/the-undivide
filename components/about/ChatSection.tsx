@@ -10,7 +10,7 @@ export default function ChatSection() {
           alt="Chat Background" 
           className="size-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#1c3530]/15" />
+        <div className="absolute inset-0 bg-[#1c3530]/5" />
         <div className="absolute inset-0 bg-black/37" />
       </div>
 

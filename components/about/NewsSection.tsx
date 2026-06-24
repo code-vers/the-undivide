@@ -55,7 +55,7 @@ export default function NewsSection() {
           {newsItems.map((item, idx) => (
             <div key={idx} className="group bg-white border border-[#dcfcc0] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[18px] overflow-hidden transition-all duration-300 hover:shadow-lg">
               <div className="h-[220px] sm:h-[300px] md:h-[380px] lg:h-[497px] overflow-hidden bg-[#f8f8f2] flex items-center justify-center">
-                <img src={item.image} alt={item.title} className="size-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                <img src={item.image} alt={item.title} className="size-full object-fit transition-transform duration-500 group-hover:scale-105" />
               </div>
               <div className="p-4 md:p-[20px] space-y-2 md:space-y-3">
                 <span className="text-[11px] font-semibold text-[#2d584a] group-hover:text-white/80 tracking-[0.88px] uppercase transition-colors duration-300">

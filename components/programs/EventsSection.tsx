@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 const events = [
   {
@@ -7,16 +8,18 @@ const events = [
     description: "During this event, we explored the power of storytelling at the intersection of art and environmental advocacy. The evening featured a film screening and panel discussion highlighting how creative expression can illuminate marine conservation challenges and inspire community action.",
     location: "Healey Family Student Center Social Room",
     time: "Feb 20, 2024, 5:30 PM-8:00 PM EST",
-    image: "https://www.figma.com/api/mcp/asset/d851cb0f-712d-4857-ae7d-3bfa50f201ab",
-    imageLeft: false
+    image: "/assets/sections/what-we-do/event/1.jpg",
+    imageLeft: false,
+    link: "https://earthcommons.georgetown.edu/announcements/event-recap-underwater-projects-film-screening-and-panel-discussion/"
   },
   {
     title: "Water and Representation Convening",
     description: "During this event we will explore the critical connections between water issues and community representation. This event will bring together leaders, researchers, and advocates to discuss tools and strategies for empowering communities through inclusive water governance and action.",
     location: "301 Water St SE Washington, 20003 United States",
     time: "Nov 13, 2024, 11:30 AM 4:00 pm EST",
-    image: "https://www.figma.com/api/mcp/asset/9314b209-cc43-41ce-9579-2b15b1c3b422",
-    imageLeft: true
+    image: "/assets/sections/what-we-do/event/2.jpg",
+    imageLeft: true,
+    link: "https://www.reservoircenter.org/event/water-and-representation-convening/"
   }
 ]
 
@@ -61,10 +64,12 @@ export default function EventsSection() {
                   <p>Location: {event.location}</p>
                   <p>Time: {event.time}</p>
                 </div>
-                <button className="group border-2 border-[#2d584a] text-[#2d584a] rounded-full px-[22px] md:px-[26px] py-[12px] md:py-[14px] text-[13px] md:text-[14px] font-medium tracking-[0.14px] flex items-center gap-2 hover:bg-[#2d584a] hover:text-white transition-all w-fit">
-                  Explore
-                  <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </button>
+                <Link href={event.link} target="_blank">
+                  <button className="group border-2 border-[#2d584a] text-[#2d584a] rounded-full px-[22px] md:px-[26px] py-[12px] md:py-[14px] text-[13px] md:text-[14px] font-medium tracking-[0.14px] flex items-center gap-2 hover:bg-[#2d584a] hover:text-white transition-all w-fit">
+                    Explore
+                    <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </button>
+                </Link>
               </div>
 
               {/* Image */}

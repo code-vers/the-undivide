@@ -1,10 +1,10 @@
 export default function ProgramsHero() {
   return (
-    <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[753px] w-full overflow-hidden flex items-end">
+    <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[770px] w-full overflow-hidden flex items-end">
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
         <img
-          // src="https://www.figma.com/api/mcp/asset/21f4e273-b5c5-46d3-b900-c5e43fc8aa60"
+          src="/assets/bg/what-we-do-hero.JPG"
           alt="Programs Background"
           className="size-full object-cover"
         />
@@ -12,14 +12,14 @@ export default function ProgramsHero() {
       </div>
 
       {/* Background Image Layer 2 (Overlay pattern) */}
-      <div className="absolute inset-0 z-10 opacity-70">
+      {/* <div className="absolute inset-0 z-10 opacity-70">
         <img
           src="https://www.figma.com/api/mcp/asset/b60992f1-7764-407a-aa32-4b931fd3d72c"
           alt="Overlay Pattern"
           className="size-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1c3530]/70" />
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="relative z-20 mx-auto w-full max-w-[1760px] px-4 sm:px-8 md:px-[80px] pt-[100px] md:pt-[180px] lg:pt-[264px] pb-10 md:pb-16">
