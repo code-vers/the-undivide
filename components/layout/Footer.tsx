@@ -103,17 +103,17 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-[12px]">
               <li>
-                <span className="text-white/70">hello@undivide.org</span>
+                <span className="text-white/70">info@theundivideproject.org</span>
               </li>
               <li>
-                <span className="text-white/70">Atlanta, GA</span>
+                <span className="text-white/70">601 King St STE 200 #671, Alexandria, Virginia</span>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-white transition-colors font-medium text-white/70">
                   Send a message &rarr;
                 </Link>
               </li>
-            </ul>
+            </ul> 
           </div>
         </div>
 
