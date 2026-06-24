@@ -4,10 +4,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 
 const impactImages = [
-  { src: "https://www.figma.com/api/mcp/asset/88994552-c2a5-4b57-bdd3-0ac27e70df06", alt: "Impact 1", widthClass: "w-[280px] sm:w-[380px] md:w-[521px]" },
-  { src: "https://www.figma.com/api/mcp/asset/c913f3d1-868f-4bbe-b928-a0de8a62dfec", alt: "Impact 2", widthClass: "w-[180px] sm:w-[220px] md:w-[293px]" },
-  { src: "https://www.figma.com/api/mcp/asset/1bafcb6b-2ea8-4045-ad66-633583044001", alt: "Impact 3", widthClass: "w-[320px] sm:w-[440px] md:w-[587px]" },
-  { src: "https://www.figma.com/api/mcp/asset/021afc96-a66e-448a-81d0-785fce7fc217", alt: "Impact 4", widthClass: "w-[180px] sm:w-[220px] md:w-[293px]" },
+  { src: "/assets/sections/donate/gallery/1.jpeg", alt: "Impact 1", widthClass: "w-[280px] sm:w-[380px] md:w-[521px]" },
+  { src: "/assets/sections/donate/gallery/2.jpg", alt: "Impact 2", widthClass: "w-[180px] sm:w-[220px] md:w-[293px]" },
+  { src: "/assets/sections/donate/gallery/3.jpg", alt: "Impact 3", widthClass: "w-[320px] sm:w-[440px] md:w-[587px]" },
+  { src: "/assets/sections/donate/gallery/4.jpg", alt: "Impact 4", widthClass: "w-[180px] sm:w-[220px] md:w-[293px]" },
 ]
 
 export default function ImpactStats() {
@@ -17,45 +17,116 @@ export default function ImpactStats() {
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const isProgrammaticScroll = useRef(false)
 
-  const scrollToImage = (index: number) => {
-    if (scrollRef.current) {
-      isProgrammaticScroll.current = true
-      const container = scrollRef.current
-      const children = container.children
-      if (children && children[index]) {
-        const targetElement = children[index] as HTMLElement
-        const containerOffsetLeft = container.offsetLeft
-        const targetOffsetLeft = targetElement.offsetLeft
-        
-        const scrollPos = targetOffsetLeft - containerOffsetLeft
-        const offset = window.innerWidth >= 768 ? 80 : (window.innerWidth >= 640 ? 32 : 16)
-        
-        container.scrollTo({
-          left: scrollPos - offset,
-          behavior: "smooth"
-        })
-        
-        setTimeout(() => {
-          isProgrammaticScroll.current = false
-        }, 600)
+  const scroll = (direction: "left" | "right") => {
+    const container = scrollRef.current
+    if (!container) return
+
+    const children = container.children
+    if (children.length < 12) return
+
+    const elem0 = children[0] as HTMLElement
+    const elem4 = children[4] as HTMLElement
+    const oneSetWidth = elem4.offsetLeft - elem0.offsetLeft
+
+    let currentScrollLeft = container.scrollLeft
+
+    // 1. Warp instantly if we are out of Set 2 range before scrolling
+    if (currentScrollLeft >= oneSetWidth * 2) {
+      container.scrollLeft = currentScrollLeft - oneSetWidth
+      currentScrollLeft = container.scrollLeft
+    } else if (currentScrollLeft < oneSetWidth) {
+      container.scrollLeft = currentScrollLeft + oneSetWidth
+      currentScrollLeft = container.scrollLeft
+    }
+
+    // 2. Find the child index closest to the current scroll position
+    let activeIdx = 0
+    let closestDiff = Infinity
+    const containerOffsetLeft = container.offsetLeft
+
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i] as HTMLElement
+      const targetPos = child.offsetLeft - containerOffsetLeft
+      const offset = window.innerWidth >= 768 ? 80 : (window.innerWidth >= 640 ? 32 : 16)
+      const diff = Math.abs(targetPos - offset - currentScrollLeft)
+      
+      if (diff < closestDiff) {
+        closestDiff = diff
+        activeIdx = i
       }
+    }
+
+    // 3. Scroll to the next or previous child index
+    const targetIdx = direction === "left" ? activeIdx - 1 : activeIdx + 1
+    if (targetIdx >= 0 && targetIdx < children.length) {
+      isProgrammaticScroll.current = true
+      
+      const targetElement = children[targetIdx] as HTMLElement
+      const targetOffsetLeft = targetElement.offsetLeft
+      const offset = window.innerWidth >= 768 ? 80 : (window.innerWidth >= 640 ? 32 : 16)
+      const scrollPos = targetOffsetLeft - containerOffsetLeft
+      
+      container.scrollTo({
+        left: scrollPos - offset,
+        behavior: "smooth"
+      })
+
+      // Update current index mapped to [0, 3]
+      setCurrentIndex(targetIdx % impactImages.length)
+      
+      setTimeout(() => {
+        isProgrammaticScroll.current = false
+      }, 600)
     }
   }
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => {
-      const nextIdx = (prev - 1 + impactImages.length) % impactImages.length
-      scrollToImage(nextIdx)
-      return nextIdx
-    })
+    scroll("left")
   }
 
   const handleNext = () => {
-    setCurrentIndex((prev) => {
-      const nextIdx = (prev + 1) % impactImages.length
-      scrollToImage(nextIdx)
-      return nextIdx
+    scroll("right")
+  }
+
+  const handleDotClick = (index: number) => {
+    const container = scrollRef.current
+    if (!container) return
+
+    const children = container.children
+    if (children.length < 12) return
+
+    const elem0 = children[0] as HTMLElement
+    const elem4 = children[4] as HTMLElement
+    const oneSetWidth = elem4.offsetLeft - elem0.offsetLeft
+
+    let currentScrollLeft = container.scrollLeft
+
+    // Warp instantly if out of Set 2 range
+    if (currentScrollLeft >= oneSetWidth * 2) {
+      container.scrollLeft = currentScrollLeft - oneSetWidth
+      currentScrollLeft = container.scrollLeft
+    } else if (currentScrollLeft < oneSetWidth) {
+      container.scrollLeft = currentScrollLeft + oneSetWidth
+      currentScrollLeft = container.scrollLeft
+    }
+
+    isProgrammaticScroll.current = true
+    const targetElement = children[index + 4] as HTMLElement
+    const containerOffsetLeft = container.offsetLeft
+    const targetOffsetLeft = targetElement.offsetLeft
+    const scrollPos = targetOffsetLeft - containerOffsetLeft
+    const offset = window.innerWidth >= 768 ? 80 : (window.innerWidth >= 640 ? 32 : 16)
+
+    container.scrollTo({
+      left: scrollPos - offset,
+      behavior: "smooth"
     })
+
+    setCurrentIndex(index)
+
+    setTimeout(() => {
+      isProgrammaticScroll.current = false
+    }, 600)
   }
 
   const handleScroll = () => {
@@ -80,8 +151,9 @@ export default function ImpactStats() {
       }
     }
     
-    if (activeIdx !== currentIndex) {
-      setCurrentIndex(activeIdx)
+    const mappedIdx = activeIdx % impactImages.length
+    if (mappedIdx !== currentIndex) {
+      setCurrentIndex(mappedIdx)
     }
   }
 
@@ -95,6 +167,59 @@ export default function ImpactStats() {
       if (timerRef.current) clearInterval(timerRef.current)
     }
   }, [isHovered])
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current
+    if (!scrollContainer) return
+
+    // 1. Initialize scroll to the middle set (Set 2)
+    const initScroll = () => {
+      const children = scrollContainer.children
+      if (children.length >= 12) {
+        const elem0 = children[0] as HTMLElement
+        const elem4 = children[4] as HTMLElement
+        scrollContainer.scrollLeft = elem4.offsetLeft - elem0.offsetLeft
+      } else if (scrollContainer.scrollWidth > 0) {
+        scrollContainer.scrollLeft = scrollContainer.scrollWidth / 3
+      }
+    }
+
+    const timer = setTimeout(initScroll, 50)
+
+    // 2. Debounced scroll normalization to wrap position seamlessly when scrolling stops
+    let scrollTimeout: NodeJS.Timeout
+    const handleInfiniteScroll = () => {
+      if (isProgrammaticScroll.current) return
+      if (scrollTimeout) clearTimeout(scrollTimeout)
+      
+      scrollTimeout = setTimeout(() => {
+        const { scrollLeft } = scrollContainer
+        const children = scrollContainer.children
+        if (children.length < 12) return
+
+        const elem0 = children[0] as HTMLElement
+        const elem4 = children[4] as HTMLElement
+        const oneSetWidth = elem4.offsetLeft - elem0.offsetLeft
+
+        // If scrolled past Set 2 into Set 3 (right side), jump back to Set 2
+        if (scrollLeft >= oneSetWidth * 2) {
+          scrollContainer.scrollLeft = scrollLeft - oneSetWidth
+        }
+        // If scrolled before Set 2 into Set 1 (left side), jump forward to Set 2
+        else if (scrollLeft < oneSetWidth) {
+          scrollContainer.scrollLeft = scrollLeft + oneSetWidth
+        }
+      }, 150)
+    }
+
+    scrollContainer.addEventListener("scroll", handleInfiniteScroll)
+
+    return () => {
+      clearTimeout(timer)
+      if (scrollTimeout) clearTimeout(scrollTimeout)
+      scrollContainer.removeEventListener("scroll", handleInfiniteScroll)
+    }
+  }, [])
 
   return (
     <section className="bg-[#2d584a] py-10 md:py-[60px] relative overflow-hidden">
@@ -143,17 +268,40 @@ export default function ImpactStats() {
           onScroll={handleScroll}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="mt-10 md:mt-20 flex gap-4 md:gap-[32px] overflow-x-auto pb-4 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden"
+          className="mt-10 md:mt-20 flex gap-4 md:gap-[32px] overflow-x-auto pb-4 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
+          {/* Render first set (clone) */}
           {impactImages.map((img, idx) => (
             <div 
-              key={idx} 
+              key={`set-1-${idx}`} 
               className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-opacity duration-300 ${
                 idx === currentIndex ? "opacity-100" : "opacity-70"
               }`}
             >
-              <img src={img.src} alt={img.alt} className="size-full object-cover" />
+              <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
+            </div>
+          ))}
+          {/* Render second set (original) */}
+          {impactImages.map((img, idx) => (
+            <div 
+              key={`set-2-${idx}`} 
+              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-opacity duration-300 ${
+                idx === currentIndex ? "opacity-100" : "opacity-70"
+              }`}
+            >
+              <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
+            </div>
+          ))}
+          {/* Render third set (clone) */}
+          {impactImages.map((img, idx) => (
+            <div 
+              key={`set-3-${idx}`} 
+              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-opacity duration-300 ${
+                idx === currentIndex ? "opacity-100" : "opacity-70"
+              }`}
+            >
+              <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
         </div>
@@ -163,10 +311,7 @@ export default function ImpactStats() {
           {impactImages.map((_, index) => (
             <button
               key={index}
-              onClick={() => {
-                setCurrentIndex(index)
-                scrollToImage(index)
-              }}
+              onClick={() => handleDotClick(index)}
               className={`size-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                 index === currentIndex 
                   ? "bg-[#f8f8f2] w-6" 

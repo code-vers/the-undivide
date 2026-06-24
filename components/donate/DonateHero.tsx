@@ -7,7 +7,7 @@ export default function DonateHero() {
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
         <img
-          // src="https://www.figma.com/api/mcp/asset/b28a3638-c6b5-4b24-998f-6a7fc365b525"
+          src="/assets/bg/donate-hero.JPG"
           alt="Mission Background"
           className="size-full object-cover"
         />
@@ -15,17 +15,17 @@ export default function DonateHero() {
       </div>
 
       {/* Background Image Layer 2 (Overlay pattern) */}
-      <div className="absolute inset-0 z-10 opacity-70">
+      {/* <div className="absolute inset-0 z-10 opacity-70">
         <img
           src="https://www.figma.com/api/mcp/asset/875be947-8d16-462e-adb9-67b43ad78a82"
           alt="Overlay Pattern"
           className="size-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1c3530]/70" />
-      </div>
+      </div> */}
 
       {/* Content */}
-      <div className="relative z-20 mx-auto w-full max-w-[1760px] px-4 sm:px-8 md:px-[80px] pt-[100px] md:pt-[180px] lg:pt-[264px] pb-12 md:pb-20">
+      <div className="relative z-20 mx-auto w-full max-w-[1760px] px-4 sm:px-8 md:px-[80px] pt-[100px] md:pt-[180px] lg:pt-[264px] pb-24 sm:pb-36 md:pb-[240px]">
         <div className="max-w-[1011px] space-y-8 md:space-y-[42px]">
           <div className="opacity-90">
             <p className="text-[14px] md:text-[20px] font-semibold tracking-wide text-white uppercase">

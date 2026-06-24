@@ -3,12 +3,12 @@
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChartNoAxesCombined, ChevronLeft, ChevronRight, Radar } from "lucide-react"
 
 const introImages = [
-  "https://www.figma.com/api/mcp/asset/8bcd98d4-e1a5-4bad-9569-8b1b2446613d",
-  "https://www.figma.com/api/mcp/asset/3ae63c5f-7588-4298-8112-7057a6fbd635",
-  "https://www.figma.com/api/mcp/asset/dc3b6e05-7aaa-4866-b5e5-ece81ed8cab2",
+  // "/assets/sections/donate/intro/1.JPG",
+  "/assets/sections/donate/intro/2.JPG",
+  "/assets/sections/donate/intro/3.jpg",
 ]
 
 export default function DonateIntro() {
@@ -59,11 +59,11 @@ export default function DonateIntro() {
                   style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
                   {introImages.map((src, index) => (
-                    <div key={index} className="w-full h-full shrink-0">
+                    <div key={index} className="w-full h-full shrink-0 relative">
                       <img
                         src={src}
                         alt={`Intro image ${index + 1}`}
-                        className="size-full object-cover"
+                        className="absolute inset-0 size-full object-cover"
                       />
                     </div>
                   ))}
@@ -124,7 +124,7 @@ export default function DonateIntro() {
               {/* Feature 1 */}
               <div className="flex gap-4">
                 <div className="size-[28px] md:size-[32px] shrink-0 mt-1">
-                  <img src="https://www.figma.com/api/mcp/asset/49d1f225-588d-4b5e-b510-c4da5dbe309a" alt="Icon" className="size-full" />
+                  <Radar className="text-[#1c3530]"/>
                 </div>
                 <div className="space-y-1">
                   <h4 className="text-[17px] md:text-[18px] font-semibold text-[#1c3530]">Empowering Local Leaders</h4>
@@ -137,7 +137,7 @@ export default function DonateIntro() {
               {/* Feature 2 */}
               <div className="flex gap-4">
                 <div className="size-[28px] md:size-[34px] shrink-0 mt-1">
-                  <img src="https://www.figma.com/api/mcp/asset/43964137-e36c-4376-8dc1-954804b86452" alt="Icon" className="size-full" />
+                  <ChartNoAxesCombined className="text-[#1c3530]" />
                 </div>
                 <div className="space-y-1">
                   <h4 className="text-[17px] md:text-[18px] font-semibold text-[#1c3530]">Data-Driven Independence</h4>

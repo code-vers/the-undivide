@@ -11,7 +11,7 @@ export default function NewsPage() {
       <NewsHero />
       <FeaturedNews />
       <PressSection />
-      <InterviewSection />
+      {/* <InterviewSection /> */}
       <Stats />
       <Newsletter />
     </div>

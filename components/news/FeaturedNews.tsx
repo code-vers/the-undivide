@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 const latestUpdates = [
   {
@@ -31,33 +32,36 @@ export default function FeaturedNews() {
           {/* Left: Featured Article */}
           <div className="space-y-8 group cursor-pointer">
             <div className="aspect-[1253/554] rounded-[24px] overflow-hidden">
-              <img 
-                src="https://www.figma.com/api/mcp/asset/db746d67-4f29-4ed4-b7e7-68192da19966" 
-                alt="Featured News" 
+              <img
+                src="/assets/bg/news-hero.png"
+                alt="Featured News"
                 className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
-            
+
             <div className="space-y-4">
               <span className="text-[13px] font-bold text-[#2d584a] tracking-[3px] uppercase">
                 FEATURED
               </span>
               <h2 className="text-[48px] font-bold text-[#1c3530] leading-tight max-w-[984px]">
-                The Undivide Project Launches Community Climate Resilience Hub in Atlanta
+                Grinnell College Announces Monica Sanders as the Inaugural Social Innovator in Residence
               </h2>
               <p className="text-[20px] text-[#3d5e57] leading-relaxed max-w-[1035px]">
-                New digital tool empowers neighborhoods to track climate risks in real-time, providing actionable data for local resilience planning and emergency response.
+                Grinnell College is thrilled to announce Monica Sanders as the distinguished inaugural recipient of the Social Innovator in Residence Program.
               </p>
-              
+
               <div className="flex items-center gap-3 text-[16px] text-[#8fa39d]">
                 <span>May 15, 2026</span>
                 <span>• Fast Company</span>
               </div>
 
-              <button className="flex items-center gap-2 text-[18px] font-semibold text-[#2d584a] hover:opacity-80 transition-opacity pt-4">
-                Read More
-                <ArrowUpRight size={20} />
-              </button>
+              <Link href={"https://www.grinnell.edu/news/grinnell-college-announces-monica-sanders-inaugural-social-innovator-residence"}>
+                <button className="flex items-center gap-2 text-[18px] font-semibold text-[#2d584a] hover:opacity-80 transition-opacity pt-4">
+                  Read More
+                  <ArrowUpRight size={20} />
+                </button>
+              </Link>
+
             </div>
           </div>
 
