@@ -65,7 +65,7 @@ export default function ResearchAdvocacy() {
         </div>
 
         {/* Research Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[60px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {researchItems.map((item, idx) => (
             <Link href={item.link} key={idx} target="_blank" className="block no-underline">
               <div

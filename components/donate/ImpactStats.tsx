@@ -222,8 +222,11 @@ export default function ImpactStats() {
   }, [])
 
   return (
-    <section className="bg-[#2d584a] py-10 md:py-[60px] relative overflow-hidden">
-      <div className="mx-auto max-w-[1920px]">
+    <section className="relative overflow-hidden bg-transparent py-10 md:py-[60px]" id="impact-stats">
+      {/* Split background: green background covers top portion, ending exactly at the middle of the cards */}
+      <div className="absolute inset-x-0 top-0 bg-[#2d584a] bottom-[214px] sm:bottom-[254px] md:bottom-[346px] z-0" />
+
+      <div className="relative z-10 mx-auto max-w-[1920px]">
         <div className="px-4 sm:px-8 md:px-[80px]">
           {/* Top row with title + nav arrows */}
           <div className="flex items-start justify-between gap-4 mb-4">
@@ -262,21 +265,20 @@ export default function ImpactStats() {
           </p>
         </div>
 
-        {/* Horizontal Scrolling images */}
+        {/* Horizontal Scrolling images with padding for shadows */}
         <div
           ref={scrollRef}
           onScroll={handleScroll}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="mt-10 md:mt-20 flex gap-4 md:gap-[32px] overflow-x-auto pb-4 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
+          className="mt-10 md:mt-20 flex gap-4 md:gap-[32px] overflow-x-auto pt-4 pb-8 md:pt-6 md:pb-12 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {/* Render first set (clone) */}
           {impactImages.map((img, idx) => (
             <div 
               key={`set-1-${idx}`} 
-              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-opacity duration-300 ${
-                idx === currentIndex ? "opacity-100" : "opacity-70"
+              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:-translate-y-2
               }`}
             >
               <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
@@ -286,9 +288,7 @@ export default function ImpactStats() {
           {impactImages.map((img, idx) => (
             <div 
               key={`set-2-${idx}`} 
-              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-opacity duration-300 ${
-                idx === currentIndex ? "opacity-100" : "opacity-70"
-              }`}
+              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:-translate-y-2`}
             >
               <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
@@ -297,9 +297,7 @@ export default function ImpactStats() {
           {impactImages.map((img, idx) => (
             <div 
               key={`set-3-${idx}`} 
-              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-opacity duration-300 ${
-                idx === currentIndex ? "opacity-100" : "opacity-70"
-              }`}
+              className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:-translate-y-2`}
             >
               <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
@@ -307,20 +305,20 @@ export default function ImpactStats() {
         </div>
 
         {/* Navigation Dots Indicator */}
-        <div className="flex justify-center gap-2 mt-8">
+        {/* <div className="flex justify-center gap-2 mt-8">
           {impactImages.map((_, index) => (
             <button
               key={index}
               onClick={() => handleDotClick(index)}
               className={`size-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                 index === currentIndex 
-                  ? "bg-[#f8f8f2] w-6" 
-                  : "bg-[#f8f8f2]/40 hover:bg-[#f8f8f2]/80"
+                  ? "bg-[#2d584a] w-6" 
+                  : "bg-[#2d584a]/40 hover:bg-[#2d584a]/85"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )

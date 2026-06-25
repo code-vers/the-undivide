@@ -1,10 +1,18 @@
+"use client"
+
 import Link from "next/link"
 import Logo from "./Logo"
 import { Link2 } from "lucide-react"
+import { usePathname } from "next/navigation"
 
 export default function Footer() {
+  const pathname = usePathname()
+  const isContactPage = pathname === "/contact"
+
   return (
-    <footer className="w-full bg-[#1c3530] text-white py-[64px] px-8 md:px-[80px]">
+    <footer className={`w-full bg-[#1c3530] text-white px-8 md:px-[80px] ${
+      isContactPage ? "pt-[140px] md:pt-[180px] pb-[64px]" : "py-[64px]"
+    }`}>
       <div className="mx-auto max-w-[1760px]">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4 lg:gap-20">
           {/* Brand block */}

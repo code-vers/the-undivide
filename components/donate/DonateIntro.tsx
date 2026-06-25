@@ -150,7 +150,7 @@ export default function DonateIntro() {
 
             <div className="pt-4 md:pt-8">
               <Link href='/impact'>
-                <Button variant="outline" className="bg-transparent border-[#2d584a] text-[#2d584a] hover:bg-[#2d584a] hover:text-white h-[46px] md:h-[50px] px-[22px] md:px-[25px] rounded-[8px] text-[15px] md:text-[16px]">
+                <Button variant="outline" className="!bg-transparent border-[#2d584a] text-[#2d584a] hover:!bg-[#2d584a] hover:!text-white h-[46px] md:h-[50px] px-[22px] md:px-[25px] rounded-[8px] text-[15px] md:text-[16px] transition-colors">
                   Explore Our Work
                 </Button>
               </Link>

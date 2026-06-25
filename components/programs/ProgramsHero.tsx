@@ -22,7 +22,7 @@ export default function ProgramsHero() {
       </div> */}
 
       {/* Content */}
-      <div className="relative z-20 mx-auto w-full max-w-[1760px] px-4 sm:px-8 md:px-[80px] pt-[100px] md:pt-[180px] lg:pt-[264px] pb-10 md:pb-16">
+      <div className="relative z-20 mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-[80px] pt-[100px] md:pt-[180px] lg:pt-[264px] pb-10 md:pb-16">
         <div className="max-w-[1011px] space-y-6 md:space-y-[42px]">
           <div className="opacity-90">
             <p className="text-[14px] md:text-[20px] font-semibold tracking-wide text-white uppercase">

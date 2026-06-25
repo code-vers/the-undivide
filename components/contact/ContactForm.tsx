@@ -22,14 +22,14 @@ export default function ContactForm() {
               {/* Card 1: Email */}
               <Link 
                 href="mailto:info@theundivideproject.org"
-                className="group block bg-white border border-[#2d584a] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[22px] p-4 md:p-[25px] flex gap-3 md:gap-[16px] items-start shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer"
+                className="group block bg-white border border-[#d4fed0] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[22px] p-4 md:p-[25px] flex gap-3 md:gap-[16px] items-start shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer"
               >
                 <div className="size-[44px] md:size-[52px] shrink-0 bg-[#2d584a]/10 group-hover:bg-white/20 text-[#2d584a] group-hover:text-white rounded-full flex items-center justify-center transition-colors duration-300">
                   <Mail className="size-5 md:size-6" />
                 </div>
                 <div className="space-y-1 min-w-0">
                   <p className="text-[13px] md:text-[16px] font-semibold text-[#8fa39d] group-hover:text-white/80 tracking-[0.6px] uppercase transition-colors duration-300">EMAIL ADDRESS</p>
-                  <p className="text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#1c3530] group-hover:text-white break-all transition-colors duration-300">info@theundivideproject.org</p>
+                  <p className="text-[16px] md:text-[20px] lg:text-lg font-medium text-[#1c3530] group-hover:text-white break-all transition-colors duration-300">info@theundivideproject.org</p>
                 </div>
               </Link>
 
@@ -37,14 +37,14 @@ export default function ContactForm() {
               <Link 
                 href="https://linktr.ee/theundivide"
                 target="_blank"
-                className="group block bg-white border border-[#2d584a] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[22px] p-4 md:p-[25px] flex gap-3 md:gap-[16px] items-start shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer"
+                className="group block bg-white border border-[#d4fed0] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[22px] p-4 md:p-[25px] flex gap-3 md:gap-[16px] items-start shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer"
               >
                 <div className="size-[44px] md:size-[52px] shrink-0 bg-[#2d584a]/10 group-hover:bg-white/20 text-[#2d584a] group-hover:text-white rounded-full flex items-center justify-center transition-colors duration-300">
                   <Handshake className="size-5 md:size-6" />
                 </div>
                 <div className="space-y-1">
                   <p className="text-[13px] md:text-[16px] font-semibold text-[#8fa39d] group-hover:text-white/80 tracking-[0.6px] uppercase transition-colors duration-300">OUR SOCIALS</p>
-                  <p className="text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#1c3530] group-hover:text-white transition-colors duration-300">Linktree</p>
+                  <p className="text-[16px] md:text-[20px] lg:text-lg font-medium text-[#1c3530] group-hover:text-white transition-colors duration-300">Linktree</p>
                 </div>
               </Link>
 
@@ -52,21 +52,21 @@ export default function ContactForm() {
               <Link 
                 href="https://www.google.com/maps/search/?api=1&query=601+King+St+STE+200+%23671%2C+Alexandria%2C+Virginia"
                 target="_blank"
-                className="group block bg-white border border-[#2d584a] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[22px] p-4 md:p-[25px] flex gap-3 md:gap-[16px] items-start shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer"
+                className="group block bg-white border border-[#d4fed0] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[22px] p-4 md:p-[25px] flex gap-3 md:gap-[16px] items-start shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer"
               >
                 <div className="size-[44px] md:size-[52px] shrink-0 bg-[#2d584a]/10 group-hover:bg-white/20 text-[#2d584a] group-hover:text-white rounded-full flex items-center justify-center transition-colors duration-300">
                   <MapPin className="size-5 md:size-6" />
                 </div>
                 <div className="space-y-1">
                   <p className="text-[13px] md:text-[16px] font-semibold text-[#8fa39d] group-hover:text-white/80 tracking-[0.6px] uppercase transition-colors duration-300">LOCATION</p>
-                  <p className="text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#1c3530] group-hover:text-white transition-colors duration-300">601 King St STE 200 #671, Alexandria, Virginia</p>
+                  <p className="text-[16px] md:text-[20px] lg:text-lg font-medium text-[#1c3530] group-hover:text-white transition-colors duration-300">601 King St STE 200 #671, Alexandria, Virginia</p>
                 </div>
               </Link>
             </div>
         </div>
 
         {/* Right Column: Contact Form */}
-        <div className="bg-white border border-[#2d584a] rounded-[22px] p-5 sm:p-6 md:p-[41px] shadow-sm">
+        <div className="bg-white border border-[#dcffd8] rounded-[22px] p-5 sm:p-6 md:p-[41px] shadow-sm">
           <form className="space-y-5 md:space-y-[24px]">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-[24px]">
               <div className="space-y-2">

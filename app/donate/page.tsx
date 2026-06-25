@@ -10,13 +10,13 @@ export default function DonatePage() {
   return (
     <div className="flex flex-col bg-white">
       <DonateHero />
-      <div className="relative">
+      <div className="relative bg-[#fdf9ed]">
         <ImpactPanel />
         <WhyDonate />
-        <DonationImpact />
       </div>
-      <div className="space-y-0">
-        <ImpactStats />
+      <ImpactStats />
+      <DonationImpact />
+      <div className="space-y-0 bg-[#fdf9ed]">
         <DonateIntro />
       </div>
       <PromotionSection />

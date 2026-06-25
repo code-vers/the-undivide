@@ -62,8 +62,8 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-[24px]">
               {/* Pillar 1 */}
               <div className="flex items-center gap-[16px] w-[210px]">
-                <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                  <BookOpenText />
+                <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center text-white">
+                  <BookOpenText className="text-white" style={{ color: 'white', stroke: 'white' }} />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Public Education</p>
@@ -74,8 +74,8 @@ export default function Hero() {
 
               {/* Pillar 2 */}
               <div className="flex items-center gap-[16px] w-[281px]">
-                <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                  <Users />
+                <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center text-white">
+                  <Users className="text-white" style={{ color: 'white', stroke: 'white' }} />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Community Co-Creation</p>
@@ -86,8 +86,8 @@ export default function Hero() {
 
               {/* Pillar 3 */}
               <div className="flex items-center gap-[16px] w-[271px]">
-                <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center">
-                  <Search />
+                <div className="h-[52px] w-[53px] rounded-full bg-white/10 backdrop-blur-[2px] border border-white/20 flex items-center justify-center text-white">
+                  <Search className="text-white" style={{ color: 'white', stroke: 'white' }} />
                 </div>
                 <div className="opacity-90">
                   <p className="text-[18px] text-white leading-[27px]">Research & Advocacy</p>

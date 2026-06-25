@@ -23,8 +23,8 @@ export default function VisionSection() {
 
   return (
     <section className="bg-[#f1ede1] py-12 md:py-[80px] lg:py-[120px]">
-      <div className="mx-auto max-w-[1760px] px-4 sm:px-8 md:px-[80px]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-[100px] items-center">
+      <div className="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[80px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 xl:gap-[100px] items-center">
           {/* Collage Images — responsive height */}
           <div className="relative h-[360px] sm:h-[480px] md:h-[600px] lg:h-[752px]">
             {/* Main Top Left */}

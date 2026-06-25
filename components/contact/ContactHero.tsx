@@ -16,7 +16,7 @@ export default function ContactHero() {
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-8 md:px-[64px] h-full flex flex-col items-center justify-center pt-[80px] md:pt-[123px]">
         <div className="space-y-3 md:space-y-[16px] text-center">
-          <p className="text-[11px] md:text-[12px] font-semibold tracking-[0.6px] text-[#dcfcc0] uppercase">
+          <p className="text-[11px] md:text-[12px] font-semibold tracking-[0.6px] text-[#ffffff] uppercase">
             GET IN TOUCH
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-bold text-[#f8f8f2] leading-tight">
