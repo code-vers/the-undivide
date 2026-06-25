@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight } from "lucide-react"
+import Link from "next/link"
 
 export default function DonateHero() {
   return (
@@ -43,14 +44,18 @@ export default function DonateHero() {
           </div>
 
           <div className="flex flex-wrap gap-4 md:gap-[24px] items-center">
+            <Link href={"https://donorbox.org/support-our-work-86"} target="_blank">
             <Button className="group bg-[#2d584a] hover:bg-[#1c3530] text-white h-[52px] md:h-[64px] px-[24px] md:px-[32px] rounded-[12px] text-[15px] md:text-[16px] shadow-lg gap-2">
               Donate Now
               <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
+            </Link>
+            <Link href={"/contact"} target="_blank">
             <Button variant="outline" className="group bg-transparent border-white text-white hover:bg-white hover:text-[#1c3530] h-[52px] md:h-[64px] px-[24px] md:px-[33px] rounded-[12px] text-[15px] md:text-[16px] gap-2">
               Get Involved
               <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
+            </Link>
           </div>
         </div>
       </div>
