@@ -15,7 +15,7 @@ export default function Newsletter() {
           <input 
             type="email" 
             placeholder="Your email address" 
-            className="flex-grow h-[48px] bg-white border border-[#a8b5b0] rounded-[8px] sm:rounded-r-none sm:rounded-l-[8px] px-[17px] text-[15px] text-[#8fa39d] outline-none w-full"
+            className="flex-grow h-[48px] bg-white rounded-[8px] sm:rounded-r-none sm:rounded-l-[8px] px-[17px] text-[15px] text-[#8fa39d] outline-none w-full"
           />
           <Button 
             type="submit"

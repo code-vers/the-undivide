@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-[1760px] px-6 md:px-[80px] pt-16 md:pt-[100px] pb-12 md:pb-0 w-full">
+      <div className="relative z-10 mx-auto max-w-[1920px] px-6 md:px-[80px] pt-16 md:pt-[10px] pb-12 md:pb-0 w-full">
         <div className="max-w-[1760px] space-y-[40px] md:space-y-[60px]">
           <div className="space-y-[42px]">
             <div className="opacity-90">

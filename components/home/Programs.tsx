@@ -45,7 +45,7 @@ export default function Programs() {
 
   return (
     <section className="bg-[#f6f9f9] py-16 md:py-[120px]">
-      <div className="mx-auto max-w-[1750px] px-6 md:px-[80px]">
+      <div className="mx-auto max-w-[1920px] px-6 md:px-[80px]">
         {/* Header */}
         <div className="flex flex-col items-center space-y-4 mb-16">
           <div className="border border-[#d6cfc0] rounded-full px-[17px] py-[5px]">
@@ -130,7 +130,7 @@ export default function Programs() {
                   key={program.id}
                   onMouseEnter={() => setActiveId(program.id)}
                   onClick={() => setActiveId(program.id)}
-                  className="bg-[#f1f2f3] border border-[#d6cfc0] text-[#1c3530] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer hover:bg-[#e8eaeb]"
+                  className="bg-[#f1f2f3] border border-[#ffffff] text-[#1c3530] rounded-[16px] transition-all duration-500 ease-in-out cursor-pointer hover:bg-[#e8eaeb]"
                 >
                   <div className="p-4 md:p-[32px] flex items-center justify-between gap-4 relative">
                     <div className="flex gap-4 md:gap-[32px] items-start flex-1 min-w-0">

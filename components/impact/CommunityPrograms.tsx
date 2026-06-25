@@ -115,10 +115,13 @@ export default function CommunityPrograms() {
   }
 
   return (
-    <section className="bg-[#2d584a] py-12 md:py-[60px] relative overflow-hidden" id="community-programs">
-      <div className="mx-auto max-w-[1920px]">
+    <section className="relative overflow-hidden bg-white pt-12 md:pt-[60px] pb-16 sm:pb-24 md:pb-[100px]" id="community-programs">
+      {/* Split background: green background covers top portion, ending exactly at the middle of the cards */}
+      <div className="absolute inset-x-0 top-0 bg-[#2d584a] bottom-[206px] sm:bottom-[278px] md:bottom-[344px] z-0" />
+
+      <div className="relative z-10 mx-auto max-w-[1920px]">
         <div className="pt-4 md:pt-8 pb-6 md:pb-8">
-          <div className="mx-auto max-w-[1760px] px-4 sm:px-8 md:px-[80px]">
+          <div className="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[80px]">
             {/* Top row with title + nav arrows */}
             <div className="flex items-start justify-between gap-4 mb-6 md:mb-8">
               <div>
@@ -156,27 +159,36 @@ export default function CommunityPrograms() {
           </div>
         </div>
 
-        {/* Horizontal Scrolling images */}
+        {/* Horizontal Scrolling images with padding for shadows */}
         <div
           ref={scrollRef}
-          className="flex gap-4 md:gap-[32px] overflow-x-auto pb-4 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
+          className="flex gap-4 md:gap-[32px] overflow-x-auto pt-4 pb-8 md:pt-6 md:pb-12 px-4 sm:px-8 md:px-[80px] snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {/* Render first set (clone) */}
           {caseStudies.map((study, idx) => (
-            <div key={`set-1-${idx}`} className={study.className}>
+            <div
+              key={`set-1-${idx}`}
+              className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
+            >
               <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
           {/* Render second set (original) */}
           {caseStudies.map((study, idx) => (
-            <div key={`set-2-${idx}`} className={study.className}>
+            <div
+              key={`set-2-${idx}`}
+              className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
+            >
               <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
           {/* Render third set (clone) */}
           {caseStudies.map((study, idx) => (
-            <div key={`set-3-${idx}`} className={study.className}>
+            <div
+              key={`set-3-${idx}`}
+              className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
+            >
               <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}

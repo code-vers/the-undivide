@@ -44,7 +44,7 @@ export default function ExploreProjects() {
   const [hoveredIndex, setHoveredIndex] = useState<number>(1) // Default to Ten States Project
 
   return (
-    <section className="bg-[#f6f9f9] py-12 md:py-[80px] lg:py-[120px] px-4 sm:px-8 md:px-[80px]">
+    <section className="bg-[#f6f9f9] py-12 md:py-[80px] lg:pt-[120px] lg:pb-48 px-4 sm:px-8 md:px-[80px]">
       <div className="mx-auto max-w-[1750px]">
         {/* Header */}
         <div className="flex flex-col items-center space-y-3 md:space-y-4 mb-10 md:mb-16">
@@ -144,7 +144,7 @@ export default function ExploreProjects() {
               return (
                 <div
                   key={idx}
-                  className="bg-[#f1f2f3] border border-[#d6cfc0] rounded-[16px] p-4 md:p-[32px] transition-all duration-300 cursor-pointer hover:bg-[#e8eaeb]"
+                  className="bg-[#f1f2f3] border border-[#ffffff] rounded-[16px] p-4 md:p-[32px] transition-all duration-300 cursor-pointer hover:bg-[#e8eaeb]"
                   onMouseEnter={() => setHoveredIndex(idx)}
                 >
                   <div className="flex items-center justify-between gap-4">

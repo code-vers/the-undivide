@@ -38,7 +38,7 @@ export default function PolicyAdvocacy() {
       <div className="mx-auto max-w-[1760px]">
         {/* Header */}
         <div className="flex flex-col items-start gap-6 md:gap-[32px] mb-10 md:mb-16">
-          <div className="border border-[#d6cfc0] rounded-full px-[17px] py-[5px]">
+          <div className="border border-[#efefef] rounded-full px-[17px] py-[5px]">
             <span className="text-[11px] font-medium tracking-[0.275px] text-[#1c3530] uppercase">
               Our RESEARCH
             </span>
@@ -48,7 +48,7 @@ export default function PolicyAdvocacy() {
               Policy Advocacy
             </h2>
             <p className="text-[14px] md:text-[16px] text-[#5c7a72] max-w-[1040px] leading-[24px]">
-              Change happens when we push for it. That&apos;s why we&apos;re writing, collaborating, and advocating at every level — from local to international. Our white papers and research don&apos;t just sit on shelves — they influence real decisions that impact people like you.
+              Change happens when we push for it. That&apos;s why we&apos;re writing, collaborating, and advocating at every level from local to international. Our white papers and research don&apos;t just sit on shelves they influence real decisions that impact people like you.
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ export default function PolicyAdvocacy() {
                 key={idx}
                 href={event.link}
                 target="_blank"
-                className="bg-white border border-[#2d584a] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[8px] p-4 md:p-[25px] flex items-start gap-4 md:gap-[24px] group hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer no-underline"
+                className="bg-white border border-[#e0f9c9] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[8px] p-4 md:p-[25px] flex items-start gap-4 md:gap-[24px] group hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer no-underline"
               >
                 {/* Icon Marker */}
                 <div className="size-[20px] md:size-[22px] shrink-0 mt-1">

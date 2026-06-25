@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[950px] w-full overflow-hidden flex items-end">
+    <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[800px] w-full overflow-hidden flex items-end">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -14,7 +14,7 @@ export default function AboutHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1760px] px-4 sm:px-8 md:px-[80px] pt-16 md:pt-24 lg:pt-[160px] pb-10 md:pb-16">
+      <div className="relative z-10 mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-[80px] pt-16 md:pt-24 lg:pt-[160px] pb-10 md:pb-16">
         <div className="max-w-[1011px] space-y-6 md:space-y-[42px]">
           <div className="opacity-90">
             <p className="text-[14px] md:text-[20px] font-semibold tracking-wide text-white uppercase">
