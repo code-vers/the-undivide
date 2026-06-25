@@ -115,7 +115,7 @@ export default function CommunityPrograms() {
   }
 
   return (
-    <section className="bg-[#2d584a] py-12 md:py-[60px] relative overflow-hidden">
+    <section className="bg-[#2d584a] py-12 md:py-[60px] relative overflow-hidden" id="community-programs">
       <div className="mx-auto max-w-[1920px]">
         <div className="pt-4 md:pt-8 pb-6 md:pb-8">
           <div className="mx-auto max-w-[1760px] px-4 sm:px-8 md:px-[80px]">

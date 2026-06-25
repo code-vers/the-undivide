@@ -133,17 +133,27 @@ export default function VisionSection() {
 
       {/* Video Modal Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-[95vw] md:max-w-[900px] p-0 overflow-hidden bg-black/95 border border-[#dcfcc0]/20 rounded-[20px] md:rounded-[32px] shadow-[0px_24px_60px_0px_rgba(28,53,48,0.4)]">
+        <DialogContent className="w-[95vw] sm:max-w-[550px] md:max-w-[600px] p-0 overflow-hidden bg-black/95 border border-[#dcfcc0]/20 rounded-[20px] md:rounded-[32px] shadow-[0px_24px_60px_0px_rgba(28,53,48,0.4)]">
           <DialogTitle className="sr-only">Our Vision Video</DialogTitle>
           <DialogDescription className="sr-only">Video detailing the vision of The Undivide Project.</DialogDescription>
-          <div className="relative w-full aspect-video flex items-center justify-center bg-black">
-            <video
-              src="/assets/sections/about/vision/Monica.mp4"
-              controls
-              autoPlay
-              className="w-full h-full object-contain"
-            />
-          </div>
+          {isDialogOpen && (
+            <div className="relative w-full aspect-square flex items-center justify-center bg-black">
+              <video
+                ref={(el) => {
+                  if (el) {
+                    el.play().catch((err) => {
+                      console.log("Video autoPlay failed:", err);
+                    });
+                  }
+                }}
+                src="/assets/sections/about/vision/Monica-reduced.mp4"
+                controls
+                autoPlay
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     </section>

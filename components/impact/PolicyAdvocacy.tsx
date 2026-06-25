@@ -34,7 +34,7 @@ const policyEvents = [
 
 export default function PolicyAdvocacy() {
   return (
-    <section className="bg-white py-12 md:py-[80px] lg:py-[120px] px-4 sm:px-8 md:px-[80px]">
+    <section className="bg-white py-12 md:py-[80px] lg:py-[120px] px-4 sm:px-8 md:px-[80px]" id="policy-advocacy">
       <div className="mx-auto max-w-[1760px]">
         {/* Header */}
         <div className="flex flex-col items-start gap-6 md:gap-[32px] mb-10 md:mb-16">

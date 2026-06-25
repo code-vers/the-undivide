@@ -1,4 +1,5 @@
 import { Globe } from "lucide-react";
+import Link from "next/link";
 
 export default function FooterCTA() {
   return (
@@ -15,9 +16,11 @@ export default function FooterCTA() {
             </div>
           </div>
           
+          <Link href={"/contact#contact-form"}>
           <button className="bg-[#f8f8f2] text-[#2d584a] px-[32px] py-[16px] rounded-full font-bold text-[16px] hover:bg-[#1c3530] hover:text-white transition-all mt-8 md:mt-0 active:scale-95 shadow-sm">
             Let&apos;s Get Started
           </button>
+          </Link>
         </div>
       </div>
     </section>

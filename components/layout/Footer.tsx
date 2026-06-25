@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Logo from "./Logo"
+import { Link2 } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -16,76 +17,82 @@ export default function Footer() {
               Empowering communities through technology, education, and advocacy to address climate change and digital inequity.
             </p>
             <div className="flex gap-[12px] pt-4">
-              <Link href="#" className="text-white/80 hover:text-white transition-colors" aria-label="Twitter">
+              <Link href={"https://linktr.ee/theundivide?fbclid=PAZXh0bgNhZW0CMTEAAac6vdyK-U0F-blPOfGMHW3eZNdcQKxP2FNG5DCXM1KqL6X-Zs9VTDReRyP5eA_aem_NVBjfZP6J6Neu-qHuA9USg"} target="_blank" className="text-white/80 hover:text-white transition-colors" aria-label="Linktree">
+                <Link2 />
+              </Link>
+              <Link href="https://www.facebook.com/people/The-Undivide-Project/100083055264645/" target="_blank" className="text-white/80 hover:text-white transition-colors" aria-label="Facebook">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </Link>
-              <Link href="#" className="text-white/80 hover:text-white transition-colors" aria-label="Instagram">
+              <Link href="https://www.instagram.com/theundivideproject/" target="_blank" className="text-white/80 hover:text-white transition-colors" aria-label="Instagram">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                 </svg>
               </Link>
-              <Link href="#" className="text-white/80 hover:text-white transition-colors" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/company/the-unidivide-project/" target="_blank" className="text-white/80 hover:text-white transition-colors" aria-label="LinkedIn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect width="4" height="12" x="2" y="9" />
                   <circle cx="4" cy="4" r="2" />
                 </svg>
               </Link>
+              <Link href={"https://www.youtube.com/channel/UCz0dO7FYgEQbR5UofPclwfA"} target="_blank" className="text-white/80 hover:text-white transition-colors" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+              </Link>
             </div>
           </div>
 
           {/* Column 1: Our services */}
           <div className="space-y-4">
-            <h4 className="text-[10px] font-medium uppercase tracking-wider text-white/50">
+            <h4 className="text-14 font-medium uppercase tracking-wider text-white">
               Our services
             </h4>
             <ul className="space-y-3 text-[12px]">
               <li>
-                <Link href="/programs" className="hover:text-white transition-colors text-white/70">
+                <Link href="/projects/gev-climate-risk-dashboard" className="hover:text-white transition-colors text-white/70">
+                  Grinnell Social Innovator
+                </Link>
+              </li>
+              <li>  
+                <Link href="/impact" className="hover:text-white transition-colors text-white/70">
                   Eco-Dashboard
                 </Link>
               </li>
               <li>
-                <Link href="/programs" className="hover:text-white transition-colors text-white/70">
-                  Ten States Projects
+                <Link href="https://the-ten-states-project-for-equitable-climate-risk-undivide.hub.arcgis.com/" target="_blank" className="hover:text-white transition-colors text-white/70">
+                  Ten States Project
                 </Link>
               </li>
               <li>
-                <Link href="/programs" className="hover:text-white transition-colors text-white/70">
+                <Link href="/impact#community-programs" className="hover:text-white transition-colors text-white/70">
+                  Community Programs
+                </Link>
+              </li>
+              <li>
+                <Link href="/impact#policy-advocacy" className="hover:text-white transition-colors text-white/70">
                   Policy Advocacy
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/programs" className="hover:text-white transition-colors text-white/70">
-                  Storytelling Work
+                 Storytelling Work
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           {/* Column 2: Get involved */}
           <div className="space-y-4">
-            <h4 className="text-[10px] font-medium uppercase tracking-wider text-white/50">
+            <h4 className="text-14 font-medium uppercase tracking-wider text-white">
               Get involved
             </h4>
             <ul className="space-y-3 text-[12px]">
               <li>
-                <Link href="/about" className="hover:text-white transition-colors text-white/70">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-white transition-colors text-white/70">
-                  Team
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-white transition-colors text-white/70">
-                  Partners
+                <Link href="/contact" className="hover:text-white transition-colors text-white/70">
+                  Volunteer
                 </Link>
               </li>
               <li>
@@ -93,12 +100,22 @@ export default function Footer() {
                   Donate
                 </Link>
               </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors text-white/70">
+                  Partner With Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors text-white/70">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Column 3: Contact */}
           <div className="space-y-4">
-            <h4 className="text-[10px] font-medium uppercase tracking-wider text-white/50">
+            <h4 className="text-14 font-medium uppercase tracking-wider text-white">
               CONTACT
             </h4>
             <ul className="space-y-3 text-[12px]">
@@ -107,11 +124,6 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-white/70">601 King St STE 200 #671, Alexandria, Virginia</span>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition-colors font-medium text-white/70">
-                  Send a message &rarr;
-                </Link>
               </li>
             </ul> 
           </div>

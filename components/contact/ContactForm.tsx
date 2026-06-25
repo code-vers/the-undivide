@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function ContactForm() {
   return (
-    <section className="bg-[#f1ede1] py-12 md:py-[80px] lg:py-[120px] px-4 sm:px-8 md:px-[80px]">
+    <section className="bg-[#f1ede1] py-12 md:py-[80px] lg:py-[120px] px-4 sm:px-8 md:px-[80px]" id="contact-form">
       <div className="mx-auto max-w-[1760px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[24px] xl:gap-[60px] items-start">
           {/* Left Column: Info & Cards */}

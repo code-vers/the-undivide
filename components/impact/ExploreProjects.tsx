@@ -104,7 +104,7 @@ export default function ExploreProjects() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="size-full object-cover"
+                      className="size-full object-fit"
                     />
                   </div>
 

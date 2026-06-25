@@ -52,7 +52,7 @@ export default function FeaturedNews() {
 
               <div className="flex items-center gap-3 text-[16px] text-[#8fa39d]">
                 <span>May 15, 2026</span>
-                <span>• Fast Company</span>
+                <span>• Grinnell College</span>
               </div>
 
               <Link href={"https://www.grinnell.edu/news/grinnell-college-announces-monica-sanders-inaugural-social-innovator-residence"}>
