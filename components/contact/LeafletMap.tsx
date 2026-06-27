@@ -22,11 +22,15 @@ export default function LeafletMap({ position, address }: LeafletMapProps) {
   }, [])
 
   return (
-    <MapContainer 
-      center={position} 
-      zoom={16} 
+    <MapContainer
+      center={position}
+      zoom={16}
       scrollWheelZoom={false}
       className="size-full"
+      dragging={false}
+      zoomControl={false}
+      doubleClickZoom={false}
+      touchZoom={false}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

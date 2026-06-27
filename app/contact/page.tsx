@@ -8,7 +8,7 @@ export default function ContactPage() {
     <div className="flex flex-col bg-white">
       <ContactHero />
       <ContactForm />
-      <MapSection />
+      {/* <MapSection /> */}
       <FooterCTA />
     </div>
   )
