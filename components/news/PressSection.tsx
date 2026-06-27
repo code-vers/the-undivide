@@ -8,7 +8,7 @@ const pressItems = [
     description: "The Wi-Fi signal is weak outside the Frederick Douglass National Historic Site in Anacostia, a historic African-American section of Washington, DC. The abolitionist leader's former home sits serenely atop a grassy hill in the otherwise bustling neighborhood.",
     date: "April 25, 2026",
     source: "MIT Technology Review",
-    image: "/assets/sections/news/news_card_1.png",
+    image: "/assets/sections/news/news_card_1.jpg",
     url: 'https://www.benton.org/headlines/how-climate-vulnerability-and-digital-divide-are-linked'
   },
   {
@@ -17,7 +17,7 @@ const pressItems = [
     description: "During this event we will explore the critical connections between water issues and community representation. This event will bring together leaders, researchers, and advocates to discuss tools and strategies for empowering communities to educate policymakers on water security, environmental justice, and resource access.",
     date: "April 20, 2026",
     source: "Medium",
-    image: "/assets/sections/news/news_card_3.png",
+    image: "/assets/sections/news/news_card_3.jpg",
     url: 'https://medium.com/the-new-climate/what-is-climate-justice-its-more-than-just-a-trending-term-851b67396234'
   },
   {
@@ -35,7 +35,7 @@ const pressItems = [
     description: "Writing for Forbes since 2023, Monica has reported on key issues such as the impact of extreme weather events on vulnerable communities and advancements in climate justice.",
     date: "April 25, 2026",
     source: "Forbes",
-    image: "/assets/sections/news/news_card_5.png",
+    image: "/assets/sections/news/news_card_5.jpg",
     url: 'https://www.forbes.com/sites/monicasanders/'
   },
   {
@@ -53,7 +53,7 @@ const pressItems = [
     description: "A powerful story about the aftermath of a devastating storm and its impact on a small community.",
     date: "April 18, 2026",
     source: "Oxford American",
-    image: "/assets/sections/news/news_card_7.png",
+    image: "/assets/sections/news/news_card_7.jpg",
     url: "https://oxfordamerican.org/oa-now/the-storm-that-blew-us-apart"
   },
    {
@@ -62,7 +62,7 @@ const pressItems = [
     description: "Fashion is a statement about who you are and how you navigate the world. I believe we've moved away from this idea and have become too focused on trends or what's considered attractive, instead of using our attire to communicate our individuality. For example, if I'm wearing the latest trendy outfit, it conveys a certain message about me, but if I'm in comfortable, professionally appropriate attire, that tells a different story.",
     date: "April 18, 2026",
     source: "Medium",
-    image: "/assets/sections/news/news-card-8.png",
+    image: "/assets/sections/news/news-card-8.jpg",
     url: "https://oxfordamerican.org/oa-now/the-storm-that-blew-us-apart"
   },
    {
@@ -89,7 +89,7 @@ const pressItems = [
     description: "Many of us are becoming more socially aware. We are thinking about the climate in a more intentional way. I am seeing social impact businesses being started and others redirecting in that way. My hope is that this odd period of being both in stasis and unrest will cause the majority of us to decide to keep some of the good from this experience and move it forward.",
     date: "April 18, 2026",
     source: "Medium",
-    image: "/assets/sections/news/news_card_11.png",
+    image: "/assets/sections/news/news_card_11.jpg",
     url: "https://medium.com/authority-magazine/heroes-of-the-covid-crisis-how-professor-monica-sanders-aims-to-facilitate-an-equitable-recovery-6cd6caac62d9"
   },
   {
@@ -98,7 +98,7 @@ const pressItems = [
     description: "Representing The Undivide Project, Monica shared critical insights on how climate change, cyber threats, and criminal activity converge to destabilize communities—especially impacting women—and emphasized the role of women's leadership and resilience in building security.",
     date: "April 18, 2026",
     source: "ParlAmericas",
-    image: "/assets/sections/news/news_card_12.png",
+    image: "/assets/sections/news/news_card_12.jpg",
     url: "https://thedialogue.org/analysis/parlamericas-parliamentary-delegation-regional-security-in-a-changing-context-traditional-and-non-traditional-threats"
   },
 ]

@@ -6,7 +6,7 @@ export default function GevResearch() {
     {
       title: "Hazard vs. Connectivity Tool",
       description: "An interactive web map that combines state and federal data with community-collected connectivity measurements to identify broadband gaps and environmental threats.",
-      image: "/assets/sections/gev-climate/hazard.png",
+      image: "/assets/sections/gev-climate/hazard.jpg",
       theme: "dark",
       link: "https://arcg.is/bG5X40"
     },

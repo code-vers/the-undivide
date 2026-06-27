@@ -18,7 +18,7 @@ const projects = [
     id: "02",
     title: "Ten States Project",
     description: "The Ten States Project targets states hardest hit by climate injustice and digital inequality, using storytelling and a research hub to help communities build sustainable, equitable solutions.",
-    image: "/assets/sections/impact/projects/Tenstate.png",
+    image: "/assets/sections/impact/projects/Tenstate.jpg",
     href: "https://the-ten-states-project-for-equitable-climate-risk-undivide.hub.arcgis.com/",
     target: '_blank'
   },
@@ -34,7 +34,7 @@ const projects = [
     id: "04",
     title: "AI Resilience",
     description: "The AI Resilience project (AI Law Compass) explores the intersection of artificial intelligence, policy, and legal frameworks to guide legal practitioners and researchers through AI regulation.",
-    image: "/assets/sections/impact/projects/AI-resilience.png",
+    image: "/assets/sections/impact/projects/AI-resilience.jpg",
     href: "/projects/ai-resilience",
     target: ''
   },

@@ -8,7 +8,7 @@ const newsItems = [
     description: "Monica Sanders draws connections between internet availability, environmental risk, and historical racial inequity for the Undivide Project.",
     date: "May 10, 2026",
     source: "TechCrunch",
-    image: "/assets/sections/about/news/news-1.png",
+    image: "/assets/sections/about/news/news-1.jpg",
     url: 'https://www.technologyreview.com/2023/06/20/1074244/climate-vulnerability-digital-divide/'
   },
   {
@@ -17,7 +17,7 @@ const newsItems = [
     description: "Grinnell College is thrilled to announce Monica Sanders as the distinguished inaugural recipient of the Social Innovator in Residence Program.",
     date: "May 6, 2026",
     source: "Grist",
-    image: "/assets/sections/about/news/news-2.png",
+    image: "/assets/sections/about/news/news-2.jpg",
     url: 'https://www.grinnell.edu/news/grinnell-college-announces-monica-sanders-inaugural-social-innovator-residence'
   },
   {

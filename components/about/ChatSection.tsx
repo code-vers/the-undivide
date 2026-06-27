@@ -6,7 +6,7 @@ export default function ChatSection() {
       {/* Background with Overlays */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/assets/sections/about/chat.png" 
+          src="/assets/sections/about/chat.jpg" 
           alt="Chat Background" 
           className="size-full object-cover"
         />

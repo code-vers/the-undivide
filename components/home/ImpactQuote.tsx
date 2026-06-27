@@ -7,7 +7,7 @@ export default function ImpactQuote() {
       {/* Background with Overlays */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/sections/home/community.png"
+          src="/assets/sections/home/community.jpg"
           alt="Impact Background"
           className="size-full object-cover"
         />

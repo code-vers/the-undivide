@@ -6,28 +6,28 @@ const researchItems = [
   {
     title: "Why affordable housing is more vulnerable to disasters",
     description: "Despite contributing the least to greenhouse gas emissions, low-income households often bear the brunt of climate change impacts. It usually becomes evident after significant flood events, such as Hurricane Helene, which pummeled the Southern US in September 2024, or the devastating floods that inundated Nepal in July 2024. The effects of climate change reinforce the disparities already evident in the housing sector.",
-    image: "/assets/sections/what-we-do/research/research-1.png",
+    image: "/assets/sections/what-we-do/research/research-1.jpg",
     dark: true,
     link: "https://www.preventionweb.net/drr-community-voices/why-affordable-housing-more-vulnerable-disasters"
   },
   {
     title: "Digital Justice Framework To Improve Disaster Preparation",
     description: "Social justice, environmental justice, and climate justice are all digital justice. Digital injustice arises from the fact that 21 million Americans are not connected to the internet, and seven percent of Americans do not use it, even if they have access to it. This lack of connectivity can lead to the loss of life, disrupted communities, and frayed social cohesion during natural disasters, as people are In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-",
-    image: "/assets/sections/what-we-do/research/research-2.png",
+    image: "/assets/sections/what-we-do/research/research-2.jpg",
     dark: false,
     link: "https://fas.org/publication/using-a-digital-justice-framework-to-improve-disaster-preparation-and-response/"
   },
   {
     title: "Avoiding Data and Algorithmic Bias In Disaster Research",
     description: "In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-Americans in the ten most states where, except for New York and California, 60% of that population lives. Our goal is to create a In this writing, we wanted to delve into the Ten States Project, a pioneering initiative addressing climate and disaster risks confronting African-Americans in the ten most states where, except for New York and California, 60% of that population lives. Our goal is to create a",
-    image: "/assets/sections/what-we-do/research/research-3.png",
+    image: "/assets/sections/what-we-do/research/research-3.jpg",
     dark: false,
     link: "https://fas.org/publication/increasing-national-resilience-through-an-open-disaster-data-initiative/"
   },
   {
     title: "Policy Paper – How the nation's emergency management agency can confront climate change",
     description: "Federal, state, local, tribal, and territorial agencies collect and maintain a range of disaster resilience, vulnerability, and loss data. However, this valuable data lives on different platforms and in various formats across agency silos. Inconsistent data collection and lack of validation can result in gaps and inefficiencies and make it difficult to implement appropriate mitigation, preparedness, response, recovery, and adaptation measures for natural hazards, including wildfires, smoke, drought, extreme heat, flooding, and debris flow.",
-    image: "/assets/sections/what-we-do/research/research-4.png",
+    image: "/assets/sections/what-we-do/research/research-4.jpg",
     dark: false,
     link: "https://www.preventionweb.net/news/increasing-national-resilience-through-open-disaster-data-initiative"
   },

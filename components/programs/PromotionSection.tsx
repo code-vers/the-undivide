@@ -7,7 +7,7 @@ export default function PromotionSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/sections/what-we-do/promotion/research-promo-section.png"
+          src="/assets/sections/what-we-do/promotion/research-promo-section.jpg"
           alt="Promotion Background"
           className="size-full object-cover"
         />
