@@ -189,11 +189,7 @@ export default function Team() {
               onClick={() => setSelectedMember(member)}
               className="relative group overflow-hidden rounded-[24px] lg:rounded-[36px] border border-[#dcfcc0] h-[360px] sm:h-[400px] lg:h-[480px] cursor-pointer"
             >
-              <img
-                src={member.image}
-                alt={member.name}
-                className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              <img decoding="async" loading="lazy" src={member.image} alt={member.name} className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1c3530]/90 via-[#1c3530]/40 to-transparent p-6 lg:p-8 flex flex-col justify-end">
                 <h3 className="text-xl lg:text-[28px] font-bold text-white leading-tight">
                   {member.name}

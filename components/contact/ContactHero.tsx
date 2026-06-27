@@ -5,11 +5,7 @@ export default function ContactHero() {
     <section className="relative min-h-[400px] md:min-h-[547px] lg:min-h-[770px] w-full overflow-hidden flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/assets/bg/contact-hero.JPG"
-          alt="Contact Hero Background"
-          className="size-full object-cover"
-        />
+        <img fetchPriority="high" src="/assets/bg/contact-hero.JPG" alt="Contact Hero Background" className="size-full object-cover" />
         <div className="absolute inset-0 bg-[#1c3530]/70" />
       </div>
 

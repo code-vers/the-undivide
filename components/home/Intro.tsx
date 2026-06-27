@@ -65,15 +65,7 @@ export default function Intro() {
               {/* Carousel Image Container */}
               <div className="w-full aspect-[737/429] bg-[#d6cfc0] rounded-[16px] overflow-hidden relative shadow-sm">
                 {carouselImages.map((imgUrl, index) => (
-                  <img
-                    key={index}
-                    src={imgUrl}
-                    alt={`Intro Slide ${index + 1}`}
-                    className={cn(
-                      "absolute inset-0 size-full object-cover transition-opacity duration-1000 ease-in-out",
-                      index === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0"
-                    )}
-                  />
+                  <img decoding="async" loading="lazy" key={index} src={imgUrl} alt={`Intro Slide ${index + 1}`} className={cn( "absolute inset-0 size-full object-cover transition-opacity duration-1000 ease-in-out", index === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0" )} />
                 ))}
               </div>
 

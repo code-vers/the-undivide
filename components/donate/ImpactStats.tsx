@@ -281,7 +281,7 @@ export default function ImpactStats() {
               className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:-translate-y-2
               }`}
             >
-              <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
+              <img decoding="async" loading="lazy" src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
           {/* Render second set (original) */}
@@ -290,7 +290,7 @@ export default function ImpactStats() {
               key={`set-2-${idx}`} 
               className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:-translate-y-2`}
             >
-              <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
+              <img decoding="async" loading="lazy" src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
           {/* Render third set (clone) */}
@@ -299,7 +299,7 @@ export default function ImpactStats() {
               key={`set-3-${idx}`} 
               className={`h-[200px] sm:h-[280px] md:h-[391px] ${img.widthClass} rounded-[8px] overflow-hidden shrink-0 snap-start transition-all duration-300 shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:-translate-y-2`}
             >
-              <img src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
+              <img decoding="async" loading="lazy" src={img.src} alt={img.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
         </div>

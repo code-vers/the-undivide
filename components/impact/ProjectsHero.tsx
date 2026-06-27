@@ -3,21 +3,13 @@ export default function ProjectsHero() {
     <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[770px] w-full overflow-hidden flex items-end">
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/assets/bg/our-project-hero.JPG"
-          alt="Projects Background"
-          className="size-full object-cover"
-        />
+        <img fetchPriority="high" src="/assets/bg/our-project-hero.JPG" alt="Projects Background" className="size-full object-cover" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Background Image Layer 2 (Overlay pattern) */}
       {/* <div className="absolute inset-0 z-10 opacity-90">
-        <img
-          src="/assets/bg/our-project-hero.JPG"
-          alt="Overlay Pattern"
-          className="size-full object-cover"
-        />
+        <img fetchPriority="high" src="/assets/bg/our-project-hero.JPG" alt="Overlay Pattern" className="size-full object-cover" />
         <div className="absolute inset-0 bg-[#1c3530]/20" />
       </div> */}
 

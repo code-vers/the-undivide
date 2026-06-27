@@ -102,20 +102,12 @@ export default function Programs() {
                     
                     {/* Inline Image Container for Mobile/Tablet */}
                     <div className="w-full aspect-[532/388] rounded-[12px] overflow-hidden lg:hidden mt-4 shrink-0">
-                      <img 
-                        src={program.image} 
-                        alt={program.title} 
-                        className="size-full object-cover"
-                      />
+                      <img decoding="async" loading="lazy" src={program.image} alt={program.title} className="size-full object-cover" />
                     </div>
 
                     {/* Floating Image Container for Desktop */}
                     <div className="hidden lg:block absolute right-4 xl:right-[32px] -top-[40px] xl:-top-[60px] w-[320px] xl:w-[442px] aspect-[532/388] rounded-[12px] overflow-hidden shadow-[0px_20px_40px_rgba(28,53,48,0.25)] z-20 transition-all duration-500 group-hover:-translate-y-2 border border-[#dcfcc0]/20 pointer-events-none">
-                      <img 
-                        src={program.image} 
-                        alt={program.title} 
-                        className="size-full object-cover"
-                      />
+                      <img decoding="async" loading="lazy" src={program.image} alt={program.title} className="size-full object-cover" />
                     </div>
 
                     <div className="absolute top-4 md:top-8 right-4 md:right-8 size-8 md:size-10 bg-white/10 rounded-full flex items-center justify-center text-white transition-all duration-300">

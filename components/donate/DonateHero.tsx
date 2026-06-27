@@ -7,21 +7,13 @@ export default function DonateHero() {
     <section className="relative min-h-[600px] md:min-h-[800px] lg:min-h-[983px] w-full overflow-hidden flex items-end">
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/assets/bg/donate-hero.JPG"
-          alt="Mission Background"
-          className="size-full object-cover"
-        />
+        <img fetchPriority="high" src="/assets/bg/donate-hero.JPG" alt="Mission Background" className="size-full object-cover" />
         <div className="absolute inset-0 bg-black/53" />
       </div>
 
       {/* Background Image Layer 2 (Overlay pattern) */}
       {/* <div className="absolute inset-0 z-10 opacity-70">
-        <img
-          src="https://www.figma.com/api/mcp/asset/875be947-8d16-462e-adb9-67b43ad78a82"
-          alt="Overlay Pattern"
-          className="size-full object-cover"
-        />
+        <img fetchPriority="high" src="https://www.figma.com/api/mcp/asset/875be947-8d16-462e-adb9-67b43ad78a82" alt="Overlay Pattern" className="size-full object-cover" />
         <div className="absolute inset-0 bg-[#1c3530]/70" />
       </div> */}
 

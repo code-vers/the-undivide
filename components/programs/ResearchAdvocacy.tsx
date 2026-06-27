@@ -75,7 +75,7 @@ export default function ResearchAdvocacy() {
               >
                 <div className="p-4 flex flex-col h-full">
                   <div className="h-[264px] rounded-[4px] overflow-hidden shrink-0">
-                    <img src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <img decoding="async" loading="lazy" src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="flex flex-col flex-1 p-2 pt-6 gap-3">
                     <h3 className={cn(

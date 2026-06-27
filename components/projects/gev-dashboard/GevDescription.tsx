@@ -43,11 +43,7 @@ export default function GevDescription() {
         </div>
 
         <div className="w-full lg:w-[756px] aspect-[756/504] rounded-lg overflow-hidden shadow-xl">
-          <img
-            src="https://www.figma.com/api/mcp/asset/29f67fac-dcf3-427e-9027-10f50905259c"
-            alt="Partnership case study"
-            className="size-full object-cover"
-          />
+          <img decoding="async" loading="lazy" src="https://www.figma.com/api/mcp/asset/29f67fac-dcf3-427e-9027-10f50905259c" alt="Partnership case study" className="size-full object-cover" />
         </div>
       </div>
     </section>

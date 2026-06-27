@@ -5,11 +5,7 @@ export default function GevHero() {
     <section className="relative h-[770px] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src="/assets/bg/GEV-hero.JPG"
-          alt="Grinnell Iowa"
-          className="size-full object-cover"
-        />
+        <img fetchPriority="high" src="/assets/bg/GEV-hero.JPG" alt="Grinnell Iowa" className="size-full object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 

@@ -171,7 +171,7 @@ export default function CommunityPrograms() {
               key={`set-1-${idx}`}
               className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
             >
-              <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+              <img decoding="async" loading="lazy" src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
           {/* Render second set (original) */}
@@ -180,7 +180,7 @@ export default function CommunityPrograms() {
               key={`set-2-${idx}`}
               className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
             >
-              <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+              <img decoding="async" loading="lazy" src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
           {/* Render third set (clone) */}
@@ -189,7 +189,7 @@ export default function CommunityPrograms() {
               key={`set-3-${idx}`}
               className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
             >
-              <img src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+              <img decoding="async" loading="lazy" src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
             </div>
           ))}
         </div>

@@ -51,11 +51,7 @@ export default function WhyDonate() {
               className="h-full rounded-[24px] overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)]"
               style={{ flex: 502 }}
             >
-              <img
-                src="/assets/sections/donate/2.jpg"
-                alt="Donation 2"
-                className="size-full object-cover"
-              />
+              <img decoding="async" loading="lazy" src="/assets/sections/donate/2.jpg" alt="Donation 2" className="size-full object-cover" />
             </div>
             {/* Right Cards Column */}
             <div 
@@ -66,21 +62,13 @@ export default function WhyDonate() {
                 className="overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)] rounded-[24px]"
                 style={{ flex: 330 }}
               >
-                <img
-                  src="/assets/sections/donate/1.jpeg"
-                  alt="Donation 1"
-                  className="size-full object-cover"
-                />
+                <img decoding="async" loading="lazy" src="/assets/sections/donate/1.jpeg" alt="Donation 1" className="size-full object-cover" />
               </div>
               <div 
                 className="overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)] rounded-[24px]"
                 style={{ flex: 281 }}
               >
-                <img
-                  src="/assets/sections/donate/3.jpg"
-                  alt="Donation 3"
-                  className="size-full object-cover"
-                />
+                <img decoding="async" loading="lazy" src="/assets/sections/donate/3.jpg" alt="Donation 3" className="size-full object-cover" />
               </div>
             </div>
           </div>

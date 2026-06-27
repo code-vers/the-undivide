@@ -127,11 +127,7 @@ export default function DonationImpact() {
           {/* Right Showcase Image Column */}
           <div className="flex flex-col gap-[24px] items-center w-full lg:col-span-5 justify-between">
             <div className="w-full aspect-[737/627] rounded-[16px] overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_2px_rgba(56,56,56,0.13)] relative bg-[#d6cfc0]">
-              <img
-                src={cardsData[activeIndex].image}
-                alt={cardsData[activeIndex].category}
-                className="size-full object-cover transition-all duration-500 ease-in-out"
-              />
+              <img decoding="async" loading="lazy" src={cardsData[activeIndex].image} alt={cardsData[activeIndex].category} className="size-full object-cover transition-all duration-500 ease-in-out" />
             </div>
             {/* Pagination dots corresponding to card states */}
             <div className="flex gap-[6px] items-center">

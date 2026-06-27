@@ -7,11 +7,7 @@ export default function Hero() {
     <section className="relative min-h-[600px] md:min-h-[1081px] w-full overflow-hidden flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/assets/bg/home-hero.jpg"
-          alt="Hero Background"
-          className="size-full object-cover"
-        />
+        <img fetchPriority="high" src="/assets/bg/home-hero.jpg" alt="Hero Background" className="size-full object-cover" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
 

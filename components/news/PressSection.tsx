@@ -122,7 +122,7 @@ export default function PressSection() {
               className="bg-white border border-[#dcfcc0] rounded-[24px] overflow-hidden group shadow-sm flex flex-col h-full transition-all duration-300 hover:bg-[#2d584a] hover:border-[#2d584a] hover:shadow-lg text-left"
             >
               <div className="h-[248px] overflow-hidden w-full">
-                <img src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img decoding="async" loading="lazy" src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
               <div className="p-[32px] flex flex-col flex-1 space-y-4 w-full">
                 <span className="text-[12px] font-bold text-[#2d584a] tracking-[1px] uppercase transition-colors duration-300 group-hover:text-[#dcfcc0]">

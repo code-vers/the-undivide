@@ -72,7 +72,7 @@ export default function GevResearch() {
               >
                 <div className="p-4 flex flex-col h-full">
                   <div className="aspect-[531/344] rounded-sm overflow-hidden bg-white mb-6 flex items-center justify-center shrink-0">
-                    <img src={card.image} alt={card.title} className="size-full object-fit transition-transform duration-500 group-hover:scale-102" />
+                    <img decoding="async" loading="lazy" src={card.image} alt={card.title} className="size-full object-fit transition-transform duration-500 group-hover:scale-102" />
                   </div>
                   <div className="px-2 pb-6 space-y-4 flex-grow flex flex-col justify-between">
                     <div className="space-y-3">

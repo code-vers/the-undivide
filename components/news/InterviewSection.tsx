@@ -33,7 +33,7 @@ export default function InterviewSection() {
           {/* Featured Interview (Full Width) */}
           <div className="bg-[#f8f8f2] border border-[#dcfcc0] rounded-[32px] overflow-hidden group shadow-sm flex flex-col lg:flex-row h-auto lg:h-[345px] transition-all hover:shadow-md">
             <div className="lg:w-[442px] h-[300px] lg:h-full overflow-hidden shrink-0">
-               <img src="https://www.figma.com/api/mcp/asset/c9470289-7f98-4967-9b8b-f55ee7c6060c" alt="Main Interview" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
+               <img decoding="async" loading="lazy" src="https://www.figma.com/api/mcp/asset/c9470289-7f98-4967-9b8b-f55ee7c6060c" alt="Main Interview" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
             <div className="p-[40px] flex flex-col justify-center space-y-4">
                <span className="text-[12px] font-bold text-[#2d584a] tracking-[1px] uppercase">INTERVIEW</span>
@@ -55,7 +55,7 @@ export default function InterviewSection() {
             {interviewItems.map((item, idx) => (
               <div key={idx} className="bg-[#f8f8f2] border border-[#dcfcc0] rounded-[32px] overflow-hidden group shadow-sm flex flex-col transition-all hover:shadow-md h-full">
                 <div className="h-[376px] overflow-hidden relative">
-                   <img src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   <img decoding="async" loading="lazy" src={item.image} alt={item.title} className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="p-[32px] flex flex-col flex-1 space-y-4">
                   <span className="text-[12px] font-bold text-[#2d584a] tracking-[1px] uppercase">

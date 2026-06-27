@@ -98,11 +98,7 @@ export default function PolicyAdvocacy() {
 
           {/* Featured Image Section */}
           <div className="w-full h-[250px] sm:h-[350px] md:h-[440px] lg:h-[540px] rounded-[12px] overflow-hidden border border-[#c0c8c3] shadow-lg lg:self-center">
-            <img
-              src="/assets/sections/impact/policy/1.jpg"
-              alt="Policy Featured"
-              className="size-full object-cover"
-            />
+            <img decoding="async" loading="lazy" src="/assets/sections/impact/policy/1.jpg" alt="Policy Featured" className="size-full object-cover" />
           </div>
         </div>
       </div>

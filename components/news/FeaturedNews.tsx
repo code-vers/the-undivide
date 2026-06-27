@@ -32,11 +32,7 @@ export default function FeaturedNews() {
           {/* Left: Featured Article */}
           <div className="space-y-8 group cursor-pointer">
             <div className="aspect-[1253/554] rounded-[24px] overflow-hidden">
-              <img
-                src="/assets/bg/news-hero.jpg"
-                alt="Featured News"
-                className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              <img fetchPriority="high" src="/assets/bg/news-hero.jpg" alt="Featured News" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
 
             <div className="space-y-4">

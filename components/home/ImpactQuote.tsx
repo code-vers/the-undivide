@@ -6,11 +6,7 @@ export default function ImpactQuote() {
     <section className="relative min-h-[558px] py-16 md:py-0 w-full flex items-center justify-center overflow-hidden">
       {/* Background with Overlays */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/assets/sections/home/community.jpg"
-          alt="Impact Background"
-          className="size-full object-cover"
-        />
+        <img decoding="async" loading="lazy" src="/assets/sections/home/community.jpg" alt="Impact Background" className="size-full object-cover" />
         <div className="absolute inset-0 bg-[#1c3530]/10" />
         <div className="absolute inset-0 bg-black/37" />
       </div>

@@ -5,11 +5,7 @@ export default function AboutHero() {
     <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[800px] w-full overflow-hidden flex items-end">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/assets/bg/about-hero.JPG"
-          alt="Mission Background"
-          className="size-full object-cover object-center"
-        />
+        <img fetchPriority="high" src="/assets/bg/about-hero.JPG" alt="Mission Background" className="size-full object-cover object-center" />
         <div className="absolute inset-0 bg-black/53" />
       </div>
 

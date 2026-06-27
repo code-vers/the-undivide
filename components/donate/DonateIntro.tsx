@@ -60,11 +60,7 @@ export default function DonateIntro() {
                 >
                   {introImages.map((src, index) => (
                     <div key={index} className="w-full h-full shrink-0 relative">
-                      <img
-                        src={src}
-                        alt={`Intro image ${index + 1}`}
-                        className="absolute inset-0 size-full object-cover"
-                      />
+                      <img decoding="async" loading="lazy" src={src} alt={`Intro image ${index + 1}`} className="absolute inset-0 size-full object-cover" />
                     </div>
                   ))}
                 </div>
@@ -105,7 +101,7 @@ export default function DonateIntro() {
               </div>
               
               {/* <div className="h-[16px] w-[54px]">
-                <img src="https://www.figma.com/api/mcp/asset/3dabd038-3b2d-4203-8a52-3be065ac7444" alt="Divider" className="size-full" />
+                <img decoding="async" loading="lazy" src="https://www.figma.com/api/mcp/asset/3dabd038-3b2d-4203-8a52-3be065ac7444" alt="Divider" className="size-full" />
               </div> */}
             </div>
           </div>

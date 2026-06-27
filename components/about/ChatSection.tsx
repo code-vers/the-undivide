@@ -5,11 +5,7 @@ export default function ChatSection() {
     <section className="relative h-[732px] w-full flex items-center justify-center overflow-hidden">
       {/* Background with Overlays */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/assets/sections/about/chat.jpg" 
-          alt="Chat Background" 
-          className="size-full object-cover"
-        />
+        <img decoding="async" loading="lazy" src="/assets/sections/about/chat.jpg" alt="Chat Background" className="size-full object-cover" />
         <div className="absolute inset-0 bg-[#1c3530]/5" />
         <div className="absolute inset-0 bg-black/37" />
       </div>

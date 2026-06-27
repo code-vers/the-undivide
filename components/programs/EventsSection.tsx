@@ -74,11 +74,7 @@ export default function EventsSection() {
 
               {/* Image */}
               <div className="w-full lg:w-[55%] xl:w-[929px] h-[250px] sm:h-[350px] md:h-[450px] lg:h-[593px] rounded-[12px] overflow-hidden border border-[#c0c8c3] shadow-lg shrink-0">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="size-full object-cover"
-                />
+                <img decoding="async" loading="lazy" src={event.image} alt={event.title} className="size-full object-cover" />
               </div>
             </div>
           ))}

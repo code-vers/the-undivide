@@ -92,20 +92,12 @@ export default function ExploreProjects() {
 
                   {/* Inline Image Container for Mobile */}
                   <div className="w-full aspect-[532/388] rounded-[12px] overflow-hidden lg:hidden mt-4 shrink-0">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="size-full object-cover"
-                    />
+                    <img decoding="async" loading="lazy" src={project.image} alt={project.title} className="size-full object-cover" />
                   </div>
 
                   {/* Floating Image Container for Desktop */}
                   <div className="hidden lg:block absolute right-4 xl:right-[32px] -top-[40px] xl:-top-[60px] w-[320px] xl:w-[442px] aspect-[532/388] rounded-[12px] overflow-hidden shadow-[0px_20px_40px_rgba(28,53,48,0.25)] z-20 transition-all duration-500 group-hover:-translate-y-2 border border-[#dcfcc0]/20 pointer-events-none">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="size-full object-fit"
-                    />
+                    <img decoding="async" loading="lazy" src={project.image} alt={project.title} className="size-full object-fit" />
                   </div>
 
                   <div
@@ -116,11 +108,7 @@ export default function ExploreProjects() {
                     }}
                     className="absolute top-4 md:top-8 right-4 md:right-8 size-8 md:size-10 bg-white/10 rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-white/20 transition-colors z-30"
                   >
-                    {/* <img
-                      src="https://www.figma.com/api/mcp/asset/84b8371e-4119-4866-9e88-de50189ba59b"
-                      alt="Close"
-                      className="size-8 md:size-10"
-                    /> */}
+                    {/* <img decoding="async" loading="lazy" src="https://www.figma.com/api/mcp/asset/84b8371e-4119-4866-9e88-de50189ba59b" alt="Close" className="size-8 md:size-10" /> */}
                   </div>
                 </div>
               )
