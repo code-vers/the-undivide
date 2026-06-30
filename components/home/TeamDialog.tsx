@@ -2,8 +2,8 @@
 
 import * as React from "react"
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog"
-import { cn } from "@/lib/utils"
-import { ArrowLeft, ArrowRight, Mail, X } from "lucide-react"
+import { ArrowLeft, ArrowRight, X } from "lucide-react"
+import Image from "next/image"
 
 export interface TeamMember {
   id: string
@@ -34,7 +34,7 @@ export default function TeamDialog({ member, isOpen, onClose, onNext, onPrevious
         <div className="flex flex-col md:flex-row h-full relative">
           {/* Left: Image Container */}
           <div className="w-full md:w-[439px] h-[250px] sm:h-[300px] md:h-full relative overflow-hidden shrink-0 border-r border-[#dcfcc0]/30 bg-neutral-100">
-            <img decoding="async" loading="lazy" src={member.image} alt={member.name} className="absolute inset-0 size-full object-cover" />
+            <Image src={member.image} alt={member.name} fill className="object-cover" />
           </div>
 
           {/* Right: Content Container */}

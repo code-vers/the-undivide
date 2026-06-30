@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function GevResearch() {
   const cards = [
@@ -71,8 +72,8 @@ export default function GevResearch() {
                 className="rounded-lg overflow-hidden flex flex-col h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-lg bg-[#f8f8f2] hover:bg-[#2d584a] text-[#1c3530]"
               >
                 <div className="p-4 flex flex-col h-full">
-                  <div className="aspect-[531/344] rounded-sm overflow-hidden bg-white mb-6 flex items-center justify-center shrink-0">
-                    <img decoding="async" loading="lazy" src={card.image} alt={card.title} className="size-full object-fit transition-transform duration-500 group-hover:scale-102" />
+                  <div className="relative aspect-[531/344] rounded-sm overflow-hidden bg-white mb-6 flex items-center justify-center shrink-0">
+                    <Image src={card.image} alt={card.title} fill className="object-cover transition-transform duration-500 group-hover:scale-102" />
                   </div>
                   <div className="px-2 pb-6 space-y-4 flex-grow flex flex-col justify-between">
                     <div className="space-y-3">

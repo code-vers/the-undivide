@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -6,7 +7,7 @@ export default function PromotionSection() {
     <section className="relative py-[96px] w-full overflow-hidden min-h-[613px] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img decoding="async" loading="lazy" src="/assets/sections/what-we-do/promotion/research-promo-section.jpg" alt="Promotion Background" className="size-full object-cover" />
+        <Image src="/assets/sections/what-we-do/promotion/research-promo-section.jpg" alt="Promotion Background" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 

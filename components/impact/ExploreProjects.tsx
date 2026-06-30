@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
 import { Plus } from "lucide-react"
+import Image from "next/image"
 
 const projects = [
   {
@@ -91,13 +91,13 @@ export default function ExploreProjects() {
                   </div>
 
                   {/* Inline Image Container for Mobile */}
-                  <div className="w-full aspect-[532/388] rounded-[12px] overflow-hidden lg:hidden mt-4 shrink-0">
-                    <img decoding="async" loading="lazy" src={project.image} alt={project.title} className="size-full object-cover" />
+                  <div className="relative w-full aspect-[532/388] rounded-[12px] overflow-hidden lg:hidden mt-4 shrink-0">
+                    <Image src={project.image} alt={project.title} fill className="object-cover" />
                   </div>
 
                   {/* Floating Image Container for Desktop */}
                   <div className="hidden lg:block absolute right-4 xl:right-[32px] -top-[40px] xl:-top-[60px] w-[320px] xl:w-[442px] aspect-[532/388] rounded-[12px] overflow-hidden shadow-[0px_20px_40px_rgba(28,53,48,0.25)] z-20 transition-all duration-500 group-hover:-translate-y-2 border border-[#dcfcc0]/20 pointer-events-none">
-                    <img decoding="async" loading="lazy" src={project.image} alt={project.title} className="size-full object-fit" />
+                    <Image src={project.image} alt={project.title} fill className="object-cover" />
                   </div>
 
                   <div

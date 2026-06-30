@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight, BookOpenText, Search, Users } from "lucide-react"
 
@@ -7,7 +8,7 @@ export default function Hero() {
     <section className="relative min-h-[600px] md:min-h-[1081px] w-full overflow-hidden flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img fetchPriority="high" src="/assets/bg/home-hero.jpg" alt="Hero Background" className="size-full object-cover" />
+        <Image src="/assets/bg/home-hero.jpg" alt="Hero Background" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-black/30" />
       </div>
 

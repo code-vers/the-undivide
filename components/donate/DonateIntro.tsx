@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ChartNoAxesCombined, ChevronLeft, ChevronRight, Radar } from "lucide-react"
+import Image from "next/image"
 
 const introImages = [
   // "/assets/sections/donate/intro/1.JPG",
@@ -60,7 +61,7 @@ export default function DonateIntro() {
                 >
                   {introImages.map((src, index) => (
                     <div key={index} className="w-full h-full shrink-0 relative">
-                      <img decoding="async" loading="lazy" src={src} alt={`Intro image ${index + 1}`} className="absolute inset-0 size-full object-cover" />
+                      <Image src={src} alt={`Intro image ${index + 1}`} fill className="object-cover" />
                     </div>
                   ))}
                 </div>

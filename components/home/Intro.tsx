@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const carouselImages = [
   "/assets/sections/home/intro-carousel/1.jpg",
@@ -65,7 +66,7 @@ export default function Intro() {
               {/* Carousel Image Container */}
               <div className="w-full aspect-[737/429] bg-[#d6cfc0] rounded-[16px] overflow-hidden relative shadow-sm">
                 {carouselImages.map((imgUrl, index) => (
-                  <img decoding="async" loading="lazy" key={index} src={imgUrl} alt={`Intro Slide ${index + 1}`} className={cn( "absolute inset-0 size-full object-cover transition-opacity duration-1000 ease-in-out", index === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0" )} />
+                  <Image key={index} src={imgUrl} alt={`Intro Slide ${index + 1}`} fill className={cn( "object-cover transition-opacity duration-1000 ease-in-out", index === currentImageIndex ? "opacity-100 z-10" : "opacity-0 z-0" )} />
                 ))}
               </div>
 

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { MapPin, Building2, Calendar } from "lucide-react"
 
 export default function GevHero() {
@@ -5,8 +6,8 @@ export default function GevHero() {
     <section className="relative h-[770px] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img fetchPriority="high" src="/assets/bg/GEV-hero.JPG" alt="Grinnell Iowa" className="size-full object-cover" />
-        <div className="absolute inset-0 bg-black/50" />
+        <Image src="/assets/bg/GEV-hero.JPG" alt="Grinnell Iowa" fill priority className="object-cover" />
+        <div className="absolute inset-0 bg-black/55" />
       </div>
 
       {/* Content */}

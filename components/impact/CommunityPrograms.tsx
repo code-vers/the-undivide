@@ -2,30 +2,31 @@
 
 import { useRef, useEffect } from "react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 const caseStudies = [
   {
-    src: "https://www.figma.com/api/mcp/asset/006e6b7b-f206-4315-8e13-968c1e852422",
+    src: "/assets/sections/impact/community/1.JPG",
     alt: "Case Study 1",
     className: "h-[220px] sm:h-[300px] md:h-[391px] w-[280px] sm:w-[380px] md:w-[521px] rounded-[8px] overflow-hidden shrink-0 snap-start"
   },
   {
-    src: "https://www.figma.com/api/mcp/asset/174c8585-78bb-4b3c-86ac-cd2214ee65f6",
+    src: "/assets/sections/impact/community/2.JPG",
     alt: "Case Study 2",
     className: "h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start"
   },
   {
-    src: "https://www.figma.com/api/mcp/asset/fd209c56-c83b-4ffe-8289-13406e59c6b9",
+    src: "/assets/sections/impact/community/3.jpg",
     alt: "Case Study 3",
     className: "h-[220px] sm:h-[300px] md:h-[391px] w-[320px] sm:w-[440px] md:w-[587px] rounded-[8px] overflow-hidden shrink-0 snap-start"
   },
   {
-    src: "https://www.figma.com/api/mcp/asset/336d5bce-46b8-4001-a96c-de16382aec5f",
+    src: "/assets/sections/impact/community/4.jpg",
     alt: "Case Study 4",
     className: "h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start"
   },
   {
-    src: "https://www.figma.com/api/mcp/asset/174c8585-78bb-4b3c-86ac-cd2214ee65f6",
+    src: "/assets/sections/impact/community/5.jpg",
     alt: "Case Study 5",
     className: "h-[220px] sm:h-[300px] md:h-[391px] w-[180px] sm:w-[220px] md:w-[293px] rounded-[8px] overflow-hidden shrink-0 snap-start"
   }
@@ -169,27 +170,27 @@ export default function CommunityPrograms() {
           {caseStudies.map((study, idx) => (
             <div
               key={`set-1-${idx}`}
-              className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
+              className={`relative ${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
             >
-              <img decoding="async" loading="lazy" src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+              <Image src={study.src} alt={study.alt} fill className="object-cover select-none pointer-events-none" />
             </div>
           ))}
           {/* Render second set (original) */}
           {caseStudies.map((study, idx) => (
             <div
               key={`set-2-${idx}`}
-              className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
+              className={`relative ${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
             >
-              <img decoding="async" loading="lazy" src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+              <Image src={study.src} alt={study.alt} fill className="object-cover select-none pointer-events-none" />
             </div>
           ))}
           {/* Render third set (clone) */}
           {caseStudies.map((study, idx) => (
             <div
               key={`set-3-${idx}`}
-              className={`${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
+              className={`relative ${study.className} shadow-[0_15px_35px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-2`}
             >
-              <img decoding="async" loading="lazy" src={study.src} alt={study.alt} className="size-full object-cover select-none pointer-events-none" />
+              <Image src={study.src} alt={study.alt} fill className="object-cover select-none pointer-events-none" />
             </div>
           ))}
         </div>

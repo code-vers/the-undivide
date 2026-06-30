@@ -1,5 +1,6 @@
 import { ArrowUpRight, Clock, MapPin, Settings } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const policyEvents = [
   {
@@ -97,8 +98,8 @@ export default function PolicyAdvocacy() {
           </div>
 
           {/* Featured Image Section */}
-          <div className="w-full h-[250px] sm:h-[350px] md:h-[440px] lg:h-[540px] rounded-[12px] overflow-hidden border border-[#c0c8c3] shadow-lg lg:self-center">
-            <img decoding="async" loading="lazy" src="/assets/sections/impact/policy/1.jpg" alt="Policy Featured" className="size-full object-cover" />
+          <div className="relative w-full h-[250px] sm:h-[350px] md:h-[440px] lg:h-[540px] rounded-[12px] overflow-hidden border border-[#c0c8c3] shadow-lg lg:self-center">
+            <Image src="/assets/sections/impact/policy/1.jpg" alt="Policy Featured" fill className="object-cover" />
           </div>
         </div>
       </div>

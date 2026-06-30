@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -6,7 +7,7 @@ export default function ImpactQuote() {
     <section className="relative min-h-[558px] py-16 md:py-0 w-full flex items-center justify-center overflow-hidden">
       {/* Background with Overlays */}
       <div className="absolute inset-0 z-0">
-        <img decoding="async" loading="lazy" src="/assets/sections/home/community.jpg" alt="Impact Background" className="size-full object-cover" />
+        <Image src="/assets/sections/home/community.jpg" alt="Impact Background" fill className="object-cover" />
         <div className="absolute inset-0 bg-[#1c3530]/10" />
         <div className="absolute inset-0 bg-black/37" />
       </div>

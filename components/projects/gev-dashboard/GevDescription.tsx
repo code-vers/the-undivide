@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function GevDescription() {
   return (
     <section className="bg-white py-[120px] px-4 sm:px-8 md:px-[80px]">
@@ -42,8 +44,8 @@ export default function GevDescription() {
           </div>
         </div>
 
-        <div className="w-full lg:w-[756px] aspect-[756/504] rounded-lg overflow-hidden shadow-xl">
-          <img decoding="async" loading="lazy" src="https://www.figma.com/api/mcp/asset/29f67fac-dcf3-427e-9027-10f50905259c" alt="Partnership case study" className="size-full object-cover" />
+        <div className="relative w-full lg:w-[756px] aspect-[756/504] rounded-lg overflow-hidden shadow-xl">
+          <Image src="https://www.figma.com/api/mcp/asset/29f67fac-dcf3-427e-9027-10f50905259c" alt="Partnership case study" fill className="object-cover" />
         </div>
       </div>
     </section>

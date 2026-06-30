@@ -1,7 +1,6 @@
 import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  output: 'export',
   async rewrites() {
     return [
       {
@@ -9,6 +8,22 @@ const nextConfig: NextConfig = {
         destination: '/projects/ai-resilience/index.html',
       },
     ]
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.theundivideproject.org',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.figma.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 }
 

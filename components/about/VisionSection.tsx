@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowUpRight, Check, Play, Pause } from "lucide-react"
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function VisionSection() {
   const [isInlinePlaying, setIsInlinePlaying] = useState(true)
@@ -29,12 +30,12 @@ export default function VisionSection() {
           <div className="relative h-[360px] sm:h-[480px] md:h-[600px] lg:h-[752px]">
             {/* Main Top Left */}
             <div className="absolute top-0 left-0 w-[52%] lg:w-[50%] h-[52%] lg:h-[50%] rounded-[24px] md:rounded-[40px] overflow-hidden shadow-xl z-20">
-              <img decoding="async" loading="lazy" src="/assets/sections/about/vision/1.jpg" alt="Work 1" className="size-full object-cover" />
+              <Image src="/assets/sections/about/vision/1.jpg" alt="Work 1" fill className="object-cover" />
             </div>
 
             {/* Top Right Tall */}
             <div className="absolute top-[5%] right-0 w-[42%] lg:w-[45%] h-[48%] lg:h-[48%] rounded-[24px] md:rounded-[40px] overflow-hidden shadow-xl z-10">
-              <img decoding="async" loading="lazy" src="/assets/sections/about/vision/2.jpeg" alt="Work 2" className="size-full object-cover" />
+              <Image src="/assets/sections/about/vision/2.jpeg" alt="Work 2" fill className="object-cover" />
               <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 backdrop-blur-md bg-white/90 border border-[#4b6637]/20 rounded-full px-2 sm:px-3 py-1 sm:py-1.5 flex items-center gap-1.5 sm:gap-2">
                 <div className="size-2 sm:size-2.5 rounded-full bg-[#144134]" />
                 <span className="text-[9px] sm:text-[11px] md:text-[14px] font-semibold text-[#144134]">Community-led</span>
@@ -84,7 +85,7 @@ export default function VisionSection() {
 
             {/* Bottom Right Square */}
             <div className="absolute bottom-0 right-0 w-[38%] lg:w-[40%] h-[38%] lg:h-[40%] rounded-[24px] md:rounded-[40px] overflow-hidden shadow-xl z-20">
-              <img decoding="async" loading="lazy" src="/assets/sections/about/vision/3.JPG" alt="Work 3" className="size-full object-cover" />
+              <Image src="/assets/sections/about/vision/3.JPG" alt="Work 3" fill className="object-cover" />
             </div>
 
             {/* Floating Badge */}

@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const latestUpdates = [
   {
@@ -31,8 +32,8 @@ export default function FeaturedNews() {
         <div className="grid grid-cols-1 lg:grid-cols-[1253px_1fr] gap-[40px]">
           {/* Left: Featured Article */}
           <div className="space-y-8 group cursor-pointer">
-            <div className="aspect-[1253/554] rounded-[24px] overflow-hidden">
-              <img fetchPriority="high" src="/assets/bg/news-hero.jpg" alt="Featured News" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div className="relative aspect-[1253/554] rounded-[24px] overflow-hidden">
+              <Image src="/assets/bg/news-hero.jpg" alt="Featured News" fill priority className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
 
             <div className="space-y-4">

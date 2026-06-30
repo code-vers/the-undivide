@@ -1,9 +1,11 @@
+import Image from "next/image"
+
 export default function ProgramsHero() {
   return (
     <section className="relative min-h-[500px] md:min-h-[653px] lg:min-h-[770px] w-full overflow-hidden flex items-end">
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
-        <img fetchPriority="high" src="/assets/bg/what-we-do-hero.JPG" alt="Programs Background" className="size-full object-cover" />
+        <Image src="/assets/bg/what-we-do-hero.JPG" alt="Programs Background" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-black/53" />
       </div>
 

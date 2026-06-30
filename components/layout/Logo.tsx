@@ -1,4 +1,3 @@
-import Link from "next/link"
 
 export default function Logo({ className = "h-[84px] w-[78px]" }: { className?: string }) {
   return (

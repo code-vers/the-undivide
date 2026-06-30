@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function WhyDonate() {
   return (
@@ -48,10 +49,10 @@ export default function WhyDonate() {
           <div className="flex gap-3 md:gap-[22px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[635px] flex-1 w-full lg:max-w-[1048px]">
             {/* Left Card */}
             <div 
-              className="h-full rounded-[24px] overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)]"
+              className="relative h-full rounded-[24px] overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)]"
               style={{ flex: 502 }}
             >
-              <img decoding="async" loading="lazy" src="/assets/sections/donate/2.jpg" alt="Donation 2" className="size-full object-cover" />
+              <Image src="/assets/sections/donate/2.jpg" alt="Donation 2" fill className="object-cover" />
             </div>
             {/* Right Cards Column */}
             <div 
@@ -59,16 +60,16 @@ export default function WhyDonate() {
               style={{ flex: 524 }}
             >
               <div 
-                className="overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)] rounded-[24px]"
+                className="relative overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)] rounded-[24px]"
                 style={{ flex: 330 }}
               >
-                <img decoding="async" loading="lazy" src="/assets/sections/donate/1.jpeg" alt="Donation 1" className="size-full object-cover" />
+                <Image src="/assets/sections/donate/1.jpeg" alt="Donation 1" fill className="object-cover" />
               </div>
               <div 
-                className="overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)] rounded-[24px]"
+                className="relative overflow-hidden border border-[#dcfcc0] shadow-[0px_4px_11.8px_rgba(0,0,0,0.2)] rounded-[24px]"
                 style={{ flex: 281 }}
               >
-                <img decoding="async" loading="lazy" src="/assets/sections/donate/3.jpg" alt="Donation 3" className="size-full object-cover" />
+                <Image src="/assets/sections/donate/3.jpg" alt="Donation 3" fill className="object-cover" />
               </div>
             </div>
           </div>

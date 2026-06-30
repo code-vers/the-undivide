@@ -13,7 +13,7 @@ interface LeafletMapProps {
 export default function LeafletMap({ position, address }: LeafletMapProps) {
   useEffect(() => {
     // Fix default markers paths on Leaflet
-    delete (L.Icon.Default.prototype as any)._getIconUrl
+    delete (L.Icon.Default.prototype as unknown as { _getIconUrl?: unknown })._getIconUrl
     L.Icon.Default.mergeOptions({
       iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
       iconRetinaUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png",

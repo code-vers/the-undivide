@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { Paperclip, Share2, ArrowUpRight, Mail, Handshake, MapPin } from "lucide-react"
 import Link from "next/link"
 

@@ -1,5 +1,6 @@
 import { ArrowUpRight, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const newsItems = [
   {
@@ -46,7 +47,7 @@ export default function NewsSection() {
             In the News
           </h2>
           <p className="text-[14px] md:text-[16px] text-[#5c7a72] text-center max-w-[964px]">
-            Stay in the loop about how we're making waves:
+            Stay in the loop about how we&apos;re making waves:
           </p>
         </div>
 
@@ -54,8 +55,8 @@ export default function NewsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {newsItems.map((item, idx) => (
             <div key={idx} className="group bg-white border border-[#dcfcc0] hover:border-[#2d584a] hover:bg-[#2d584a] rounded-[18px] overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="h-[220px] sm:h-[300px] md:h-[380px] lg:h-[497px] overflow-hidden bg-[#f8f8f2] flex items-center justify-center">
-                <img decoding="async" loading="lazy" src={item.image} alt={item.title} className="size-full object-fit transition-transform duration-500 group-hover:scale-105" />
+              <div className="relative h-[220px] sm:h-[300px] md:h-[380px] lg:h-[497px] overflow-hidden bg-[#f8f8f2] flex items-center justify-center">
+                <Image src={item.image} alt={item.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
               <div className="p-4 md:p-[20px] space-y-2 md:space-y-3">
                 <span className="text-[11px] font-semibold text-[#2d584a] group-hover:text-white/80 tracking-[0.88px] uppercase transition-colors duration-300">

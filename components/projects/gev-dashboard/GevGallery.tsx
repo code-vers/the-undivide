@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+import Image from "next/image"
 
 const images = [
   { src: "/assets/sections/gev-climate/gallery/1.JPG", width: 521, height: 391, overlay: "bg-[rgba(135,135,135,0.44)]" },
@@ -139,7 +140,7 @@ export default function GevGallery() {
               maxWidth: '80vw'
             }}
           >
-            <img decoding="async" loading="lazy" src={img.src} alt={`Gallery image ${idx + 1}`} className="size-full object-cover pointer-events-none" />
+            <Image src={img.src} alt={`Gallery image ${idx + 1}`} fill className="object-cover pointer-events-none" />
             {img.overlay && <div className={`absolute inset-0 ${img.overlay} pointer-events-none`} />}
           </div>
         ))}
@@ -151,7 +152,7 @@ export default function GevGallery() {
           <DialogDescription className="sr-only">Detailed view of the selected gallery image</DialogDescription>
           {selectedImage && (
             <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] flex items-center justify-center p-4">
-              <img decoding="async" loading="lazy" src={selectedImage} alt="Enlarged gallery view" className="max-w-full max-h-full object-contain rounded-sm" />
+              <Image src={selectedImage} alt="Enlarged gallery view" fill className="object-contain rounded-sm" />
             </div>
           )}
         </DialogContent>

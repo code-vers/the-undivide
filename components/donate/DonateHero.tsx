@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowUpRight } from "lucide-react"
 import Link from "next/link"
@@ -7,7 +8,7 @@ export default function DonateHero() {
     <section className="relative min-h-[600px] md:min-h-[800px] lg:min-h-[983px] w-full overflow-hidden flex items-end">
       {/* Background Image Layer 1 */}
       <div className="absolute inset-0 z-0">
-        <img fetchPriority="high" src="/assets/bg/donate-hero.JPG" alt="Mission Background" className="size-full object-cover" />
+        <Image src="/assets/bg/donate-hero.JPG" alt="Mission Background" fill priority className="object-cover" />
         <div className="absolute inset-0 bg-black/53" />
       </div>
 
